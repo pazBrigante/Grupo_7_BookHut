@@ -12,7 +12,7 @@ Sitios Web de referencia:
 
 -Casa del libro: https://www.casadellibro.com/
 
-- Penguin libros: https://www.penguinlibros.com/ar/
+-Penguin libros: https://www.penguinlibros.com/ar/
 
 -Leandro Scquizzato
 Agregar descripcion
