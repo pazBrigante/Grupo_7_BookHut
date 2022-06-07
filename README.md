@@ -5,7 +5,8 @@ Programa de beneficios/recompensas/puntos. Programa para acumular puntos por com
 El grupo esta compuesto por 3 integrantes:
 
 -Paz Brigante
-Soy Paz, tengo 27 años, vivo en Buenos Aires, Argentina. Trabajo de administrativo en la UBA de Odontología. Decidí hacer un cambio en mi vida y empezar a estudiar acerca de programación web. En mi tiempo libre me gusta salir, cocinar o mirar series.
+
+"Soy Paz, tengo 27 años, vivo en Buenos Aires, Argentina. Trabajo de administrativo en la UBA de Odontología. Decidí hacer un cambio en mi vida y empezar a estudiar acerca de programación web. En mi tiempo libre me gusta salir, cocinar o mirar series."
 
 -Leandro Scquizzato
 Agregar descripcion
