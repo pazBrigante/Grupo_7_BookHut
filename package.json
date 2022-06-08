@@ -1,0 +1,19 @@
+{
+  "name": "proyecto_book_hut",
+  "version": "1.0.0",
+  "description": "Proyecto del Grupo 7 de Digital House para el desarrollo de un sitio web.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pazBrigante/Grupo_7_BookHut.git"
+  },
+  "author": "Paz Brigante, Leandro Scquizzato y Sergio Laulhe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pazBrigante/Grupo_7_BookHut/issues"
+  },
+  "homepage": "https://github.com/pazBrigante/Grupo_7_BookHut#readme"
+}
