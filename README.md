@@ -13,7 +13,7 @@ El grupo esta compuesto por 3 integrantes:
 
 
 -Leandro Scquizzato
-Agregar descripcion
+"Vivo en Banfield, Buenos Aires trabajo en el área de sistema de control para uso, principalmente en la industria del Oil & Gas, como en este último tiempo hay interés por  tecnologías IOT, dispositivos móviles y cloud, me pareció interesante realizar este entrenamiento"
 
 -Sergio Laulhé
 
