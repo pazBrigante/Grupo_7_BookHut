@@ -33,4 +33,8 @@ Sitios Web de referencia:
 
 -Barns & Noble (https://barnesandnoble.com)
 
+-----------------------------------------------------------------------------------------------------------------------------------
+Tablero de trabajo:
+
+-Link de acceso https://trello.com/b/K1lIc6Vm/proyectointegrador
 
