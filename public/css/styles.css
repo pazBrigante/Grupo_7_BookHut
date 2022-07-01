@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-size: 30px;
+    font-size: 17px;
 }
 
 .main-header-medium-bar{
@@ -142,6 +142,10 @@ header .logo{
 
 
 @media (min-width:768px) {
+    
+    *{
+        font-size: 30px;
+    }
     .main-navbar  {
         display: flex;
         justify-content:space-between ;
@@ -319,4 +323,13 @@ color: #0044AA;
     margin-right: auto;
 
    
+}
+
+
+@media (min-width:1268px) {
+    
+    *{
+        font-size: 40px;
+    }
+
 }
