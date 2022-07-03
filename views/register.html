@@ -1,58 +1,166 @@
 <html>
-  <head>
-    <title>Formulario de registro</title>
-    <meta charset="UTF-8">
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <link rel="stylesheet" href="css/styles_Register.css">
-        <script src="https://kit.fontawesome.com/d7986910c9.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    
-    <form action="register.html" method="POST">
-      <p>
-            <label for="nombre"> Nombre y apellido :</label>
-    <input type="text" name="nombre" id="nombre">
-        </p>
-    <p>
-    <label for="usuario"> Nombre de usuario :</label>
-    <input type="text" name="usuario" id="usuario">
-    </p>
-      
-      <p>
-        <label for="nacimiento"> Fecha de nacimiento:</label>
-    <input type="date" name="nacimiento" id="date">
-      </p>
-      <p>
-      <label for="domicilio"> Domicilio :</label>
-      <input type="text" name="domicilio" id="domicilio">
-          </p>
-          
+
+<head>
+  <title>Formulario de registro</title>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/d7986910c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body_Register">
+  <header class="main-header">
+    <nav class="main-header-top-bar">
+      <ul class="left-header-navbar">
+
+        <li class="home"> <a href="#"><i class="fa-solid fa-house"></i></a></li>
+        <li class="submit"> <a href="#"> <i class="fa-solid fa-envelope"></i></a></li>
+
+      </ul>
+      <ul class="right-header-navbar">
+        <li class="user"> <a href="#"> <i class="fa-solid fa-user"></i> </a> </li>
+        <li class="user-texto"> <a href="/register"> Iniciar Sesión / Crear cuenta </a> </li>
+      </ul>
+    </nav>
+
+
+
+    <div class="main-header-medium-bar">
+      <img src="images/logo_the BooK Hut.png" class="logo" alt="Logo de TheHutBook">
+
+      <form class="form" action="#" method="GET">
+        <input type="search" name="dato-busqueda" class="input" placeholder="Buscar productos, marcas y más">
+        <button type="submit" class="submit"><i class="fa fa-search"></i> </button>
+      </form>
+
+
+    </div>
+
+    <nav class="main-navbar">
+      <ul class="left-navbar">
+        <li> <a href="#"> Categorías </a> </li>
+        <li> <a href="#"> Proximamente </a> </li>
+        <li> <a href="#"> Nuevos Lanzamientos </a> </li>
+      </ul>
+
+      <ul class="right-navbar">
+        <li> <a href="#"> AR$ </a> </li>
+        <li> <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a> </li>
+
+        <div class="burger-menu">
+          <i class="fa fa-bars burger"></i>
+        </div>
+
+
+      </ul>
+    </nav>
+
+    <div class="burger-menu">
+      <i class="fa fa-bars burger"></i>
+    </div>
+
+  </header>
+  <div class="login_Register">
+    <div class="Login">
+
+      <form action="register.html" method="POST">
+        <p class="login_Register_text">CREÁ TU CUENTA Y COMPRÁ DESDE DONDE ESTÉS</p>
+
         <p>
-            <label></label>  Seleccionar una imagen de perfil : </label>
-            <input type="file" name="img" accept=".jpg">
-                </p>
-        
-                <p>
-                    <label for="pass"> Password :</label>
-                    <input type="password" name="pass" id="pass">
-                </p>
+          <label for="nombre"> Nombre y apellido :</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
+        </p>
+        <p>
+          <label for="usuario"> Nombre de usuario :</label>
+          <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+        </p>
 
-                <p>
-                    <label for="passC"> Confirmar Password :</label>
-                    <input type="password" name="passC" id="passC">
-                </p>
+        <p>
+          <label for="nacimiento"> Fecha de nacimiento:</label>
+          <input type="date" name="nacimiento" id="date">
+        </p>
+        <p>
+          <label for="domicilio"> Domicilio :</label>
+          <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+        </p>
+
+        <p>
+          <label></label> Seleccionar una imagen de perfil : </label>
+          <input type="file" name="img" accept=".jpg">
+        </p>
+
+        <p>
+          <label for="pass"> Password :</label>
+          <input type="password" name="pass" id="pass" placeholder="Contraseña">
+        </p>
+
+        <p>
+          <label for="passC"> Confirmar Password :</label>
+          <input type="password" name="passC" id="passC" placeholder="Repetir contraseña">
+        </p>
 
 
-    
-        <button  type="reset" > Cancelar  </button>
-        <button  type="submit" > Enviar  </button>
-    
-    
-    
-    
-    </form>
-  </body>
+
+        <button type="reset"> Cancelar </button>
+        <button type="submit"> Enviar </button>
+
+
+
+
+      </form>
+    </div>
+
+    <div class="Register">
+
+      <form action="register.html" method="POST">
+        <p class="login_Register_text">¿TENÉS UNA CUENTA?</p>
+        <p>
+          <label for="nombre"> Nombre y apellido :</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
+        </p>
+        <p>
+          <label for="usuario"> Nombre de usuario :</label>
+          <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+        </p>
+
+        <p>
+          <label for="nacimiento"> Fecha de nacimiento:</label>
+          <input type="date" name="nacimiento" id="date">
+        </p>
+        <p>
+          <label for="domicilio"> Domicilio :</label>
+          <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+        </p>
+
+        <p>
+          <label></label> Seleccionar una imagen de perfil : </label>
+          <input type="file" name="img" accept=".jpg">
+        </p>
+
+        <p>
+          <label for="pass"> Password :</label>
+          <input type="password" name="pass" id="pass" placeholder="Contraseña">
+        </p>
+
+        <p>
+          <label for="passC"> Confirmar Password :</label>
+          <input type="password" name="passC" id="passC" placeholder="Repetir contraseña">
+        </p>
+
+
+
+        <button type="reset"> Cancelar </button>
+        <button type="submit"> Enviar </button>
+
+
+
+
+      </form>
+    </div>
+  </div>
+</body>
+
 </html>

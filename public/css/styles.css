@@ -32,6 +32,7 @@ header .form .input{
     padding: 2px;
     max-width: 500px;
 }
+
 header .form .submit{
     background-color: #FFF;
     border: 1px solid #000;
@@ -329,4 +330,24 @@ color: #0044AA;
         font-size: 40px;
     }
 
+}
+
+
+/*register*/
+
+.login_Register{
+    display: flex;
+    align-items: center;
+
+}
+
+.login_Register_text{
+    color:#0044AA
+
+   }
+
+body div div form p .login_Register_text{
+    color: #0044AA;
+    font-weight: bold;
+    
 }
