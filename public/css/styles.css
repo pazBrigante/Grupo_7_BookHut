@@ -3,7 +3,25 @@
     padding: 0px;
     box-sizing: border-box;
     font-size: 17px;
+
 }
+
+.img1{
+    display:block;
+}
+
+.img2{
+    display:none;
+}
+
+.img3{
+    display:none;
+}
+
+.search-button form {
+    display: none;
+    padding-top: 10px;
+  }
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -91,7 +109,7 @@ header .logo{
         
     }
 
-.main-navbar  li{
+.main-navbar  li,.main-navbar  p{
         margin: 0 15px;
         }
 
@@ -151,7 +169,7 @@ header .logo{
         background-color: aqua;
         }
 
-        .main-navbar  ul{
+        .main-navbar ul,.main-navbar  p{
             display: flex;
             justify-content:space-between ;
             }
@@ -181,7 +199,7 @@ header .logo{
     }
 
 
-.main-navbar ul {
+.main-navbar ul,.main-navbar p {
 list-style: none;
 margin: 10px;
 padding: 0;
@@ -190,7 +208,7 @@ padding: 0;
 }
 
 
-.main-navbar a{
+.main-navbar a, .main-navbar p{
 text-decoration: none;
 color: #0044AA;
 }
@@ -316,7 +334,7 @@ color: #0044AA;
 
 .imgcenter{
 
-    display: block;
+    
     margin-left: auto;
     margin-right: auto;
 
