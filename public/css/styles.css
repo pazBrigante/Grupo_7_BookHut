@@ -6,6 +6,12 @@
 
 }
 
+main {
+    width: 95em;
+    height: 30em;
+}
+
+
 .img1{
     display:block;
 }
