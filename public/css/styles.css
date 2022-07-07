@@ -7,21 +7,24 @@
 }
 
 main {
-    width: 95em;
-    height: 30em;
+    width: auto;
+    height: auto;
 }
 
 
 .img1{
     display:block;
+   
 }
 
 .img2{
     display:none;
+    
 }
 
 .img3{
     display:none;
+    
 }
 
 .search-button form {
@@ -112,6 +115,7 @@ header .logo{
 
 .main-navbar  {
     display:none;
+    
         
     }
 
@@ -343,7 +347,9 @@ color: #0044AA;
     
     margin-left: auto;
     margin-right: auto;
-
+     
+      
+     
    
 }
 
