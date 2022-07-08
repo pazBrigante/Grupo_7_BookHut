@@ -30,13 +30,6 @@ main {
     
 }
 
-.iframe1{
-    display:none;
-    width: 100%;
-    height: 100%;
-    
-}
-
 .search-button form {
     display: none;
     padding-top: 10px;

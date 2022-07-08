@@ -4,7 +4,7 @@ const router = express.Router();
 
 const path = require('path');
 const publicFolderPath = path.resolve(__dirname, './public');
-const productosController = require("./controllers/mainController.js");
+const productosController = require("../controllers/mainController.js");
 
 
 
