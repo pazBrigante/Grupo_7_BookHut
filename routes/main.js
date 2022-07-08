@@ -4,11 +4,11 @@ const router = express.Router();
 
 const path = require('path');
 const publicFolderPath = path.resolve(__dirname, './public');
-const productosController = require("./controllers/productosController");
+const productosController = require("./controllers/mainController.js");
 
 
 
-router.use(express.static(publicFolderPath));
+router.use(express.static(publicFolderPath)); 
 
 
 

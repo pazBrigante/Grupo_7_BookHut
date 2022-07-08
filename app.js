@@ -3,7 +3,8 @@ const app = express();
 
 const path = require('path');
 const publicFolderPath = path.resolve(__dirname, './public');
-const productosController = require("./controllers/productosController");
+const mainController = require("./controllers/mainController.js");
+const rutasMain = require("./routes/main");
 
 
 
@@ -11,7 +12,9 @@ app.use(express.static(publicFolderPath));
 
 app.listen(3030, () => console.log('Servidor en linea en puerto 3030'));
 
-app.get('/',productosController.index );
 
-app.get("/register",productosController.registro);
+
+app.get('/',mainController.index );
+
+app.get("/register",mainController.registro);
 
