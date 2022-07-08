@@ -16,3 +16,5 @@ app.get("/register",(req,res)=> {
 });
 
 
+app.get("/login",productosController.registro);
+
