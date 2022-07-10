@@ -350,9 +350,6 @@ color: #0044AA;
     
     margin-left: auto;
     margin-right: auto;
-     
-      
-     
    
 }
 
@@ -366,95 +363,36 @@ color: #0044AA;
 }
 
 
-/*register*/
-
-.login_Register{
+.secctionGeneral {
     display: flex;
-    align-items: center;
-
 }
 
-.login_Register_text{
-    color:#0044AA;
-    font-size: 30px;
-    font-weight: bold;
-
-   }
-
-body div div form p .login_Register_text{
-    color: #0044AA;
-    font-weight: bold;
-    
-}
-
-/*<<<<<<< HEAD*/
-.login_Register{
+.secctionGeneral_div{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    /*background-image: url("https://www.eleconomista.com.mx/__export/1618813105696/sites/eleconomista/img/2021/04/19/libros2.jpg_2118499843.jpg") ;
-    */
-}
-
-.login{
-    margin: 2%
-}
-
-.login_Register p input{
+    width: 100%;
     margin: 2%;
-    padding: 10px;
-    width: 100%;
-    box-shadow: 10px 5px 5px rgb(71, 140, 189);
-    border: 0.5px solid;
-}
-
-
-.register{
-    margin: 2%
-}
-
-.register p{
-    margin: 2%
-}
-
-.return{
+    justify-content: space-between;
     
-    text-align: center;
 }
 
-.button_ingresar{
-    width: 100%;
-    align-items: center;
-    background-color: rgb(71, 140, 189);
-    color: white;
+.secctionGeneral_div_bloque {
+    margin: 2%;
     cursor: pointer;
-    border: 1px solid  rgb(71, 140, 189);
-    transition: all 0.5s;
-}
-.button_ingresar:hover{
-    background-color: #0022AA;   
-    border: 1px solid  rgb(71, 140, 189);
-    background-color: #0022AA;
-    transition: 1s;
 }
 
-.button_registro{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.button_registro_{
-    width: 100%;
-    align-items: center;
-    background-color: rgb(71, 140, 189);
-    color: white;
-    cursor: pointer;
-    border: 1px solid white;
-    transition: all 0.5s;
-}
-.button_registro_:hover{
-    background-color: #0022AA;   
-    border: 1px solid  rgb(71, 140, 189);
-    background-color: #0022AA;
+.secctionGeneral_div_bloque:hover{
     transition: 1s;
+    box-shadow: 10px 5px 5px rgb(79, 79, 79);
+
+}
+.secctionGeneral img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div h3 {
+    color: #0044AA;
+    font-size: auto;
+    font-weight: bold;
+
 }

@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Bienvenidos a The BooK Hut</title>
-        <meta name="viewport" content="width=device-width">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <script src="https://kit.fontawesome.com/d7986910c9.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/styles.css">
-        
-    </head>
 
-    <script>
-        function categorias() {
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenidos a The BooK Hut</title>
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/d7986910c9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<script>
+    function categorias() {
         var img1 = document.getElementById("img1");
         var img2 = document.getElementById("img2");
         var img3 = document.getElementById("img3");
@@ -21,12 +22,12 @@
         var display2 = getComputedStyle(img2).display;
         var display3 = getComputedStyle(img3).display;
         img1.style.display = "block";
-        img2.style.display = "none";       
-        img3.style.display = "none";             
-                
-            }
-        
-            function proximamente() {
+        img2.style.display = "none";
+        img3.style.display = "none";
+
+    }
+
+    function proximamente() {
         var img1 = document.getElementById("img1");
         var img2 = document.getElementById("img2");
         var img3 = document.getElementById("img3");
@@ -34,11 +35,11 @@
         var display2 = getComputedStyle(img2).display;
         var display3 = getComputedStyle(img3).display;
         img1.style.display = "none";
-        img2.style.display = "block";       
-        img3.style.display = "none";   
-            }
-        
-            function lanzamientos() {
+        img2.style.display = "block";
+        img3.style.display = "none";
+    }
+
+    function lanzamientos() {
         var img1 = document.getElementById("img1");
         var img2 = document.getElementById("img2");
         var img3 = document.getElementById("img3");
@@ -46,26 +47,26 @@
         var display2 = getComputedStyle(img2).display;
         var display3 = getComputedStyle(img3).display;
         img1.style.display = "none";
-        img2.style.display = "none";       
-        img3.style.display = "block";  
-            }
-        
-        </script>
-        
-    
+        img2.style.display = "none";
+        img3.style.display = "block";
+    }
+
+</script>
+
+
 
 <body>
 
-    
-    <header class = "main-header">
-        
-        <nav class = "main-header-top-bar">
+
+    <header class="main-header">
+
+        <nav class="main-header-top-bar">
             <ul class="left-header-navbar">
-                
+
                 <li class="home"> <a href="#"><i class="fa-solid fa-house"></i></a></li>
                 <li class="submit"> <a href="#"> <i class="fa-solid fa-envelope"></i></a></li>
-                        
-            </ul>   
+
+            </ul>
             <ul class="right-header-navbar">
                 <li class="user"> <a href="#"> <i class="fa-solid fa-user"></i> </a> </li>
                 <li class="user-texto"> <a href="/register"> Iniciar Sesión / Crear cuenta </a> </li>
@@ -74,34 +75,35 @@
 
 
 
-        <div class = "main-header-medium-bar">
-            <img src="images/logo_the BooK Hut.png" class="logo"  alt="Logo de TheHutBook" >
-        
+        <div class="main-header-medium-bar">
+            <img src="images/logo_the BooK Hut.png" class="logo" alt="Logo de TheHutBook">
+
             <form class="form" action="#" method="GET">
-                <input type="search" name="dato-busqueda"  class="input" placeholder="Buscar productos, marcas y más">
-                <button type ="submit" class="submit"><i class="fa fa-search"></i> </button>
+                <input type="search" name="dato-busqueda" class="input" placeholder="Buscar productos, marcas y más">
+                <button type="submit" class="submit"><i class="fa fa-search"></i> </button>
             </form>
 
 
         </div>
-        
-        <nav class = "main-navbar">
-        <ul class="left-navbar">
-            <li><a class="link" onclick="categorias()" > Categorías </a></li>
-            <li><a class="link" onclick="proximamente()" > Próximamente </a></li>
-            <li><a class="link" onclick="lanzamientos()" > Lanzamientos </a></li> 
-        </ul>
-            
-        <ul class="right-navbar">
-            <li>   <a href="#"> AR$ </a>     </li>
-            <li>   <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>     </li>
-            
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-            </div>
-        
-        
-        </ul>
+
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li><a class="link" onclick="categorias()"> Categorías </a></li>
+                <li><a class="link" onclick="proximamente()"> Próximamente </a></li>
+                <li><a class="link" onclick="lanzamientos()"> Lanzamientos </a></li>
+            </ul>
+
+            <ul class="right-navbar">
+                <li> <a href="#"> AR$ </a> </li>
+                <li> <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a> </li>
+                
+
+                <div class="burger-menu">
+                    <i class="fa fa-bars burger"></i>
+                </div>
+
+
+            </ul>
         </nav>
 
         <div class="burger-menu">
@@ -109,30 +111,115 @@
         </div>
 
     </header>
- 
-<main>
-<br>
+
+    <main>
+        <br>
 
 
 
-    <img id="img1" src="images/Ada_Lovelace_Chalon.jpg" class="imgcenter img1"  alt="Sacar esta imaénk" width="30%"> 
-    <img id="img2" src="images/Alan_Turing.jpg" class="imgcenter img2"  alt="Sacar esta imaénk" width="22%">
-    <img id="img3" src="images/CharlesBabbage.jpg" class="imgcenter img3"  alt="Sacar esta imaénk" width="25%">   
+        <img id="img1" src="images/Ada_Lovelace_Chalon.jpg" class="imgcenter img1" alt="Sacar esta imaénk" width="30%">
+        <img id="img2" src="images/Alan_Turing.jpg" class="imgcenter img2" alt="Sacar esta imaénk" width="22%">
+        <img id="img3" src="images/CharlesBabbage.jpg" class="imgcenter img3" alt="Sacar esta imaénk" width="25%">
 
-    <br>
-</main>
+        <br>
+    </main>
+    <div>
+        <h3>Mas Vendidos</h3>
+        <section class="secctionGeneral">
+            <div class="secctionGeneral_div">
 
-    <footer class = "main-footer">
-        
-        <nav class = "main-footer-top-bar">
-            <ul class="left-footer-navbar">
+                <div class="secctionGeneral_div_bloque">
+                    <img
+                        src="https://marketplace.canva.com/EAE_nUfazus/1/0/1003w/canva-portada-libro-invierno-2AlG-dAa9cs.jpg">
+                    <div class="descripcionProductos">
+                        <p class="titulo">Viajando en inverno</p>
+                        <p class="autor">Josep Lopez</p>
+                        <p class="precios">$230</p>
+                        <p class="agregarAlCarrito"><button type="submit"><a href="/register">Comprar</a></button><i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                </div>
+
+                <div class="secctionGeneral_div_bloque">
+                    <img
+                        src="https://marketplace.canva.com/EAE6nr4GsPs/1/0/1003w/canva-portada-de-libro-sobre-novela-apasionante-beige-DdhxXOXWl8o.jpg">
+                    <div class="descripcionProductos">
+                        <p class="titulo">La felicidad es un habito</p>
+                        <p class="autor">Hortencia Marquez</p>
+                        <p class="precios">$230</p>
+                        <p class="agregarAlCarrito"><button type="submit"><a href="/register">Comprar</a></button><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+        </section>
+
+        <h3>Nuevos Lanzamientos</h3>
+        <section class="secctionGeneral">
+            <div class="secctionGeneral_div">
                 
+                <div class="secctionGeneral_div_bloque">
+                    <img
+                        src="https://marketplace.canva.com/EAE_nUfazus/1/0/1003w/canva-portada-libro-invierno-2AlG-dAa9cs.jpg">
+                    <div class="descripcionProductos">
+                        <p class="titulo">Viajando en inverno</p>
+                        <p class="autor">Josep Lopez</p>
+                        <p class="precios">$230</p>
+                        <p class="agregarAlCarrito"><button type="submit">Comprar</button><i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                </div>
+
+                <div class="secctionGeneral_div_bloque">
+                    <img
+                        src="https://marketplace.canva.com/EAE6nr4GsPs/1/0/1003w/canva-portada-de-libro-sobre-novela-apasionante-beige-DdhxXOXWl8o.jpg">
+                    <div class="descripcionProductos">
+                        <p class="titulo">La felicidad es un habito</p>
+                        <p class="autor">Hortencia Marquez</p>
+                        <p class="precios">$230</p>
+                        <p class="agregarAlCarrito"><button type="submit">Comprar</button><i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h3>Seleccionados para vos</h3>
+        <section class="secctionGeneral">
+            <div class="secctionGeneral_div">
+                
+                <div class="secctionGeneral_div_bloque">
+                    <img
+                        src="https://marketplace.canva.com/EAE_nUfazus/1/0/1003w/canva-portada-libro-invierno-2AlG-dAa9cs.jpg">
+                    <div class="SeleccionadosParaVos">
+                        <p class="titulo">Viajando en inverno</p>
+                        <p class="autor">Josep Lopez</p>
+                        <p class="precios">$230</p>
+                        <p class="agregarAlCarrito"><button type="submit">Comprar</button><i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                </div>
+
+                <div class="secctionGeneral_div_bloque">
+                    <img
+                        src="https://marketplace.canva.com/EAE6nr4GsPs/1/0/1003w/canva-portada-de-libro-sobre-novela-apasionante-beige-DdhxXOXWl8o.jpg">
+                    <div class="descripcionProductos">
+                        <p class="titulo">La felicidad es un habito</p>
+                        <p class="autor">Hortencia Marquez</p>
+                        <p class="precios">$230</p>
+                        <p class="agregarAlCarrito"><button type="submit">Comprar</button><i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="main-footer">
+
+        <nav class="main-footer-top-bar">
+            <ul class="left-footer-navbar">
+
                 <li class="correo"> <a href="#">Correo Eléctronico</a></li>
                 <li class="sucribite"> <a href="#"> Suscribite</a></li>
-                        
-            </ul>   
+
+            </ul>
             <ul class="right-footer-navbar">
-            
+
                 <li class="footer-social"> <a href="#"> <i class="fa-brands fa-facebook-square"></i></a> </li>
                 <li class="footer-social"> <a href="#"> <i class="fa-brands fa-twitter"></i></a> </li>
                 <li class="footer-social"> <a href="#"> <i class="fa-brands fa-pinterest-p"></i></a> </li>
@@ -140,39 +227,40 @@
             </ul>
         </nav>
 
-        <nav class = "footer-navbar">
-        <ul class="footer-left1-navbar">
-            <li>   <a href="#" > <strong> Nuestros servicios </strong> </a>     </li>
-            <li>   <a href="#"> Suscripciones </a>     </li>
-            <li>   <a href="#"> Reseñas </a>     </li>
-            <li>   <a href="#"> Programas de Benefícios </a>     </li>
-        </ul>
-            
-        <ul class="footer-right1-navbar">
-            <li>   <a href="#"> <strong>Sobre nosotros </strong></a>     </li>
-            <li>   <a href="#"> Trabaja en The Book Hut </a>     </li>
-            <li>   <a href="#"> Contactanos </a>     </li>
-        </ul>
-            
-        <ul class="footer-right1-navbar">
-             <li>   <a href="#"> <strong>Ayuda Rápida</strong> </a>     </li>
-             <li>   <a href="#"> Centro de Ayuda </a>     </li>
-             <li>   <a href="#"> Envíos y devoluciones </a>     </li>
-             <li>   <a href="#"> Gift Card </a>     </li>
+        <nav class="footer-navbar">
+            <ul class="footer-left1-navbar">
+                <li> <a href="#"> <strong> Nuestros servicios </strong> </a> </li>
+                <li> <a href="#"> Suscripciones </a> </li>
+                <li> <a href="#"> Reseñas </a> </li>
+                <li> <a href="#"> Programas de Benefícios </a> </li>
             </ul>
-            
 
-        <ul class="footer-right1-navbar">
-            <li>   <a href="#"> <strong>Información importante </strong></a>     </li>
-            <li>   <a href="#"> Cookies </a>     </li>
-            <li>   <a href="#"> Términos y condiciones </a>     </li>
-            <li>   <a href="#"> Politicas de Privacidad </a>     </li>
-        </ul>
-        </nav>          
-    
+            <ul class="footer-right1-navbar">
+                <li> <a href="#"> <strong>Sobre nosotros </strong></a> </li>
+                <li> <a href="#"> Trabaja en The Book Hut </a> </li>
+                <li> <a href="#"> Contactanos </a> </li>
+            </ul>
+
+            <ul class="footer-right1-navbar">
+                <li> <a href="#"> <strong>Ayuda Rápida</strong> </a> </li>
+                <li> <a href="#"> Centro de Ayuda </a> </li>
+                <li> <a href="#"> Envíos y devoluciones </a> </li>
+                <li> <a href="#"> Gift Card </a> </li>
+            </ul>
+
+
+            <ul class="footer-right1-navbar">
+                <li> <a href="#"> <strong>Información importante </strong></a> </li>
+                <li> <a href="#"> Cookies </a> </li>
+                <li> <a href="#"> Términos y condiciones </a> </li>
+                <li> <a href="#"> Politicas de Privacidad </a> </li>
+            </ul>
+        </nav>
+
 
     </footer>
 
 
 </body>
+
 </html>
