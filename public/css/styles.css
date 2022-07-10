@@ -3,7 +3,37 @@
     padding: 0px;
     box-sizing: border-box;
     font-size: 17px;
+
 }
+
+main {
+    width: auto;
+    height: auto;
+}
+
+.link:hover {
+    cursor: pointer;
+  }
+
+.img1{
+    display:block;
+   
+}
+
+.img2{
+    display:none;
+    
+}
+
+.img3{
+    display:none;
+    
+}
+
+.search-button form {
+    display: none;
+    padding-top: 10px;
+  }
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -88,6 +118,7 @@ header .logo{
 
 .main-navbar  {
     display:none;
+    
         
     }
 
@@ -151,7 +182,7 @@ header .logo{
         background-color: aqua;
         }
 
-        .main-navbar  ul{
+        .main-navbar ul{
             display: flex;
             justify-content:space-between ;
             }
@@ -181,7 +212,7 @@ header .logo{
     }
 
 
-.main-navbar ul {
+.main-navbar ul{
 list-style: none;
 margin: 10px;
 padding: 0;
@@ -316,10 +347,12 @@ color: #0044AA;
 
 .imgcenter{
 
-    display: block;
+    
     margin-left: auto;
     margin-right: auto;
-
+     
+      
+     
    
 }
 
@@ -342,7 +375,9 @@ color: #0044AA;
 }
 
 .login_Register_text{
-    color:#0044AA
+    color:#0044AA;
+    font-size: 30px;
+    font-weight: bold;
 
    }
 
@@ -352,20 +387,25 @@ body div div form p .login_Register_text{
     
 }
 
+/*<<<<<<< HEAD*/
 .login_Register{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    margin: 2%;
-    
+    /*background-image: url("https://www.eleconomista.com.mx/__export/1618813105696/sites/eleconomista/img/2021/04/19/libros2.jpg_2118499843.jpg") ;
+    */
 }
 
 .login{
     margin: 2%
 }
 
-.login p{
-    margin: 2%
+.login_Register p input{
+    margin: 2%;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 10px 5px 5px rgb(71, 140, 189);
+    border: 0.5px solid;
 }
 
 
@@ -375,4 +415,46 @@ body div div form p .login_Register_text{
 
 .register p{
     margin: 2%
+}
+
+.return{
+    
+    text-align: center;
+}
+
+.button_ingresar{
+    width: 100%;
+    align-items: center;
+    background-color: rgb(71, 140, 189);
+    color: white;
+    cursor: pointer;
+    border: 1px solid  rgb(71, 140, 189);
+    transition: all 0.5s;
+}
+.button_ingresar:hover{
+    background-color: #0022AA;   
+    border: 1px solid  rgb(71, 140, 189);
+    background-color: #0022AA;
+    transition: 1s;
+}
+
+.button_registro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.button_registro_{
+    width: 100%;
+    align-items: center;
+    background-color: rgb(71, 140, 189);
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: all 0.5s;
+}
+.button_registro_:hover{
+    background-color: #0022AA;   
+    border: 1px solid  rgb(71, 140, 189);
+    background-color: #0022AA;
+    transition: 1s;
 }

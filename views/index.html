@@ -9,12 +9,56 @@
         <script src="https://kit.fontawesome.com/d7986910c9.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
+        
     </head>
 
-
+    <script>
+        function categorias() {
+        var img1 = document.getElementById("img1");
+        var img2 = document.getElementById("img2");
+        var img3 = document.getElementById("img3");
+        var display1 = getComputedStyle(img1).display;
+        var display2 = getComputedStyle(img2).display;
+        var display3 = getComputedStyle(img3).display;
+        img1.style.display = "block";
+        img2.style.display = "none";       
+        img3.style.display = "none";             
+                
+            }
+        
+            function proximamente() {
+        var img1 = document.getElementById("img1");
+        var img2 = document.getElementById("img2");
+        var img3 = document.getElementById("img3");
+        var display1 = getComputedStyle(img1).display;
+        var display2 = getComputedStyle(img2).display;
+        var display3 = getComputedStyle(img3).display;
+        img1.style.display = "none";
+        img2.style.display = "block";       
+        img3.style.display = "none";   
+            }
+        
+            function lanzamientos() {
+        var img1 = document.getElementById("img1");
+        var img2 = document.getElementById("img2");
+        var img3 = document.getElementById("img3");
+        var display1 = getComputedStyle(img1).display;
+        var display2 = getComputedStyle(img2).display;
+        var display3 = getComputedStyle(img3).display;
+        img1.style.display = "none";
+        img2.style.display = "none";       
+        img3.style.display = "block";  
+            }
+        
+        </script>
+        
+    
 
 <body>
+
+    
     <header class = "main-header">
+        
         <nav class = "main-header-top-bar">
             <ul class="left-header-navbar">
                 
@@ -43,9 +87,9 @@
         
         <nav class = "main-navbar">
         <ul class="left-navbar">
-            <li>   <a href="#"> Categorías </a>     </li>
-            <li>   <a href="#"> Proximamente </a>     </li>
-            <li>   <a href="#"> Nuevos Lanzamientos </a>     </li>
+            <li><a class="link" onclick="categorias()" > Categorías </a></li>
+            <li><a class="link" onclick="proximamente()" > Próximamente </a></li>
+            <li><a class="link" onclick="lanzamientos()" > Lanzamientos </a></li> 
         </ul>
             
         <ul class="right-navbar">
@@ -65,12 +109,21 @@
         </div>
 
     </header>
+ 
+<main>
+<br>
 
-    
-    <img src="images/Ada_Lovelace_Chalon.jpg" class="imgcenter"  alt="Sacar esta imaénk" width="30%">
-<br>
-<br>
+
+
+    <img id="img1" src="images/Ada_Lovelace_Chalon.jpg" class="imgcenter img1"  alt="Sacar esta imaénk" width="30%"> 
+    <img id="img2" src="images/Alan_Turing.jpg" class="imgcenter img2"  alt="Sacar esta imaénk" width="22%">
+    <img id="img3" src="images/CharlesBabbage.jpg" class="imgcenter img3"  alt="Sacar esta imaénk" width="25%">   
+
+    <br>
+</main>
+
     <footer class = "main-footer">
+        
         <nav class = "main-footer-top-bar">
             <ul class="left-footer-navbar">
                 

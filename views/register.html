@@ -22,7 +22,7 @@
       </ul>
       <ul class="right-header-navbar">
         <li class="user"> <a href="#"> <i class="fa-solid fa-user"></i> </a> </li>
-        <li class="user-texto"> <a href="/register"> Iniciar Sesión / Crear cuenta </a> </li>
+        <li class="home"> <a href="/"><i class="fa-solid fa-house"></i>Volver al Home</a></li>
       </ul>
     </nav>
 
@@ -69,27 +69,25 @@
       <form action="register.html" method="POST">
         <p class="login_Register_text">CREÁ TU CUENTA Y COMPRÁ DESDE DONDE ESTÉS</p>
 
-        <p>
-          <label for="nombre"></label>
-          <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
-        </p>
+        
         <p>
           <label for="usuario"></label>
           <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
         </p>
+        <p>
+          <label for="nombre"></label>
+          <input type="email" name="e-mail" id="e-mail" placeholder="Correo electrónico">
+        </p>
 
         <p>
-          <label for="nacimiento"> <p>Fecha de nacimiento:</p></label>
+          <label for="nacimiento">
+            <p>Fecha de nacimiento:</p>
+          </label>
           <input type="date" name="nacimiento" id="date">
         </p>
         <p>
           <label for="domicilio"></label>
           <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
-        </p>
-
-        <p>
-          <label></label> Seleccionar una imagen de perfil : </label>
-          <input type="file" name="img" accept=".jpg">
         </p>
 
         <p>
@@ -101,41 +99,83 @@
           <label for="passC"></label>
           <input type="password" name="passC" id="passC" placeholder="Repetir contraseña">
         </p>
-
-
-
-        <button type="reset"> Cancelar </button>
-        <button type="submit"> Enviar </button>
-
-
-
+        <p class="button_registro">
+          <button type="submit" class="button_registro_"> Enviar </button>
+          <button type="reset" class="button_registro_"> Cancelar </button>
+        </p>
 
       </form>
     </div>
 
-    <div class="Register">
+    <div class=" Register">
 
-      <form action="register.html" method="POST">
-        <p class="login_Register_text">¿TENÉS UNA CUENTA?</p>
-        
-        <p>
-          <label for="usuario"></label>
-          <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
-        </p>
-        <p>
-          <label for="pass"></label>
-          <input type="password" name="pass" id="pass" placeholder="Contraseña">
-        </p>
+            <form action="register.html" method="POST">
+              <p class="login_Register_text">¿TENÉS UNA CUENTA?</p>
 
-        <button type="reset"> Cancelar </button>
-        <button type="submit"> Enviar </button>
+              <p>
+                <label for="usuario"></label>
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+              </p>
+              <p>
+                <label for="pass"></label>
+                <input type="password" name="pass" id="pass" placeholder="Contraseña">
+              </p>
 
+              <button type="submit" class="button_ingresar"> Ingresar </button>
 
-
-
-      </form>
+            </form>
     </div>
   </div>
+  <footer class="main-footer">
+
+    <nav class="main-footer-top-bar">
+      <ul class="left-footer-navbar">
+
+        <li class="correo"> <a href="#">Correo Eléctronico</a></li>
+        <li class="sucribite"> <a href="#"> Suscribite</a></li>
+
+      </ul>
+      <ul class="right-footer-navbar">
+
+        <li class="footer-social"> <a href="#"> <i class="fa-brands fa-facebook-square"></i></a> </li>
+        <li class="footer-social"> <a href="#"> <i class="fa-brands fa-twitter"></i></a> </li>
+        <li class="footer-social"> <a href="#"> <i class="fa-brands fa-pinterest-p"></i></a> </li>
+        <li class="footer-social"> <a href="#"> <i class="fa-brands fa-instagram-square"></i></a> </li>
+      </ul>
+    </nav>
+
+    <nav class="footer-navbar">
+      <ul class="footer-left1-navbar">
+        <li> <a href="#"> <strong> Nuestros servicios </strong> </a> </li>
+        <li> <a href="#"> Suscripciones </a> </li>
+        <li> <a href="#"> Reseñas </a> </li>
+        <li> <a href="#"> Programas de Benefícios </a> </li>
+      </ul>
+
+      <ul class="footer-right1-navbar">
+        <li> <a href="#"> <strong>Sobre nosotros </strong></a> </li>
+        <li> <a href="#"> Trabaja en The Book Hut </a> </li>
+        <li> <a href="#"> Contactanos </a> </li>
+      </ul>
+
+      <ul class="footer-right1-navbar">
+        <li> <a href="#"> <strong>Ayuda Rápida</strong> </a> </li>
+        <li> <a href="#"> Centro de Ayuda </a> </li>
+        <li> <a href="#"> Envíos y devoluciones </a> </li>
+        <li> <a href="#"> Gift Card </a> </li>
+      </ul>
+
+
+      <ul class="footer-right1-navbar">
+        <li> <a href="#"> <strong>Información importante </strong></a> </li>
+        <li> <a href="#"> Cookies </a> </li>
+        <li> <a href="#"> Términos y condiciones </a> </li>
+        <li> <a href="#"> Politicas de Privacidad </a> </li>
+      </ul>
+    </nav>
+
+
+  </footer>
 </body>
 
 </html>
