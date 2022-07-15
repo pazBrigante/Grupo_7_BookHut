@@ -4,6 +4,9 @@ const app = express();
 const path = require('path');
 const publicFolderPath = path.resolve(__dirname, './public');
 
+app.set("view engine","ejs");
+
+
 const mainController = require("./controllers/mainController.js");
 const rutasMain = require("./routes/mainRoutes");
 

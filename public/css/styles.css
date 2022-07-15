@@ -15,20 +15,7 @@ main {
     cursor: pointer;
   }
 
-.img1{
-    display:block;
-   
-}
-
-.img2{
-    display:none;
-    
-}
-
-.img3{
-    display:none;
-    
-}
+  
 
 .search-button form {
     display: none;
@@ -371,13 +358,14 @@ color: #0044AA;
     display: flex;
     width: 100%;
     margin: 2%;
-    justify-content: space-between;
+   
     
 }
 
 .secctionGeneral_div_bloque {
     margin: 2%;
     cursor: pointer;
+
 }
 
 .secctionGeneral_div_bloque:hover{
@@ -395,4 +383,19 @@ div h3 {
     font-size: auto;
     font-weight: bold;
 
+}
+
+.masvendidos{
+    display:flex;
+   
+}
+
+.nuevoslanzamientos{
+    display:none;
+    
+}
+
+.seleccionados{
+    display:none;
+    
 }

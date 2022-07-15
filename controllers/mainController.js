@@ -2,11 +2,11 @@ const path = require('path');
 const controlador = {
     index: function (req, res){
        
-        res.sendFile(path.resolve(__dirname, '../views/index.html'));
+        res.render("index");
         
     },
     registro: (req,res)=> {
-        res.sendFile(path.resolve(__dirname,'../views/register.html'));
+        res.render("register");
     },
 };
 
