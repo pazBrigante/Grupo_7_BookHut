@@ -351,11 +351,11 @@ color: #0044AA;
 
 
 .secctionGeneral {
-    display: flex;
+    display: block;
 }
 
 .secctionGeneral_div{
-    display: flex;
+    display: block;
     width: 100%;
     margin: 2%;
    
@@ -386,7 +386,7 @@ div h3 {
 }
 
 .masvendidos{
-    display:flex;
+    display:block;
    
 }
 
@@ -398,4 +398,9 @@ div h3 {
 .seleccionados{
     display:none;
     
+}
+
+.secctionGeneral_bloque{
+    display:flex;
+
 }

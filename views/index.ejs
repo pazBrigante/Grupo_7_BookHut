@@ -23,7 +23,7 @@
         var display1 = getComputedStyle(masvendidos).display;
         var display2 = getComputedStyle(nuevoslanzamientos).display;
         var display3 = getComputedStyle(seleccionados).display;
-        masvendidos.style.display = "flex";
+        masvendidos.style.display = "block";
         nuevoslanzamientos.style.display = "none";
         seleccionados.style.display = "none";
 
@@ -37,7 +37,7 @@
         var display2 = getComputedStyle(nuevoslanzamientos).display;
         var display3 = getComputedStyle(seleccionados).display;
         masvendidos.style.display = "none";
-        nuevoslanzamientos.style.display = "flex";
+        nuevoslanzamientos.style.display = "block";
         seleccionados.style.display = "none";
     }
 
@@ -50,7 +50,7 @@
         var display3 = getComputedStyle(seleccionados).display;
         masvendidos.style.display = "none";
         nuevoslanzamientos.style.display = "none";
-        seleccionados.style.display = "flex";
+        seleccionados.style.display = "block";
     }
 
 </script>
@@ -68,18 +68,20 @@
 
     <main>
         
-    <div>
+  
         
         <section  class="secctionGeneral">
-            <div id="masvendidos" class="secctionGeneral_div masvendidos">
+           
+            <div id="masvendidos"  class="secctionGeneral_div masvendidos">
+                
                 <%- include("./partials/masvendidos") %> 
                 
             </div>
         </section>
 
       
-        <section  class="secctionGeneral ">
-            <div id="nuevoslanzamientos" class="secctionGeneral_div nuevoslanzamientos">
+        <section   class="secctionGeneral ">
+            <div  id="nuevoslanzamientos" class="secctionGeneral_div nuevoslanzamientos">
                 
                 <%- include("./partials/nuevoslanzamientos") %> 
             </div>
@@ -87,12 +89,12 @@
 
         
         <section  class="secctionGeneral">
-            <div id ="seleccionados" class="secctionGeneral_div seleccionados">
+            <div  id ="seleccionados" class="secctionGeneral_div seleccionados">
                 
                 <%- include("./partials/seleccionados") %> 
             </div>
         </section>
-    </div>
+  
 
 
     <main>
