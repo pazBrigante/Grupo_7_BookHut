@@ -11,8 +11,13 @@
   <script src="https://kit.fontawesome.com/d7986910c9.js" crossorigin="anonymous"></script>
 </head>
 
-
- 
+<body class="body_Register">
+  <header class="main-header">
+    
+    <%- include("./partials/header") %> 
+    
+    
+  </header>
   <div class="login_Register">
     <div class="Login">
 
@@ -55,11 +60,31 @@
         </p>
 
       </form>
-  
+    </div>
 
-    
+    <div class=" Register">
+
+            <form action="register.html" method="POST">
+              <p class="login_Register_text">¿TENÉS UNA CUENTA?</p>
+
+              <p>
+                <label for="usuario"></label>
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+              </p>
+              <p>
+                <label for="pass"></label>
+                <input type="password" name="pass" id="pass" placeholder="Contraseña">
+              </p>
+
+              <button type="submit" class="button_ingresar"> Ingresar </button>
+
+            </form>
+    </div>
   </div>
-  
+  <footer class="main-footer">
+
+    <%- include("./partials/footer") %> 
+  </footer>
 </body>
 
 </html>
