@@ -8,10 +8,6 @@ const controlador = {
     registro: (req,res)=> {
         res.render("register");
     },
-
-    detalle: (req,res)=> {
-        res.render("productDetail",{"catalogo" : catalogo,"id": req.params.id});
-    },
 };
 
 module.exports=controlador;
