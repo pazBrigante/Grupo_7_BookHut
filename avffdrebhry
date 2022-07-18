@@ -1,0 +1,397 @@
+[33mcommit 32b5369e0c5f2764af1f608c06157560903a0ea3[m[33m ([m[1;36mHEAD -> [m[1;32mLogin_Register[m[33m)[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jul 18 11:52:55 2022 -0300
+
+    Revert "Error - NO SIRVE"
+    
+    This reverts commit 1fc4d109efa381638da442babd6e62c95041ce67.
+
+[33mcommit f24432ad4e7fc38af16400ddefda88fc2195d2f7[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jul 18 11:52:31 2022 -0300
+
+    Revert "Revert "Error - NO SIRVE""
+    
+    This reverts commit 6b4ad1c277ab92da073e735bf4fd5457494a2370.
+
+[33mcommit 6b4ad1c277ab92da073e735bf4fd5457494a2370[m[33m ([m[1;31morigin/Login_Register[m[33m)[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jul 18 11:51:13 2022 -0300
+
+    Revert "Error - NO SIRVE"
+    
+    This reverts commit 1fc4d109efa381638da442babd6e62c95041ce67.
+
+[33mcommit 8ed14813c9d250b70ce5638051240d3278ac8ebd[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jul 18 11:45:41 2022 -0300
+
+    Revert "Dividí Ingresar y crear en 2 ejs y los hice  función"
+    
+    This reverts commit f452d6b4a1356b9ca0b365df31ddbe010dc2e8e1.
+
+[33mcommit 1fc4d109efa381638da442babd6e62c95041ce67[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jul 18 11:45:32 2022 -0300
+
+    Error - NO SIRVE
+
+[33mcommit f452d6b4a1356b9ca0b365df31ddbe010dc2e8e1[m[33m ([m[1;32mRuta18_7[m[33m)[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jul 18 10:13:35 2022 -0300
+
+    Dividí Ingresar y crear en 2 ejs y los hice  función
+
+[33mcommit 87d14ccca070605ff8f7c87886882f8d4196f699[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 15 12:09:21 2022 -0300
+
+    Detalles Main view
+
+[33mcommit d6c19c9a645290dc9b69f795384308525afff35a[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 15 11:04:21 2022 -0300
+
+    EJS y vista de libros
+    
+    Adapté a EJS para, header, footer y vista de libros
+
+[33mcommit 76165dbf7c831e08aff80901f342dcb302d391e4[m
+Author: Santifragueiro <santiagofragueiro23@gmail.com>
+Date:   Sun Jul 10 16:54:28 2022 -0300
+
+    actulizacion del home
+
+[33mcommit 1aac5f5e0c58df9c571433aa03e08157549f9e06[m
+Merge: cfda4cd f5b9da3
+Author: Santifragueiro <santiagofragueiro23@gmail.com>
+Date:   Sun Jul 10 15:33:32 2022 -0300
+
+    actulizacion de login
+
+[33mcommit cfda4cdf40f25c204fcb986a51e07b98a6471c3d[m
+Author: Santifragueiro <santiagofragueiro23@gmail.com>
+Date:   Sun Jul 10 13:50:46 2022 -0300
+
+    estetica en login
+
+[33mcommit f5b9da3cd669c725bf1e3ab0ca4c28add9485c68[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 8 14:54:30 2022 -0300
+
+    Detalles Routes
+
+[33mcommit 75eec7ac8c2ce167446f8d8a56684d7dbea81110[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 8 14:30:40 2022 -0300
+
+    Add Archivos de Rutas
+
+[33mcommit aa03538f9446470f66a7f99cd341865bc998a3ec[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 8 12:35:10 2022 -0300
+
+    Corrección de errore
+
+[33mcommit 7efb225db93459df8d335a35cd9109d433eab8b9[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 8 12:29:18 2022 -0300
+
+    error
+
+[33mcommit aaaa17d9fa4bff4ee1668075df41563695ec2164[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 8 11:26:20 2022 -0300
+
+    Add Controller ajuste menor
+
+[33mcommit 6911daece9122c9e8220f09c7e89bba076269777[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 8 10:58:54 2022 -0300
+
+    Add Controllers y productControllers
+
+[33mcommit 62a267608e80c0828fb47cd98b0ddc380801088f[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Thu Jul 7 11:57:41 2022 -0300
+
+    Ajustes Cambio imagen lanzamiento, categoría o próximamente
+    
+    Ajustes Cambio imagen lanzamiento, categoría o próximamente
+    RETURN en pantalla de registro
+
+[33mcommit d5d55d1d6cd7e21d07d01d0ab4150b5ae4dfdea3[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Thu Jul 7 11:41:26 2022 -0300
+
+    Ajustes Cambio imagen lanzamiento, categoría o próximamente
+    
+    Cambio de cursor
+
+[33mcommit 36c554a5a98dcf63693d1d2afce1a53a608b4098[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Thu Jul 7 11:29:14 2022 -0300
+
+    Ajustes Cambio imagen lanzamiento, categoría o próximamente 44798e3 Cambio imagen lanzamiento, categoria
+
+[33mcommit 44798e32edac04109603ad54b9d416bd421c2ac4[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Thu Jul 7 11:07:13 2022 -0300
+
+    Ajustes Cambio imagen lanzamiento, categoría o próximamente
+    
+    Cambio imagen lanzamiento, categoría o próximamente
+
+[33mcommit 2153e5f392365a24674b265e0c001b867107da57[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Thu Jul 7 10:15:43 2022 -0300
+
+    Cambio imagen lanzamiento, categoría o próximamente
+    
+    Cambia la imagen cuando presionas lanzamiento, categoría o próximamente
+
+[33mcommit 38bcc5f4dcbec6ed7d4c81f3760f7f04d76f0328[m
+Author: Santifragueiro <santiagofragueiro23@gmail.com>
+Date:   Sun Jul 3 11:25:22 2022 -0300
+
+    login actualizado
+
+[33mcommit c808b175624e4280cc3477350d9ae48260f13718[m
+Merge: a8828a4 dde1a2f
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Fri Jul 1 14:55:53 2022 -0300
+
+    resolviendo conflicto
+
+[33mcommit a8828a46a8b2659ed08f7ebdb75010ddeca34215[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Fri Jul 1 14:33:09 2022 -0300
+
+    subiendo modificaciones a wireframes e index
+
+[33mcommit dde1a2f0eff406c85737f0b3c9f4330fd230eb26[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 1 10:49:18 2022 -0300
+
+    Detalles Menores
+
+[33mcommit 8c2e5e450542e78456f41a61466ccb8d08a36b34[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 1 10:46:44 2022 -0300
+
+    Ajuste Font size
+
+[33mcommit b128c64c3391a611f381aa96046d1a6356d8bd70[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Fri Jul 1 10:28:17 2022 -0300
+
+    Ajuste Tamaño de Letra
+
+[33mcommit 2e51fb65797a518a1c1145c3a12f58bef89f3270[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Thu Jun 30 11:01:53 2022 -0300
+
+    Footer en proceso
+
+[33mcommit a2cbd1d2be37097e05eca21055d49ac7787ee28d[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Tue Jun 28 12:28:46 2022 -0300
+
+    Inicio de trabajo en el register
+
+[33mcommit a000ae0d5c2a3a73d8bc89e2d598b8b4e2644204[m
+Merge: 3f8e150 5e195e5
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jun 27 19:30:34 2022 -0300
+
+    Merge branch 'main' of https://github.com/pazBrigante/Grupo_7_BookHut
+
+[33mcommit 3f8e15091a174dee2fa46854e6f06c772d4cbd88[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jun 27 19:30:18 2022 -0300
+
+    Detalles en Header - busqueda
+
+[33mcommit 5e195e5915993831629a25f6eb4da1ce7c508955[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 27 17:20:42 2022 -0300
+
+    agregando archivos html de las distintas secciones
+
+[33mcommit 420755e5c25e680e22fc0f1dcb9255f5068c610c[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 27 17:07:21 2022 -0300
+
+    agregando archivo retro.md
+
+[33mcommit a423e68ef7b20a2fc0da8b1caa970dce35b75c1e[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 27 17:03:00 2022 -0300
+
+    agregando enlace al tablero de trabajo en README
+
+[33mcommit 657e4da8005366bc584fb34c6c6523c7fcd0f0c4[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jun 27 16:18:13 2022 -0300
+
+    Detalles del Header
+
+[33mcommit f60fd7f7852f38c58191d8f8f98be78d1c93f70e[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Mon Jun 27 16:05:23 2022 -0300
+
+    Trabajo en el Header
+
+[33mcommit dd33b6af78f8d016b89e419b85d64547631ee05a[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Sat Jun 25 18:34:05 2022 -0300
+
+    Nuevo WF HOME Sergio
+
+[33mcommit fa4a0a5b2b6fef814feef2aa2ff47fecfef43ce1[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Wed Jun 22 15:30:21 2022 -0300
+
+    actualizacion general del proyecto
+
+[33mcommit a86195a24c0eb17ee4368e16073a2e6a5a40d1a6[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 20 18:38:40 2022 -0300
+
+    actualizacion de contenido y wireframes
+
+[33mcommit 0f686afa0334ff625e2c573a0f5819aba1869b8b[m
+Merge: 7ab4950 6f35476
+Author: Sergio Laulhé <sergiolaulhe@MBP-de-Sergio.fibertel.com.ar>
+Date:   Mon Jun 20 13:24:39 2022 -0300
+
+    subiendo carpeta de wireframe
+
+[33mcommit 7ab49505e2e7b4883c01e95ac42dd853d254a5b2[m
+Author: Sergio Laulhé <sergiolaulhe@MBP-de-Sergio.fibertel.com.ar>
+Date:   Mon Jun 20 13:21:21 2022 -0300
+
+    subiendo carpeta de wireframe
+
+[33mcommit 6f35476179aa053764946016bc2262d139cc29af[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 20 13:15:59 2022 -0300
+
+    actualizacion
+
+[33mcommit e9b672a5ce6f2e340e143c2f1d6775af2c69c529[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 20 11:46:30 2022 -0300
+
+    creacion de carpetas y archivos para el desarrollo del proyecto
+
+[33mcommit bf315e612da7cd276d995cda2033281cdc38a98e[m
+Merge: ac3254d 783c0e2
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 20 11:23:19 2022 -0300
+
+    actualizando contenido de README
+
+[33mcommit ac3254d0e8e3b684a3ef2110177555b8118dcaaa[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 20 11:08:28 2022 -0300
+
+    actualizacion del readme
+
+[33mcommit 783c0e2d244df71f31d5371796b28be271c87568[m
+Author: Lea102 <lscquizzato@gmail.com>
+Date:   Thu Jun 9 16:29:04 2022 -0300
+
+    Update README.md
+    
+    Lea, agregué mi  info personal en el readme
+
+[33mcommit b84604eb65b75e73ea74ab29ad43be10320863bc[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Wed Jun 8 16:13:30 2022 -0300
+
+    archivo app.js
+
+[33mcommit 0ba5b1653f7380ee4aa0ddd04314e36717298262[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Wed Jun 8 15:59:36 2022 -0300
+
+    instalacion de express
+
+[33mcommit 868ade4ccf4504bbd44206b974c38fab521d9f93[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Wed Jun 8 15:38:46 2022 -0300
+
+    inicio de npm y definicion de app.js como entry point
+
+[33mcommit 0b322520601f44eac2c9c82905e1406465d80299[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Wed Jun 8 11:30:39 2022 -0300
+
+    actualizacion del readme
+
+[33mcommit 6b4c7dda8e74de1460bca1dccee8c59e8812f11a[m
+Author: pazBrigante <106492230+pazBrigante@users.noreply.github.com>
+Date:   Tue Jun 7 18:55:57 2022 -0300
+
+    .
+
+[33mcommit 04b1d1d56ba0d3478e9ed9ca9cad85f07ad4130b[m
+Author: pazBrigante <106492230+pazBrigante@users.noreply.github.com>
+Date:   Tue Jun 7 18:54:33 2022 -0300
+
+    agregue referencias de sitios web
+
+[33mcommit 9eea2392edd9d98283253d2c36aacb3981384645[m
+Author: pazBrigante <106492230+pazBrigante@users.noreply.github.com>
+Date:   Tue Jun 7 18:42:52 2022 -0300
+
+    modificación
+
+[33mcommit 4cda9423ffa618c4de62b653f7af28a8faf4e3bd[m
+Author: pazBrigante <106492230+pazBrigante@users.noreply.github.com>
+Date:   Tue Jun 7 18:41:14 2022 -0300
+
+    agregue descripción
+
+[33mcommit b4f97f4fe2d731d7d8d5804f57e56957dcd06ade[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Tue Jun 7 14:59:16 2022 -0300
+
+    actualizacion del readme
+
+[33mcommit 6503104ee8e8deb29746ec766b57ff5a8b7bb277[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Tue Jun 7 13:38:51 2022 -0300
+
+    actualizacion del readme
+
+[33mcommit 40fa1e6e18bb4443c2d9d0ca3ce633a50a1a12ec[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 6 22:51:30 2022 -0300
+
+    actualizacion del readme
+
+[33mcommit bc79c2ca64fcd0ae04ee3c666c309821cd6dcc10[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 6 22:50:24 2022 -0300
+
+    actualizacion del readme
+
+[33mcommit 91e2e8a48e6e30a786daca1d68bf32da80dedc8b[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 6 22:39:36 2022 -0300
+
+    actualizacion del readme
+
+[33mcommit ef0f0ea4d8a17b56b9fd1ca4ad89f25a3e1ecdfd[m
+Author: sergiolaulhe <sergiolaulhe@hotmail.com>
+Date:   Mon Jun 6 22:21:50 2022 -0300
+
+    actualizando readme
+
+[33mcommit ebe975e67d002371fdae6e22de8ef4ada4f387d9[m
+Author: pazBrigante <106492230+pazBrigante@users.noreply.github.com>
+Date:   Mon Jun 6 21:21:16 2022 -0300
+
+    Agregue un READ.ME
