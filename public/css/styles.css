@@ -3,7 +3,24 @@
     padding: 0px;
     box-sizing: border-box;
     font-size: 17px;
+
 }
+
+main {
+    width: auto;
+    height: auto;
+}
+
+.link:hover {
+    cursor: pointer;
+  }
+
+  
+
+.search-button form {
+    display: none;
+    padding-top: 10px;
+  }
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -32,6 +49,7 @@ header .form .input{
     padding: 2px;
     max-width: 500px;
 }
+
 header .form .submit{
     background-color: #FFF;
     border: 1px solid #000;
@@ -87,6 +105,7 @@ header .logo{
 
 .main-navbar  {
     display:none;
+    
         
     }
 
@@ -150,7 +169,7 @@ header .logo{
         background-color: aqua;
         }
 
-        .main-navbar  ul{
+        .main-navbar ul{
             display: flex;
             justify-content:space-between ;
             }
@@ -180,7 +199,7 @@ header .logo{
     }
 
 
-.main-navbar ul {
+.main-navbar ul{
 list-style: none;
 margin: 10px;
 padding: 0;
@@ -315,10 +334,9 @@ color: #0044AA;
 
 .imgcenter{
 
-    display: block;
+    
     margin-left: auto;
     margin-right: auto;
-
    
 }
 
@@ -328,5 +346,71 @@ color: #0044AA;
     *{
         font-size: 40px;
     }
+
+}
+
+
+.secctionGeneral {
+    display: block;
+}
+
+.secctionGeneral_div{
+    display: block;
+    width: 100%;
+    margin: 2%;
+   
+    
+}
+
+.secctionGeneral_div_bloque {
+    margin: 2%;
+    cursor: pointer;
+
+}
+
+.secctionGeneral_div_bloque:hover{
+    transition: 1s;
+    box-shadow: 10px 5px 5px rgb(79, 79, 79);
+
+}
+.secctionGeneral img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div h3 {
+    color: #0044AA;
+    font-size: auto;
+    font-weight: bold;
+
+}
+
+.masvendidos{
+    display:block;
+   
+}
+
+.nuevoslanzamientos{
+    display:none;
+    
+}
+
+.login{
+    display:none;
+    
+}
+
+.register{
+    display:none;
+    
+}
+
+.seleccionados{
+    display:none;
+    
+}
+
+.secctionGeneral_bloque{
+    display:flex;
 
 }
