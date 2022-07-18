@@ -12,4 +12,6 @@ router.use(express.static(publicFolderPath));
 router.get('/',mainController.index );
 router.get("/register",mainController.registro);
 
+router.get('/detalle/:id',mainController.detalle);
+
 module.exports =router;
