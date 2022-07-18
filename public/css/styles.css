@@ -3,7 +3,8 @@
     padding: 0px;
     box-sizing: border-box;
     font-size: 17px;
-
+  
+   
 }
 
 main {
@@ -24,6 +25,8 @@ main {
 
 body {
     font-family: 'Roboto', sans-serif;
+
+    
 }
 
 .main-header-medium-bar{
@@ -396,6 +399,16 @@ div h3 {
 }
 
 .seleccionados{
+    display:none;
+    
+}
+
+.register{
+    display:none;
+    
+}
+
+.ingresar{
     display:none;
     
 }
