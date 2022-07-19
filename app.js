@@ -20,5 +20,7 @@ app.use('/',rutasMain );
 
 app.use('/detalle/:id',rutasMain );
 
+app.use('/carrito/:id',rutasMain );
+
 
 

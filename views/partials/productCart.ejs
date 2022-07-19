@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -17,29 +16,29 @@
        
     </header>
 
-    <br /><br />
-    <h3>Detalle del Producto</h3>
 
+    <br /><br />
+    <h3>Carrito de Compras</h3>
     <br /><br />
                
                     <img src=<%= catalogo[id].img %> >
                     
                     <p class="ps-text-grey">
-               <br /><br />         <%= catalogo[id].nombre %> 
+                        <%= catalogo[id].nombre %> 
                         <br />
                     <%= catalogo[id].autor %> 
                     <%= catalogo[id].precio %>
                     <br />
-                    <a href="carrito/<%=id%>">  <%= catalogo[id].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
+                    <a href="/carrito/<%=id%>">  <%= catalogo[id].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
                
-                    <br /><br />
+    
            
           
         
      
     </div>
 
-
+    <br /><br />
 
     <footer class="main-footer">
 

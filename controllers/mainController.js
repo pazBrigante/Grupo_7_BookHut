@@ -81,6 +81,10 @@ const controlador = {
         res.render("./partials/productDetail",{"catalogo" : catalogo,"id": req.params.id});
     },
 
+    carrito: (req,res)=> {
+        res.render("./partials/productCart",{"catalogo" : catalogo,"id": req.params.id});
+    },
+
 };
 
 module.exports=controlador;

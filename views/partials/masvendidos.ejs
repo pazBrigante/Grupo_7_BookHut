@@ -86,10 +86,11 @@
                 <p class="ps-text-grey">
                 <%= catalogo[i].autor %> 
                 <%= catalogo[i].precio %>
-                
+                <br />
+                <a href="/carrito/<%=i%>">  <%= catalogo[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
 
-                    </p>
-                <p class="agregarAlCarrito"><button type="submit">Comprar</button><i class="fa-solid fa-cart-shopping"></i></p>
+                    
+                
             <% } %>
 
         </div>
