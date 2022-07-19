@@ -1,90 +1,5 @@
 
-<script>
-    function masvendidos() {
-        var masvendidos= document.getElementById("masvendidos");
-        var nuevoslanzamientos = document.getElementById("nuevoslanzamientos");
-        var seleccionados = document.getElementById("seleccionados");
-        var login = document.getElementById("login");
-        var register = document.getElementById("register");
-        var display1 = getComputedStyle(masvendidos).display;
-        var display2 = getComputedStyle(nuevoslanzamientos).display;
-        var display3 = getComputedStyle(seleccionados).display;
-        masvendidos.style.display = "block";
-        nuevoslanzamientos.style.display = "none";
-        seleccionados.style.display = "none";
-        register.style.display = "none";
-        login.style.display = "none";
-    }
 
-    function lanzamientos() {
-        var masvendidos = document.getElementById("masvendidos");
-        var nuevoslanzamientos = document.getElementById("nuevoslanzamientos");
-        var seleccionados = document.getElementById("seleccionados");
-        var login = document.getElementById("login");
-        var register = document.getElementById("register");
-        var display1 = getComputedStyle(masvendidos).display;
-        var display2 = getComputedStyle(nuevoslanzamientos).display;
-        var display3 = getComputedStyle(seleccionados).display;
-        masvendidos.style.display = "none";
-        nuevoslanzamientos.style.display = "block";
-        seleccionados.style.display = "none";
-      
-        register.style.display = "none";
-        login.style.display = "none";
-    }
-
-    function seleccionados() {
-        var masvendidos = document.getElementById("masvendidos");
-        var nuevoslanzamientos = document.getElementById("nuevoslanzamientos");
-        var seleccionados= document.getElementById("seleccionados");
-        var login = document.getElementById("login");
-        var register = document.getElementById("register");
-        var display1 = getComputedStyle(masvendidos).display;
-        var display2 = getComputedStyle(nuevoslanzamientos).display;
-        var display3 = getComputedStyle(seleccionados).display;
-        masvendidos.style.display = "none";
-        nuevoslanzamientos.style.display = "none";
-        seleccionados.style.display = "block";
-      
-        register.style.display = "none";
-        login.style.display = "none";
-    }
-
-    function login() {
-        var masvendidos = document.getElementById("masvendidos");
-        var nuevoslanzamientos = document.getElementById("nuevoslanzamientos");
-        var seleccionados= document.getElementById("seleccionados");
-        var login = document.getElementById("login");
-        var register = document.getElementById("register");
-        var display1 = getComputedStyle(masvendidos).display;
-        var display2 = getComputedStyle(nuevoslanzamientos).display;
-        var display3 = getComputedStyle(seleccionados).display;
-        masvendidos.style.display = "none";
-        nuevoslanzamientos.style.display = "none";
-        seleccionados.style.display = "none";
-      
-        register.style.display = "none";
-        login.style.display = "block";
-    }
-
-    function register() {
-        var masvendidos = document.getElementById("masvendidos");
-        var nuevoslanzamientos = document.getElementById("nuevoslanzamientos");
-        var seleccionados= document.getElementById("seleccionados");
-        var login = document.getElementById("login");
-        var register = document.getElementById("register");
-        var display1 = getComputedStyle(masvendidos).display;
-        var display2 = getComputedStyle(nuevoslanzamientos).display;
-        var display3 = getComputedStyle(seleccionados).display;
-        masvendidos.style.display = "none";
-        nuevoslanzamientos.style.display = "none";
-        seleccionados.style.display = "none";
-      
-        register.style.display = "block";
-        login.style.display = "none";
-    }
-
-</script>
 
 
 <nav class="main-header-top-bar">
@@ -97,8 +12,9 @@
     <ul class="right-header-navbar">
         <li class="user"> <a href="#"> <i class="fa-solid fa-user"></i> </a> </li>
         
-        <li><a class="link" onclick="login()"> Iniciar Sesión </a></li>
-        <li><a class="link" onclick="register()"> / Crear cuenta </a></li>
+        
+        <li class="link"> <a href="/login"> Iniciar Sesión </a></li>
+        <li class="link"> <a href="/register"> / Crear Cuenta </a></li>
     </ul>
 </nav>
 
@@ -106,7 +22,7 @@
 
 
 <div class="main-header-medium-bar">
-    <img src="images/logo_the BooK Hut.png" class="logo" alt="Logo de TheHutBook">
+    <img src="/images/logo_the BooK Hut.png" class="logo" alt="Logo de The HutBook">
 
     <form class="form" action="#" method="GET">
         <input type="search" name="dato-busqueda" class="input" placeholder="Buscar productos, marcas y más">
@@ -118,9 +34,9 @@
 
 <nav class="main-navbar">
     <ul class="left-navbar">
-        <li><a class="link" onclick="lanzamientos()"> Nuevos Lanzamientos </a></li>
-        <li><a class="link" onclick="seleccionados()"> Seleccionados para vos </a></li>
-        <li><a class="link" onclick="masvendidos()"> Mas vendidos</a></li>
+        <li class="link"> <a href="/lanzamientos"> Nuevos Lanzamientos </a></li>
+        <li class="link"> <a href="/seleccionados"> Seleccionados para vos </a></li>
+        <li class="link"> <a href="/masVendidos"> Mas vendidos </a></li>
     </ul>
 
     <ul class="right-navbar">

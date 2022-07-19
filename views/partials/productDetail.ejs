@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <%- include("./head") %> 
+</head>
+
+ 
+
+
+
+    <header class="main-header">
+
+        <%- include("./header") %> 
+       
+    </header>
+
+
+      
+
+        
+               
+                    <img src=<%= catalogo[id].img %> >
+                    
+                    <p class="ps-text-grey">
+                        <%= catalogo[id].nombre %> 
+                        <br />
+                    <%= catalogo[id].autor %> 
+                    <%= catalogo[id].precio %>
+                        
+                        </p>
+                    <p class="agregarAlCarrito"><button type="submit">Comprar</button><i class="fa-solid fa-cart-shopping"></i></p>
+               
+    
+           
+          
+        
+     
+    </div>
+
+
+
+    <footer class="main-footer">
+
+        <%- include("./footer") %> 
+    </footer>
+
+    </body>

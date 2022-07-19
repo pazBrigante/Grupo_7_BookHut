@@ -1,5 +1,18 @@
+<head>
+    
+  <%- include("./head_reg") %> 
+  <%- include("./head") %> 
+</head>
 
-    <div class=" Register">
+
+
+<head>
+    
+  <%- include("./header") %> 
+</head>
+    
+    
+    <div class="Register">
 
             <form action="register.html" method="POST">
               <p class="login_Register_text">¿TENÉS UNA CUENTA?</p>
@@ -12,9 +25,16 @@
                 <label for="pass"></label>
                 <input type="password" name="pass" id="pass" placeholder="Contraseña">
               </p>
-
-              <button type="submit" class="button_ingresar"> Ingresar </button>
-
             </form>
+            <p>
+              <button type="submit" class="button_ingresar"> Ingresar </button>
+            </p>
+
+            
     </div>
+
+    <footer class="main-footer">
+
+      <%- include("./footer") %> 
+    </footer>
   

@@ -385,30 +385,6 @@ div h3 {
 
 }
 
-.masvendidos{
-    display:block;
-   
-}
-
-.nuevoslanzamientos{
-    display:none;
-    
-}
-
-.login{
-    display:none;
-    
-}
-
-.register{
-    display:none;
-    
-}
-
-.seleccionados{
-    display:none;
-    
-}
 
 .secctionGeneral_bloque{
     display:flex;
