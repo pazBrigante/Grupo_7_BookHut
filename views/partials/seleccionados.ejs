@@ -79,8 +79,9 @@
     <% for(let i=0; i< catalogo.length; i++) { %> 
         
         <br />
-        <div class="secctionGeneral_div_bloque">
+        
             <% if (catalogo[i].categoria=="seleccionados") { %> 
+                <div class="secctionGeneral_div_bloque">
                 <img src=<%= catalogo[i].img %> ><br />
                 <a href="detalle/<%=i%>">  <%= catalogo[i].nombre %></a>
                 <p class="ps-text-grey">
@@ -90,9 +91,10 @@
 
                 <br />
                 <a href="/carrito/<%=i%>">  <%= catalogo[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
+            </div>
             <% } %>
 
-        </div>
+        
         <% } %> 
     
  
