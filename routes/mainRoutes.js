@@ -9,7 +9,7 @@ const mainController = require("../controllers/mainController.js");
 router.use(express.static(publicFolderPath)); 
 
 
-router.get('/',mainController.index );
+router.get('/',mainController.seleccionados );
 router.get("/register",mainController.register);
 router.get("/login",mainController.login);
 router.get("/lanzamientos",mainController.lanzamientos);
