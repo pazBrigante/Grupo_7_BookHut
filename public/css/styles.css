@@ -356,7 +356,7 @@ color: #0044AA;
 
 .secctionGeneral_div{
     display: flex;
-    width: 100%;
+    width: auto;
     margin: 2%;
    
     
@@ -367,6 +367,7 @@ color: #0044AA;
     cursor: pointer;
     width: auto;
     
+    
 
 }
 
@@ -376,8 +377,8 @@ color: #0044AA;
 
 }
 .secctionGeneral img{
-    max-height: 100%;
-    max-width: 100%;
+    max-height: auto;
+    max-width: auto;
     display:flex;
 }
 
@@ -391,5 +392,6 @@ div h3 {
 
 .secctionGeneral_bloque{
     display:flex;
+    flex-wrap:wrap;
 
 }

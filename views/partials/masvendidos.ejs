@@ -18,7 +18,7 @@
 
     
       <br />
-<h3>Seleccionados para vos</h3>
+<h3>Mas Vendidos</h3>
 
 <div class="secctionGeneral_bloque">
 
@@ -28,6 +28,7 @@
       
             <% if (catalogo[i].categoria=="masVendidos") { %> 
             <div class="secctionGeneral_div_bloque">
+                <article>
                 <img src=<%= catalogo[i].img %> ><br />
                 <a href="detalle/<%=i%>">  <%= catalogo[i].nombre %></a>
                 <p class="ps-text-grey">
@@ -35,7 +36,7 @@
                 <%= catalogo[i].precio %>
                 <br />
                 <a href="/carrito/<%=i%>">  <%= catalogo[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
-
+                </article>
             </div>
                 
             <% } %>
