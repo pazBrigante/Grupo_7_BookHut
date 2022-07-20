@@ -56,18 +56,18 @@ const catalogo =[{
 const controlador = {
     index: function (req, res){
        
-        res.render("./partials/seleccionados");
+        res.render("./partials/seleccionados",{"catalogo" : catalogo});
        
     },
 
     lanzamientos: (req,res)=> {
-        res.render("./partials/nuevoslanzamientos");
+        res.render("./partials/nuevoslanzamientos",{"catalogo" : catalogo});
     },
     masVendidos: (req,res)=> {
-        res.render("./partials/masvendidos");
+        res.render("./partials/masvendidos",{"catalogo" : catalogo});
     },
     seleccionados: (req,res)=> {
-        res.render("./partials/seleccionados");
+        res.render("./partials/seleccionados",{"catalogo" : catalogo});
     },
 
     login: (req,res)=> {

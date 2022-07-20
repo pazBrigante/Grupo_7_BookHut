@@ -16,36 +16,39 @@
         <%- include("./header") %> 
        
     </header>
-
+    <body>
     <br />
     <h3>Detalle del Producto</h3>
-
+    <div class="secctionGeneral_bloque">
     <br />
     
     <div class="secctionGeneral_div_bloque">
                     <img src=<%= catalogo[id].img %> >
                     
-                    <p class="ps-text-grey">
-                 
+                    <br />
+                    <br />
+                
                 <%= catalogo[id].nombre %> 
                         <br />
                     <%= catalogo[id].autor %> 
                     <%= catalogo[id].precio %>
                     <br />
                     <a href="carrito/<%=id%>">  <%= catalogo[id].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
-               
-                    <br /><br />
+                  
+                    <br />
+                    <br />
            
           
-        
+                </div>    
      
-    </div>
+    
+</div>
 
-
+</body>
 
     <footer class="main-footer">
 
         <%- include("./footer") %> 
     </footer>
 
-    </body>
+   
