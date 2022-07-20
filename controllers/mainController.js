@@ -115,6 +115,23 @@ const controlador = {
         res.render("./partials/productCart",{"catalogo" : catalogo,"id": req.params.id});
     },
 
+    search: (req,res)=> {
+        
+        let textoBusqueda = req.query.busqueda;
+        let resultado =[];
+
+        for(let i=0; i< catalogo.length; i++) {
+
+
+            if (catalogo[i].nombre.includes(textoBusqueda)) {
+                resultado.push(catalogo[i].nombre)
+            }
+        }
+    
+        res.render("./partials/resultadoBusqueda",{"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id});
+    
+    },
+
 };
 
 module.exports=controlador;

@@ -19,4 +19,6 @@ router.get("/seleccionados",mainController.seleccionados);
 router.get('/detalle/:id',mainController.detalle);
 router.get('/carrito/:id',mainController.carrito);
 router.get('/detalle/carrito/:id',mainController.carrito);
+router.get('/search',mainController.search);
+
 module.exports =router;
