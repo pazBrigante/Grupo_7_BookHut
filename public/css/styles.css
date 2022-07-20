@@ -377,8 +377,8 @@ color: #0044AA;
 
 }
 .secctionGeneral img{
-    max-height: auto;
-    max-width: auto;
+    height: auto;
+    width: 50%;
     display:flex;
 }
 
@@ -394,4 +394,10 @@ div h3 {
     display:flex;
     flex-wrap:wrap;
 
+}
+
+.imagen {
+    height: auto;
+    width: 90%;
+    
 }
