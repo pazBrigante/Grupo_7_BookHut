@@ -59,15 +59,17 @@ const controller = {
         let textoBusqueda = req.query.busqueda;
         let resultado =[];
         let orden=[];
-
+		console.log(textoBusqueda)
         for(let i=0; i< catalogo.length; i++) {
 
-
+			console.log(textoBusqueda)
+			if (typeof catalogo[i].nombre !="undefined") {
             if (catalogo[i].nombre.toUpperCase().includes(textoBusqueda.toUpperCase())) {
                 resultado.push(catalogo[i].nombre)
                 orden.push(i);
             }
         }
+	}
     
         res.render("./partials/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id});
     
