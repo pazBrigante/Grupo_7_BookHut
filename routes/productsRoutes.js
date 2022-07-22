@@ -9,8 +9,8 @@ const productsController = require('../controllers/productsController');
 //router.get('/', productsController.index); 
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('products/create', productsController.create);
-router.post('products/', productsController.store);  
+router.get('/create', productsController.create);
+router.post('/', productsController.store);  
 
 
 /*** GET ONE PRODUCT ***/ 
@@ -22,7 +22,12 @@ router.post('products/', productsController.store);
 
 
 /*** DELETE ONE PRODUCT***/ 
-// router.???('/:id', productsController.destroy); 
+// router.delete('products/:id/eliminar', productsController.destroy); 
 
+
+router.get('/detalle/:id',productsController.detalle);
+router.get('/carrito/:id',productsController.carrito);
+router.get('/detalle/carrito/:id',productsController.carrito);
+router.get('/search',productsController.search);
 
  module.exports = router;

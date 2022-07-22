@@ -9,7 +9,7 @@ const publicFolderPath = path.resolve(__dirname, './public');
 app.set("view engine","ejs");
 
 
-const mainController = require("./controllers/mainController.js");
+
 const rutasMain = require("./routes/mainRoutes");
 const productsRouter = require('./routes/productsRoutes'); // Rutas /products
 
@@ -22,11 +22,7 @@ app.listen(3030, () => console.log('Servidor en linea en puerto 3030'));
 
 app.use('/',rutasMain );
 
-app.use('/detalle/:id',rutasMain );
-
-app.use('/carrito/:id',rutasMain );
-
-app.use('/products/create', productsRouter);
+app.use('/products', productsRouter);
 
 app.use((req,res,next) => {
     res.status(404).render("../views/partials/not-found.ejs")

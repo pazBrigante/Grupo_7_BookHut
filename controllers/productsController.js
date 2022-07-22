@@ -25,9 +25,7 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-	console.log(req.body);
 	const nuevoProducto = req.body;
-	console.log(nuevoProducto);
 	nuevoProducto.id = catalogo.length +1;
 	catalogo.push(nuevoProducto);
 	fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
@@ -46,7 +44,34 @@ const controller = {
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 		// Do the magic
-	}
+	},
+
+	detalle: (req,res)=> {
+        res.render("./partials/productDetail",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
+    },
+
+    carrito: (req,res)=> {
+        res.render("./partials/productCart",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
+    },
+
+    search: (req,res)=> {
+        
+        let textoBusqueda = req.query.busqueda;
+        let resultado =[];
+        let orden=[];
+
+        for(let i=0; i< catalogo.length; i++) {
+
+
+            if (catalogo[i].nombre.toUpperCase().includes(textoBusqueda.toUpperCase())) {
+                resultado.push(catalogo[i].nombre)
+                orden.push(i);
+            }
+        }
+    
+        res.render("./partials/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id});
+    
+    },
 };
 
 module.exports = controller;

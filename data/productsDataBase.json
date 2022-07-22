@@ -111,5 +111,25 @@
   "categoria": "masVendidos",
   "descripcion": "casdcs",
   "id": 14
+ },
+ {
+  "nombre": "prueba 7",
+  "precio": "1288",
+  "descuento": "23",
+  "autor": "Jose pedro",
+  "img": "/images/id8.jpg",
+  "categoria": "lanzamientos",
+  "descripcion": "jkjk",
+  "id": 15
+ },
+ {
+  "nombre": "prueba123",
+  "precio": "1234",
+  "descuento": "123",
+  "autor": "Juan B",
+  "img": "/images/id5.jpg",
+  "categoria": "seleccionados",
+  "descripcion": "dded",
+  "id": 16
  }
 ]

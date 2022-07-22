@@ -17,12 +17,8 @@ router.get("/lanzamientos",mainController.lanzamientos);
 router.get("/masVendidos",mainController.masVendidos);
 router.get("/seleccionados",mainController.seleccionados);
 
-router.get('/detalle/:id',mainController.detalle);
-router.get('/carrito/:id',mainController.carrito);
-router.get('/detalle/carrito/:id',mainController.carrito);
-router.get('/search',mainController.search);
 
-router.get('/admin/create', productsController.create);
-router.post('/admin', productsController.store);  
+
+ 
 
 module.exports =router;
