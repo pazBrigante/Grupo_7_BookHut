@@ -401,3 +401,16 @@ div h3 {
     width: 90%;
     
 }
+
+.buy-now-button {
+    background-color: var(--light-blue);
+    font-size: 1.6em;
+    color: #220f46;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+  }
