@@ -1,28 +1,47 @@
 [
  {
-  "nombre": "Juan",
-  "apellido": "Perez",
-  "email": "jp@gmail.com",
-  "contraseña": "jp123",
-  "categoria": "lector",
-  "id": "1"
+  "usuario": "Alberto Rodriguez",
+  "email": "AR@ddd",
+  "nacimiento": "2000-06-29",
+  "domicilio": "000",
+  "pass": "123",
+  "passC": "123",
+  "id": 2
  },
  {
-    "nombre": "Pedro",
-    "apellido": "Garcia",
-    "email": "Pg@gmail.com",
-    "contraseña": "pg123",
-    "categoria": "lector",
-    "id": "2"
+  "usuario": "Juan Perez",
+  "email": "jp@ddd",
+  "nacimiento": "2022-06-29",
+  "domicilio": "111",
+  "pass": "123",
+  "passC": "123",
+  "id": 3
  },
  {
-    "nombre": "Jose",
-    "apellido": "Gonza",
-    "email": "jg@gmail.com",
-    "contraseña": "jg123",
-    "categoria": "lector",
-    "id": "3"
+  "usuario": "Pedro Gracia",
+  "email": "pg@ddd",
+  "nacimiento": "2022-06-29",
+  "domicilio": "aaa",
+  "pass": "123",
+  "passC": "123",
+  "id": 4
+ },
+ {
+  "usuario": "Cristian",
+  "email": "Sarasa@www",
+  "nacimiento": "2022-07-06",
+  "domicilio": "sarasa",
+  "pass": "1234",
+  "passC": "1234",
+  "id": 5
+ },
+ {
+  "usuario": "lea",
+  "email": "aaa@hhh",
+  "nacimiento": "2022-07-07",
+  "domicilio": "aaaa",
+  "pass": "123",
+  "passC": "123",
+  "id": 5
  }
- 
- 
 ]

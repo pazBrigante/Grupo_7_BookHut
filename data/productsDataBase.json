@@ -27,7 +27,7 @@
   "nombre": "JUn regalo Para el alma",
   "autor": "Cecilia Ahern",
   "precio": "U$S 31",
-  "img": "/images/id10.jpg",
+  "img": "/images/id7.jpg",
   "categoria": "masVendidos",
   "id": "10"
  },
@@ -44,7 +44,7 @@
   "precio": "1234",
   "descuento": "10",
   "autor": "Juan",
-  "img": "/images/id10.jpg",
+  "img": "/images/id2.jpg",
   "categoria": "lanzamientos",
   "descripcion": "fret",
   "id": 12

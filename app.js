@@ -12,6 +12,7 @@ app.set("view engine","ejs");
 
 const rutasMain = require("./routes/mainRoutes");
 const productsRouter = require('./routes/productsRoutes'); // Rutas /products
+const usersRouter = require('./routes/usersRoutes'); // Rutas /users
 
 app.use(express.static(publicFolderPath));
 app.use(methodOverride("_method"));
@@ -23,6 +24,7 @@ app.listen(3030, () => console.log('Servidor en linea en puerto 3030'));
 app.use('/',rutasMain );
 
 app.use('/products', productsRouter);
+app.use('/users', usersRouter);
 
 app.use((req,res,next) => {
     res.status(404).render("../views/partials/not-found.ejs")
