@@ -16,14 +16,6 @@
   "id": "7"
  },
  {
-  "nombre": "La Nueva Arquitectura",
-  "autor": "Milena Rodriguez",
-  "precio": "U$S 47",
-  "img": "/images/id8.jpg",
-  "categoria": "seleccionados",
-  "id": "8"
- },
- {
   "nombre": "Juvenil",
   "autor": "Elisa Perez",
   "precio": "U$S 11",
@@ -56,5 +48,25 @@
   "categoria": "lanzamientos",
   "descripcion": "fret",
   "id": 12
+ },
+ {
+  "nombre": "Libro DH",
+  "precio": "1.23",
+  "descuento": "1",
+  "autor": "Alberto Alberto",
+  "img": "/images/id3.jpg",
+  "categoria": "seleccionados",
+  "descripcion": "",
+  "id": 17
+ },
+ {
+  "nombre": "prueba",
+  "precio": "1234",
+  "descuento": "12",
+  "autor": "Jose pedro",
+  "img": "/images/id5.jpg",
+  "id": 8,
+  "categoria": "seleccionados",
+  "descripcion": ""
  }
 ]
