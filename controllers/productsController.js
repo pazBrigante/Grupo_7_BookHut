@@ -44,10 +44,15 @@ const controller = {
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 		// Do the magic
+		let id_a_borrar = req.params.id;
+		catalogo.splice(id_a_borrar,1);
+		fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
+		res.redirect('/')
+		
 	},
 
 	detalle: (req,res)=> {
-        res.render("./partials/productDetail",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
+        image.png
     },
 
     carrito: (req,res)=> {

@@ -1,0 +1,28 @@
+[
+ {
+  "nombre": "Juan",
+  "apellido": "Perez",
+  "email": "jp@gmail.com",
+  "contraseña": "jp123",
+  "categoria": "lector",
+  "id": "1"
+ },
+ {
+    "nombre": "Pedro",
+    "apellido": "Garcia",
+    "email": "Pg@gmail.com",
+    "contraseña": "pg123",
+    "categoria": "lector",
+    "id": "2"
+ },
+ {
+    "nombre": "Jose",
+    "apellido": "Gonza",
+    "email": "jg@gmail.com",
+    "contraseña": "jg123",
+    "categoria": "lector",
+    "id": "3"
+ }
+ 
+ 
+]
