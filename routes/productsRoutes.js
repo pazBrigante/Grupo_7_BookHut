@@ -22,9 +22,9 @@ router.post('/', productsController.store);
 
 
 /*** DELETE ONE PRODUCT***/ 
-// router.delete('products/:id/eliminar', productsController.destroy); 
+router.get('/eliminar/:id', productsController.destroy); 
 
-
+router.get('/list',productsController.list);
 router.get('/detalle/:id',productsController.detalle);
 router.get('/carrito/:id',productsController.carrito);
 router.get('/detalle/carrito/:id',productsController.carrito);

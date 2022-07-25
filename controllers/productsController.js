@@ -45,9 +45,14 @@ const controller = {
 	destroy : (req, res) => {
 		// Do the magic
 		let id_a_borrar = req.params.id;
-		catalogo.splice(id_a_borrar,1);
+		for(let i=0; i< catalogo.length; i++) {
+			if (catalogo[i].id==id_a_borrar ) {
+			catalogo.splice(i,1);
+			
+			}
+		}
 		fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
-		res.redirect('/')
+		res.redirect('/products/list')
 		
 	},
 
@@ -77,6 +82,24 @@ const controller = {
 	}
     
         res.render("./partials/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id});
+    
+    },
+
+	list: (req,res)=> {
+        
+        let resultado =[];
+        
+		
+        for(let i=0; i< catalogo.length; i++) {
+
+			
+                resultado.push(catalogo[i])
+               
+            
+        
+	}
+    
+        res.render("./partials/lista",{"resultado" : resultado});
     
     },
 };

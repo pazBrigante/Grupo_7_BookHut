@@ -8,46 +8,6 @@
   "id": "1"
  },
  {
-  "nombre": "La Felicidad es un Hábito",
-  "autor": "Hortencia Márquez",
-  "precio": "U$S 5.50",
-  "img": "/images/id2.jpg",
-  "categoria": "lanzamientos",
-  "id": "21"
- },
- {
-  "nombre": "El Mundo Contra el más allá",
-  "autor": "Julián Palomino",
-  "precio": "U$S a5.50",
-  "img": "/images/id3.jpg",
-  "categoria": "masVendidos",
-  "id": "3"
- },
- {
-  "nombre": "Arkitektura Moderna",
-  "autor": "Jaime Martinez",
-  "precio": "U$S 25.50",
-  "img": "/images/id4.jpg",
-  "categoria": "seleccionados",
-  "id": "4"
- },
- {
-  "nombre": "Guiá de Arquitectura",
-  "autor": "Tomás Andrade",
-  "precio": "U$S 45.50",
-  "img": "/images/id5.jpg",
-  "categoria": "seleccionados",
-  "id": "5"
- },
- {
-  "nombre": "El principito",
-  "autor": "Antoine de Saint-exupery",
-  "precio": "U$S 17",
-  "img": "/images/id6.jpg",
-  "categoria": "masVendidos",
-  "id": "6"
- },
- {
   "nombre": "Orgullo y prejuicio",
   "autor": "Jane Austen",
   "precio": "U$S 47",
@@ -80,6 +40,11 @@
   "id": "10"
  },
  {
+  "nombre": "Nuevo libro",
+  "autor": "nuevo autor",
+  "precio": "U$S 31",
+  "img": "/images/id10.jpg",
+  "categoria": "masVendidos",
   "id": 11
  },
  {
@@ -91,46 +56,5 @@
   "categoria": "lanzamientos",
   "descripcion": "fret",
   "id": 12
- },
- {
-  "nombre": "prueba 2",
-  "precio": "12",
-  "descuento": "12",
-  "autor": "Juan pedro",
-  "img": "/images/id1.jpg",
-  "categoria": "seleccionados",
-  "descripcion": "dedede",
-  "id": 13
- },
- {
-  "nombre": "Libro DH",
-  "precio": "101",
-  "descuento": "1",
-  "autor": "Alberto Alberto",
-  "img": "/images/id3.jpg",
-  "categoria": "masVendidos",
-  "descripcion": "casdcs",
-  "id": 14
- },
- {
-  "nombre": "prueba 7",
-  "precio": "1288",
-  "descuento": "23",
-  "autor": "Jose pedro",
-  "img": "/images/id8.jpg",
-  "categoria": "lanzamientos",
-  "descripcion": "jkjk",
-  "id": 15
- },
- {
-  "nombre": "prueba123",
-  "precio": "1234",
-  "descuento": "123",
-  "autor": "Juan B",
-  "img": "/images/id5.jpg",
-  "categoria": "seleccionados",
-  "descripcion": "dded",
-  "id": 16
  }
- 
 ]
