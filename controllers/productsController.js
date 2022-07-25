@@ -52,7 +52,7 @@ const controller = {
 	},
 
 	detalle: (req,res)=> {
-        image.png
+        res.render("./partials/productDetail",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
     },
 
     carrito: (req,res)=> {
