@@ -12,7 +12,7 @@ router.use(express.static(publicFolderPath));
 
 router.get('/',mainController.seleccionados );
 router.get("/register",mainController.register);
-router.get("/login",mainController.login);
+
 router.get("/lanzamientos",mainController.lanzamientos);
 router.get("/masVendidos",mainController.masVendidos);
 router.get("/seleccionados",mainController.seleccionados);

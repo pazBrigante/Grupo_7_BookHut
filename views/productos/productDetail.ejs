@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <%- include("../partials/head") %> 
+</head>
+
+ 
+
+
+
+    <header class="main-header">
+
+        <%- include("../partials/header") %> 
+       
+    </header>
+    <body>
+    <br />
+    <h3>Detalle del Producto</h3>
+    <div class="secctionGeneral_bloque">
+    <br />
+    
+    <div class="secctionGeneral_div_bloque">
+                    <img class="imagen" src=<%= catalogodetalle.img %> >
+                    
+                    <br />
+                    <br />
+                
+                <%= catalogodetalle.nombre %> 
+                        <br />
+                    <%= catalogodetalle.autor %> 
+                    <%= catalogodetalle.precio %>
+                    <br />
+                    <a href="/products/carrito/<%=id%>">  <%= catalogodetalle.nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
+                  
+                    <br />
+                    <br />
+           
+          
+                </div>    
+     
+    
+</div>
+
+</body>
+
+    <footer class="main-footer">
+
+        <%- include("../partials/footer") %> 
+    </footer>
+
+   

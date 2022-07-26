@@ -73,9 +73,7 @@ const controlador = {
         res.render("./partials/seleccionados",{"resultadose" : resultadose, "ordense" :ordense});
     },
 
-    login: (req,res)=> {
-        res.render("./partials/login");
-    },
+    
 
     register: (req,res)=> {
         res.render("./partials/register");

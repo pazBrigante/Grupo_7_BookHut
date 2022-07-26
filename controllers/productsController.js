@@ -19,7 +19,7 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 		
-	res.render('../views/partials/product-create-form');
+	res.render('../views/productos/product-create-form');
 	
 	},
 	
@@ -56,11 +56,11 @@ const controller = {
 	},
 
 	detalle: (req,res)=> {
-        res.render("./partials/productDetail",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
+        res.render("./productos/productDetail",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
     },
 
     carrito: (req,res)=> {
-        res.render("./partials/productCart",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
+        res.render("./productos/productCart",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
     },
 
     search: (req,res)=> {
@@ -68,10 +68,10 @@ const controller = {
         let textoBusqueda = req.query.busqueda;
         let resultado =[];
         let orden=[];
-		console.log(textoBusqueda)
+		
         for(let i=0; i< catalogo.length; i++) {
 
-			console.log(textoBusqueda)
+		
 			if (typeof catalogo[i].nombre !="undefined") {
             if (catalogo[i].nombre.toUpperCase().includes(textoBusqueda.toUpperCase())) {
                 resultado.push(catalogo[i].nombre)
@@ -80,7 +80,7 @@ const controller = {
         }
 	}
     
-        res.render("./partials/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id});
+        res.render("./productos/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id});
     
     },
 
@@ -98,7 +98,7 @@ const controller = {
         
 	}
     
-        res.render("./partials/lista",{"resultado" : resultado});
+        res.render("./productos/listaProducts",{"resultado" : resultado});
     
     },
 };

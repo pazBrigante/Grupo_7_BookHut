@@ -10,7 +10,7 @@ const controller = {
 	
 	register: (req, res) => {
 		
-	res.render('../views/partials/register');
+	res.render('../views/usuarios/register');
 	
 	},
 	
@@ -18,13 +18,15 @@ const controller = {
 	create: (req, res) => {
 	const nuevoUsuario = req.body;
 	nuevoUsuario.id=usuarios.length + 1;
+	nuevoUsuario.image = req.file.filename;
+	console.log(nuevoUsuario)
 	usuarios.push(nuevoUsuario);
 	fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '));
 	res.redirect('/')
 	},
 
 	detalle: (req,res)=> {
-        res.render("./partials/userDetail",{"usuariodetalle" : usuarios[req.params.id],"id": req.params.id});
+        res.render("./usuarios/userDetail",{"usuariodetalle" : usuarios[req.params.id],"id": req.params.id});
     },
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
@@ -57,9 +59,17 @@ const controller = {
         
 	}
     
-        res.render("./partials/listaUsers",{"resultado" : resultado});
+        res.render("./usuarios/listaUsers",{"resultado" : resultado});
     
     },
+
+	login: (req,res)=> {
+		res.render("./usuarios/login");
+	},
+
+
 };
+
+
 
 module.exports = controller;

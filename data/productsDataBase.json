@@ -68,5 +68,15 @@
   "id": 8,
   "categoria": "seleccionados",
   "descripcion": ""
+ },
+ {
+  "nombre": "DH Book",
+  "precio": "22",
+  "descuento": "12",
+  "autor": "Juan Juan",
+  "img": "/images/id4.jpg",
+  "id": "12345",
+  "categoria": "lanzamientos",
+  "descripcion": ""
  }
 ]
