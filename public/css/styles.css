@@ -355,8 +355,8 @@ color: #0044AA;
 }
 
 .secctionGeneral_div{
-    display: block;
-    width: 100%;
+    display: flex;
+    width: auto;
     margin: 2%;
    
     
@@ -365,6 +365,9 @@ color: #0044AA;
 .secctionGeneral_div_bloque {
     margin: 2%;
     cursor: pointer;
+    width: auto;
+    
+    
 
 }
 
@@ -374,8 +377,9 @@ color: #0044AA;
 
 }
 .secctionGeneral img{
-    max-height: 100%;
-    max-width: 100%;
+    height: auto;
+    width: 50%;
+    display:flex;
 }
 
 div h3 {
@@ -385,32 +389,28 @@ div h3 {
 
 }
 
-.masvendidos{
-    display:block;
-   
-}
-
-.nuevoslanzamientos{
-    display:none;
-    
-}
-
-.login{
-    display:none;
-    
-}
-
-.register{
-    display:none;
-    
-}
-
-.seleccionados{
-    display:none;
-    
-}
 
 .secctionGeneral_bloque{
     display:flex;
+    flex-wrap:wrap;
 
 }
+
+.imagen {
+    height: auto;
+    width: 90%;
+    
+}
+
+.buy-now-button {
+    background-color: var(--light-blue);
+    font-size: 1.6em;
+    color: #220f46;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+  }

@@ -18,6 +18,8 @@
   "homepage": "https://github.com/pazBrigante/Grupo_7_BookHut#readme",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1"
   }
 }

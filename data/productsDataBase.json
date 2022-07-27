@@ -1,0 +1,114 @@
+[
+ {
+  "nombre": "Viajando en invierno!",
+  "autor": "Josep Lopez",
+  "precio": "U$S 65.50",
+  "img": "/images/id1.jpg",
+  "categoria": "lanzamientos",
+  "id": "1"
+ },
+ {
+  "nombre": "Juvenil",
+  "autor": "Elisa Perez",
+  "precio": "U$S 11",
+  "img": "/images/id9.jpg",
+  "categoria": "masVendidos",
+  "id": "9"
+ },
+ {
+  "nombre": "JUn regalo Para el alma",
+  "autor": "Cecilia Ahern",
+  "precio": "U$S 31",
+  "img": "/images/id7.jpg",
+  "categoria": "masVendidos",
+  "id": "10"
+ },
+ {
+  "nombre": "Nuevo libro",
+  "autor": "nuevo autor",
+  "precio": "U$S 31",
+  "img": "/images/id10.jpg",
+  "categoria": "masVendidos",
+  "id": 11
+ },
+ {
+  "nombre": "prueba",
+  "precio": "1234",
+  "descuento": "10",
+  "autor": "Juan",
+  "img": "/images/id2.jpg",
+  "categoria": "lanzamientos",
+  "descripcion": "fret",
+  "id": 12
+ },
+ {
+  "nombre": "Libro DH",
+  "precio": "1.23",
+  "descuento": "1",
+  "autor": "Alberto Alberto",
+  "img": "/images/id3.jpg",
+  "categoria": "seleccionados",
+  "descripcion": "",
+  "id": 17
+ },
+ {
+  "nombre": "DH Book",
+  "precio": "22",
+  "descuento": "12",
+  "autor": "Juan Juan",
+  "img": "/images/id4.jpg",
+  "id": "12345",
+  "categoria": "lanzamientos",
+  "descripcion": ""
+ },
+ {
+  "nombre": "prueba imagen",
+  "precio": "1234",
+  "descuento": "10",
+  "autor": "Juan",
+  "img": "/images/id5.jpg",
+  "id": "123",
+  "categoria": "seleccionados",
+  "descripcion": ""
+ },
+ {
+  "nombre": "prueba img2",
+  "precio": "1234",
+  "descuento": "10",
+  "autor": "222",
+  "id": "2212",
+  "categoria": "seleccionados",
+  "descripcion": "",
+  "img": "/images/1658929610664-id6.jpg"
+ },
+ {
+  "nombre": "prueba img3",
+  "precio": "1.23",
+  "descuento": "23",
+  "autor": "Juan Alberto",
+  "id": "3331",
+  "categoria": "seleccionados",
+  "descripcion": "ksnsdascja",
+  "img": "/images/1658944544551-id7.jpg"
+ },
+ {
+  "nombre": "Sarasa",
+  "precio": "12",
+  "descuento": "10",
+  "autor": "Jose Sarasa",
+  "id": "Jose ",
+  "categoria": "seleccionados",
+  "descripcion": "librazo lllllllllllllls\r\n\r\nçss",
+  "img": "/images/1658945010806-id8.jpg"
+ },
+ {
+  "nombre": "libro DH1",
+  "precio": "1.23",
+  "descuento": "10",
+  "autor": "Alberto Alberto",
+  "id": "333as",
+  "categoria": "lanzamientos",
+  "descripcion": "Libro buenisimo",
+  "img": "/images/1658963108637-id3.jpg"
+ }
+]

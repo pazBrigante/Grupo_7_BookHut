@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+	<!DOCTYPE html>
+	<html>
+	
+	<head>
+		
+		<%- include("../partials/head") %> 
+	</head>
+	
+	 
+	<body>
+	
+	
+		<header class="main-header">
+	
+			<%- include("../partials/header") %> 
+		   
+		</header>
+	
+
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Formulario de creación de productos</h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/products" method="post" enctype="multipart/form-data">
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="nombre" class="form-label">Nombre del producto:</label>
+						<input type="text" id="nombre" name="nombre" placeholder="Título del libro" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="precio" class="form-label">Precio del producto:</label>
+						<input type="text" id="precio" name="precio" placeholder="Ej: 5678" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="descuento" class="form-label">Descuento:</label>
+						<input type="text" id="descuento" name="descuento" placeholder="Ej: 15" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="autor" class="form-label">Autor:</label>
+						<input type="text" id="autor" name="autor" placeholder="Nombre del Autor" class="form-input">
+					</div>
+					
+					
+
+					<div class="col-12 col-md-6">
+						<label for="id" class="form-label">ID</label>
+						<input type="text" id="id" name="id" placeholder="id" class="form-input">
+					</div>
+					
+					<div class="col-12 col-md-6">
+						<label for="categoria" class="form-label">Categoría:</label>
+						<select name="categoria" id="categoria" class="form-input">
+							<option value="">Elegí</option>
+							<option value="lanzamientos">Nuevos Lanzamientos</option>
+							<option value="seleccionados">Seleccionadoss</option>
+							<option value="masVendidos">Mas Vendidos</option>
+						</select>
+					</div>
+					<div class="col-12">
+						<label for="descripcion" class="form-label">Descipción:</label>
+						<textarea name="descripcion" id="autor" class="form-input"></textarea>
+					</div>
+
+					<p>
+						<label for="product-img"></label>
+						<input type="file" name="product-img" id="product-img" placeholder="Subir imagen ">
+					  </p>
+
+
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Guardar producto</button>
+					</div>
+
+
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<footer class="main-footer">
+
+		<%- include("../partials/footer") %> 
+	</footer>
+	<!-- /footer -->
+</body>	
+</html>

@@ -1,0 +1,114 @@
+[
+ {
+  "usuario": "Alberto Rodriguez",
+  "email": "AR@ddd",
+  "nacimiento": "2000-06-29",
+  "domicilio": "000",
+  "pass": "123",
+  "passC": "123",
+  "id": 2
+ },
+ {
+  "usuario": "Juan Perez",
+  "email": "jp@ddd",
+  "nacimiento": "2022-06-29",
+  "domicilio": "111",
+  "pass": "123",
+  "passC": "123",
+  "id": 3
+ },
+ {
+  "usuario": "Pedro Gracia",
+  "email": "pg@ddd",
+  "nacimiento": "2022-06-29",
+  "domicilio": "aaa",
+  "pass": "123",
+  "passC": "123",
+  "id": 4
+ },
+ {
+  "usuario": "Cristian",
+  "email": "cris@hhh",
+  "nacimiento": "2022-07-27",
+  "domicilio": "www123",
+  "pass": "123",
+  "passC": "123",
+  "id": 61
+ },
+ {
+  "usuario": "Nacho",
+  "email": "nacho@ffff",
+  "nacimiento": "2022-07-06",
+  "domicilio": "Evergreen",
+  "pass": "888",
+  "passC": "888",
+  "id": 5
+ },
+ {
+  "usuario": "eeee",
+  "email": "eee@sss",
+  "nacimiento": "2022-06-29",
+  "domicilio": "",
+  "pass": "",
+  "passC": "",
+  "id": 6
+ },
+ {
+  "usuario": "aaa",
+  "email": "aaa@hhh",
+  "nacimiento": "2022-06-29",
+  "domicilio": "aaa",
+  "pass": "aa",
+  "passC": "aa",
+  "id": 7
+ },
+ {
+  "usuario": "sss",
+  "email": "lll@hhh",
+  "nacimiento": "2022-07-15",
+  "domicilio": "aaa",
+  "pass": "aaa",
+  "passC": "aaa",
+  "id": 8
+ },
+ {
+  "usuario": "prueba imagen",
+  "email": "sss@hhh",
+  "nacimiento": "2022-07-08",
+  "domicilio": "aaaaa123",
+  "pass": "222",
+  "passC": "222",
+  "id": 9,
+  "image": "CharlesBabbage.jpg"
+ },
+ {
+  "usuario": "aaa imagen",
+  "email": "aaa@hhh",
+  "nacimiento": "2022-07-20",
+  "domicilio": "aaaa",
+  "pass": "111",
+  "passC": "111",
+  "id": 10,
+  "image": "IMG_20190622_162736234 (2).jpg"
+ },
+ {
+  "usuario": "lea",
+  "email": "aaa@hhh",
+  "nacimiento": "2022-06-28",
+  "domicilio": "Evergreen",
+  "pass": "123",
+  "passC": "123",
+  "id": 11,
+  "image": "1658944483690-IMG_20190622_162736234 (2).jpg"
+ },
+ {
+  "usuario": "Sergio",
+  "email": "aaa@hhh",
+  "nacimiento": "2022-07-01",
+  "domicilio": "Evergreen",
+  "pass": "123",
+  "passC": "123",
+  "id": 12,
+  "image": "1658963202268-Ada_Lovelace_Chalon.jpg"
+ }
+]
