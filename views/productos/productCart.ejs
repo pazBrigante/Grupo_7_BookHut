@@ -25,11 +25,14 @@
                
                     <img class="imagen" src="<%= catalogodetalle.img %>" alt="Product Image" >
                     
-                    <p class="ps-text-grey">
-                        <%= catalogodetalle.nombre %> 
+                    Título: <%= catalogodetalle.nombre %> 
                         <br />
-                    <%= catalogodetalle.autor %> 
-                    <%= catalogodetalle.precio %>
+                    Autor: <%= catalogodetalle.autor %> 
+                    <br />
+                    Precio: <%= catalogodetalle.precio %>
+                    <br />
+                    Descripción: <%= catalogodetalle.descripcion%>
+                    <br />
                     <br />
                     <a href="/products/carrito/<%=id%>">  <%= catalogodetalle.nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
                

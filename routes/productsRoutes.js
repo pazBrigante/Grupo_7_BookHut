@@ -38,8 +38,8 @@ router.post('/', upload.single("product-img"),productsController.store);
 // router.???('/:id/', productsController.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
-// router.???('/:id/???', productsController.edit); 
-// router.???('/:id', productsController.update); 
+router.get("/edit/:id", productsController.edit); 
+router.put("/update/:id", productsController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 

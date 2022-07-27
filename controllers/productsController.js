@@ -34,11 +34,35 @@ const controller = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		// Do the magic
+		let id_a_editar = req.params.id;
+		let productEdit = catalogo.find(item => item.id == id_a_editar);
+		console.log({productEdit});
+		res.render("./productos/product-edit-form.ejs",{productEdit});
 	},
+
+	
 	// Update - Method to update
 	update: (req, res) => {
-		// Do the magic
+		let id_a_editar = req.params.id;
+		let productEdit=req.body;
+		let product = catalogo.find(item => item.id == id_a_editar);
+		console.log({productEdit});
+		if (req.file) {
+			product.img = req.file.filename;
+
+		} 
+
+		
+		product.nombre = productEdit.nombre;
+		product.autor = productEdit.autor;
+		product.precio = productEdit.precio;
+	
+		product.categoria = productEdit.categoria;
+		product.id = productEdit.id;
+		fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
+
+
+		res.redirect("/");
 	},
 
 	// Delete - Delete one product from DB
