@@ -82,13 +82,13 @@
   "image": "CharlesBabbage.jpg"
  },
  {
-  "usuario": "prueba Imag 2",
-  "email": "aaa@fff",
-  "nacimiento": "2022-06-30",
-  "domicilio": "222",
-  "pass": "222",
-  "passC": "",
+  "usuario": "aaa imagen",
+  "email": "aaa@hhh",
+  "nacimiento": "2022-07-20",
+  "domicilio": "aaaa",
+  "pass": "111",
+  "passC": "111",
   "id": 10,
-  "image": "Alan_Turing.jpg"
+  "image": "IMG_20190622_162736234 (2).jpg"
  }
 ]

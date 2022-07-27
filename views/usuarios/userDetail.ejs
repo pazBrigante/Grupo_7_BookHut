@@ -36,12 +36,16 @@
                     <br />
                     Nacimiento: <%= usuariodetalle.nacimiento %>
                     <br />
+                    id: <%= usuariodetalle.id %>
                     <br />
 
                     <img class="imagen" src="/images/users/<%= usuariodetalle.image %>" alt="user Avatar" >
                     
                     <br />
                     <br />
+                    <form action="/users/eliminar/<%= usuariodetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
                     <br />
                     
                     <br />

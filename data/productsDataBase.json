@@ -8,14 +8,6 @@
   "id": "1"
  },
  {
-  "nombre": "Orgullo y prejuicio",
-  "autor": "Jane Austen",
-  "precio": "U$S 47",
-  "img": "/images/id7.jpg",
-  "categoria": "lanzamientos",
-  "id": "7"
- },
- {
   "nombre": "Juvenil",
   "autor": "Elisa Perez",
   "precio": "U$S 11",
@@ -60,16 +52,6 @@
   "id": 17
  },
  {
-  "nombre": "prueba",
-  "precio": "1234",
-  "descuento": "12",
-  "autor": "Jose pedro",
-  "img": "/images/id5.jpg",
-  "id": 8,
-  "categoria": "seleccionados",
-  "descripcion": ""
- },
- {
   "nombre": "DH Book",
   "precio": "22",
   "descuento": "12",
@@ -78,5 +60,25 @@
   "id": "12345",
   "categoria": "lanzamientos",
   "descripcion": ""
+ },
+ {
+  "nombre": "prueba imagen",
+  "precio": "1234",
+  "descuento": "10",
+  "autor": "Juan",
+  "img": "/images/id5.jpg",
+  "id": "123",
+  "categoria": "seleccionados",
+  "descripcion": ""
+ },
+ {
+  "nombre": "prueba img2",
+  "precio": "1234",
+  "descuento": "10",
+  "autor": "222",
+  "id": "2212",
+  "categoria": "seleccionados",
+  "descripcion": "",
+  "img": "/images/1658929610664-id6.jpg"
  }
 ]

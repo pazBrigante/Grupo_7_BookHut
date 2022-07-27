@@ -23,7 +23,7 @@
     <br />
     
     <div class="secctionGeneral_div_bloque">
-                    <img class="imagen" src=<%= catalogodetalle.img %> >
+                    <img class="imagen" src="<%= catalogodetalle.img %>" alt="Product Image" >
                     
                     <br />
                     <br />
@@ -37,6 +37,9 @@
                   
                     <br />
                     <br />
+                    <form action="/products/eliminar/<%= catalogodetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
            
           
                 </div>    

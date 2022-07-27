@@ -8,7 +8,7 @@
         cb(null,"public/images/users")
             },
         filename: function(req,file,cb){
-           cb(null, file.originalname) 
+           cb(null, Date.now() + '-' +file.originalname) 
 
 
             }
@@ -40,7 +40,7 @@ router.post('/', upload.single("avatar-img"),usersController.create);
 //router.get('/eliminar/:id', productsController.destroy); 
 
 router.get('/list',usersController.list);
-router.get('/eliminar/:id', usersController.destroy); 
+router.delete('/eliminar/:id', usersController.destroy); 
 router.get('/detalle/:id',usersController.detalle);
 router.get("/login",usersController.login);
 
