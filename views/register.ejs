@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  <title>Formulario de registro</title>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles_Register.css">
+  <script src="https://kit.fontawesome.com/d7986910c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body_Register">
+  <header class="main-header">
+    
+    <%- include("./partials/header") %> 
+    
+    
+  </header>
+  <div class="login_Register">
+    <div class="Login">
+
+      <form action="register.html" method="POST">
+        <p class="login_Register_text">CREÁ TU CUENTA Y COMPRÁ DESDE DONDE ESTÉS</p>
+
+        
+        <p>
+          <label for="usuario"></label>
+          <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+        </p>
+        <p>
+          <label for="nombre"></label>
+          <input type="email" name="e-mail" id="e-mail" placeholder="Correo electrónico">
+        </p>
+
+        <p>
+          <label for="nacimiento">
+            <p>Fecha de nacimiento:</p>
+          </label>
+          <input type="date" name="nacimiento" id="date">
+        </p>
+        <p>
+          <label for="domicilio"></label>
+          <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+        </p>
+
+        <p>
+          <label for="pass"></label>
+          <input type="password" name="pass" id="pass" placeholder="Contraseña">
+        </p>
+
+        <p>
+          <label for="passC"></label>
+          <input type="password" name="passC" id="passC" placeholder="Repetir contraseña">
+        </p>
+        <p class="button_registro">
+          <button type="submit" class="button_registro_"> Enviar </button>
+          <button type="reset" class="button_registro_"> Cancelar </button>
+        </p>
+
+      </form>
+    </div>
+
+    <div class=" Register">
+
+            <form action="register.html" method="POST">
+              <p class="login_Register_text">¿TENÉS UNA CUENTA?</p>
+
+              <p>
+                <label for="usuario"></label>
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+              </p>
+              <p>
+                <label for="pass"></label>
+                <input type="password" name="pass" id="pass" placeholder="Contraseña">
+              </p>
+
+              <button type="submit" class="button_ingresar"> Ingresar </button>
+
+            </form>
+    </div>
+  </div>
+  <footer class="main-footer">
+
+    <%- include("./partials/footer") %> 
+  </footer>
+</body>
+
+</html>

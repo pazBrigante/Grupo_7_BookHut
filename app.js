@@ -31,5 +31,3 @@ app.use((req,res,next) => {
 
 });
 
-app.get("/login",productosController.registro);
-

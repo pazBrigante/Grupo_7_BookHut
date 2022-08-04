@@ -1,6 +1,7 @@
 Retrospectiva del Grupo 7
 
 Comenzar a hacer.
+-Tener una reunion diaria breve
 
 Deberiamos organizarnos mejor como grupo. 
 
