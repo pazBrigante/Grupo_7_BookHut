@@ -14,7 +14,7 @@ const controller = {
 	
 	register: (req, res) => {
 		console.log("Por GET");
-	res.render('../views/usuarios/register');
+	res.render('../views/usuarios/register',{"usuarioActual":req.session.usuarioLogueado});
 	
 	},
 	
@@ -47,7 +47,7 @@ const controller = {
 			}
 	},
 	detalle: (req,res)=> {
-        res.render("./usuarios/userDetail",{"usuariodetalle" : usuarios[req.params.id],"id": req.params.id});
+        res.render("./usuarios/userDetail",{"usuariodetalle" : usuarios[req.params.id],"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
     },
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
@@ -60,7 +60,7 @@ const controller = {
 			}
 		}
 		fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '));
-		res.redirect('/users/list')
+		res.redirect('/users/list',{usuarioActual:req.session.usuarioLogueado})
 		
 	},
 
@@ -80,7 +80,7 @@ const controller = {
         
 	}
     
-        res.render("./usuarios/listaUsers",{"resultado" : resultado});
+        res.render("./usuarios/listaUsers",{"resultado" : resultado,"usuarioActual":req.session.usuarioLogueado});
     
     },
 

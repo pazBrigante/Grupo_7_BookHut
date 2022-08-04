@@ -42,7 +42,8 @@
   "domicilio": "Evergreen",
   "pass": "8888",
   "passC": "888",
-  "id": 5
+  "id": 5,
+  "group": "admin"
  },
  {
   "usuario": "eeee",
@@ -120,5 +121,16 @@
   "passC": "1234",
   "id": 13,
   "image": "1659573783286-Alan_Turing.jpg"
+ },
+ {
+  "usuario": "ssseee",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-23",
+  "domicilio": "",
+  "pass": "1234",
+  "passC": "1234",
+  "group": "admin",
+  "id": 14,
+  "image": "1659619929344-CharlesBabbage.jpg"
  }
 ]

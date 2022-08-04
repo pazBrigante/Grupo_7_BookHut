@@ -40,10 +40,21 @@
                   
                     <br />
                     <br />
-                    <form action="/products/eliminar/<%= catalogodetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
-                    </form>
-           
+                    <% if (locals.usuarioActual) {%>
+                        <% if (locals.usuarioActual.group=="admin") { %>
+                            
+                          
+                            <form action="/products/eliminar/<%= catalogodetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button type="submit" class="action-button delete">ELIMINAR</button>
+                            </form> 
+                    
+                    
+                    
+                    
+                    <%}%>
+                <%}%>
+                    
+                    
           
                 </div>    
      

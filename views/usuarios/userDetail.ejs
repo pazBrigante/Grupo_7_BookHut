@@ -43,11 +43,20 @@
                     
                     <br />
                     <br />
+                    <% if (locals.usuarioActual) {%>
+                        <% if (locals.usuarioActual.group=="admin") { %>
+                            
+                          
+                        
+                    
+                    
                     <form action="/users/eliminar/<%= usuariodetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                         <button type="submit" class="action-button delete">ELIMINAR</button>
                     </form>
-                    <br />
                     
+                    <%}%>
+                <%}%>
+                <br />
                     <br />
                     <br />
            
