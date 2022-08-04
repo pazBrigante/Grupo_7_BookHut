@@ -53,7 +53,10 @@ const controlador = {
         res.render("./partials/masvendidos",{"resultadomv" : resultadomv, "ordenmv" :ordenmv});
     },
     seleccionados: (req,res)=> {
+        if (!req.session.usuarioLogueado){
+            req.session.usuarioLogueado={usuario:"guest"};
 
+        }
 
         let resultadose =[];
         let ordense=[];

@@ -43,22 +43,27 @@ const controller = {
 	
 	// Update - Method to update
 	update: (req, res) => {
-		let id_a_editar = req.params.id;
-		let productEdit=req.body;
-		let product = catalogo.find(item => item.id == id_a_editar);
-		console.log({productEdit});
-		if (req.file) {
-			product.img = req.file.filename;
+		let id_a_editaru = req.params.id;
+		let productEditu=req.body;
+		let productu = catalogo.find(item => item.id == id_a_editaru);
+		console.log(req.file);
+		if (req.file!=null) {
+			productu.img = req.file.filename; 
 
-		} 
+		} else {
+			productu.img = productEditu.img; 
+
+		}
 
 		
-		product.nombre = productEdit.nombre;
-		product.autor = productEdit.autor;
-		product.precio = productEdit.precio;
-	
-		product.categoria = productEdit.categoria;
-		product.id = productEdit.id;
+		productu.nombre = productEditu.nombre;
+		productu.autor = productEditu.autor;
+		productu.precio = productEditu.precio;
+		productu.descuento = productEditu.descuento;
+		productu.descripcion = productEditu.descripcion;
+		productu.categoria = productEditu.categoria;
+		productu.id = productEditu.id;
+		console.log({productu});
 		fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
 
 

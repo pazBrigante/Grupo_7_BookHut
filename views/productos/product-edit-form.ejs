@@ -17,33 +17,41 @@
 			<%- include("../partials/header") %> 
 		   
 		</header>
+	
 
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Estás editando: <i><%= productEdit.nombre %></i></h2>
-			</div>
-		</div>
-		<div class="col-12">
-			
-			<form action="/products/update/<%= productEdit.id %>?_method=PUT" method="POST">
+			<form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data>
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
-						<label for="nombre" class="form-label">Título:</label>
-						<input type="text" id="nombre" name="nombre" placeholder="Ej: El Principito" value="<%= productEdit.nombre %>" class="form-input">
+						<label for="nombre" class="form-label">Nombre del producto:</label>
+						<input type="text" id="nombre" name="nombre" placeholder="Título" value="<%= productEdit.nombre %>" class="form-input">
 					</div>
+					
+					<div class="col-12 col-md-6">
+						<label for="autor" class="form-label">Descuento:</label>
+						<input type="text" id="autor" name="autor" placeholder="Ej: 15" value="<%= productEdit.autor %>" class="form-input">
+					</div>
+
 					<div class="col-12 col-md-6">
 						<label for="precio" class="form-label">Precio del producto:</label>
-						<input type="text" id="precio" name="precio" placeholder="Ej: 5678" value="<%= productEdit.precio %>"class="form-input">
+						<input type="text" id="precio" name="precio" placeholder="Ej: 5678" value="<%= productEdit.precio %>" class="form-input">
 					</div>
+										
+
 					<div class="col-12 col-md-6">
 						<label for="descuento" class="form-label">Descuento:</label>
-						<input type="text" id="descuento" name="descuento" placeholder="Ej: 15" value="<%= productEdit.descuento%>" class="form-input">
+						<input type="text" id="descuento" name="descuento" placeholder="Ej: 15" value="<%= productEdit.descuento %>" class="form-input">
 					</div>
+
+					<div class="col-12 col-md-6">
+						<label for="id" class="form-label">Descuento:</label>
+						<input type="text" id="id" name="id" placeholder="Ej: 15" value="<%= productEdit.id %>" class="form-input">
+					</div>
+
+					
 					<div class="col-12 col-md-6">
 						<label for="categoria" class="form-label">Categoría:</label>
-						<select name="categoria" id="categoria" value="<%= productEdit.categoria %>" class="form-input">
-							<option value="<%= productEdit.categoria %>">Elegí</option>
+						<select name="categoria" id="categoria"  class="form-input">
+							<option value="<%= productEdit.categoria %>"><%= productEdit.categoria %></option>
 							<option value="lanzamientos">Nuevos Lanzamientos</option>
 							<option value="seleccionados">Seleccionadoss</option>
 							<option value="masVendidos">Mas Vendidos</option>
@@ -53,10 +61,22 @@
 						<label for="descripcion" class="form-label">Descipción:</label>
 						<textarea name="descripcion" id="descripcion" class="form-input"><%= productEdit.descripcion %></textarea>
 					</div>
-					<p>
+
+					<div>
 						<label for="product-img"></label>
-						<input type="file" name="product-img" id="product-img" placeholder="Subir imagen ">
-					  </p>
+						<input type="file" name="product-img" id="product-img" value="<%= productEdit.img%>">
+						
+					</div>
+					<br />
+					<div>
+						
+					Imagen Actual : <%= productEdit.img%>
+					<br />
+					<img class="imagen" src="<%= productEdit.img %>" alt="Product Image" style="width:20%">
+					</div>
+
+
+
 					<div class="col-12">
 						<button type="submit" class="buy-now-button">Guardar producto</button>
 					</div>
@@ -67,11 +87,9 @@
 	</div>
 	<!-- /todos los productos -->
 
-	<!-- footer -->
 	<footer class="main-footer">
 
 		<%- include("../partials/footer") %> 
 	</footer>
-	<!-- /footer -->
 </body>	
 </html>
