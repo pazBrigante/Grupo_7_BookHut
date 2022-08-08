@@ -29,7 +29,12 @@ router.get('/register', usersController.register);
 router.post('/', upload.single("avatar-img"),[
     check("usuario").isLength({min:4}).withMessage("Usuario Mínimo 4 Caracteres"),
     check("pass").isLength({min:4}).withMessage("Password Mínimo 4 Caracteres"),
-    check("passC").isLength({min:4}).withMessage("Password Mínimo 4 Caracteres"),
+    check("passC").custom(async (passC, {req}) => {
+        const password = req.body.pass;
+        if(password !== passC){
+            throw new Error('Las Contraseñas deben ser iguales')
+        }
+    }),
     check("email").isEmail().withMessage("Debe ser Email"),
     check("nacimiento").isDate().withMessage("Debe ser Fecha"),
     

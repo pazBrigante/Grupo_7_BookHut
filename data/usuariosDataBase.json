@@ -1,136 +1,57 @@
 [
  {
-  "usuario": "Alberto Rodriguez",
-  "email": "AR@ddd",
-  "nacimiento": "2000-06-29",
-  "domicilio": "000",
-  "pass": "123",
-  "passC": "123",
-  "id": 2
+  "usuario": "pedro",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-10",
+  "domicilio": "aaaa",
+  "pass": "$2a$10$hRuXHHktGJQC3IVU2rYpVetHEC6aazYsTvKUMWOKEu3QwjZBbCmsu",
+  "passC": "1234",
+  "group": "usuario",
+  "id": 16,
+  "image": "1659980946110-CharlesBabbage.jpg"
  },
  {
-  "usuario": "Juan Perez",
-  "email": "jp@ddd",
-  "nacimiento": "2022-06-29",
-  "domicilio": "111",
-  "pass": "123",
-  "passC": "123",
-  "id": 3
- },
- {
-  "usuario": "Pedro Gracia",
-  "email": "pg@ddd",
-  "nacimiento": "2022-06-29",
-  "domicilio": "aaa",
-  "pass": "123",
-  "passC": "123",
-  "id": 4
- },
- {
-  "usuario": "Cristian",
-  "email": "cris@hhh",
-  "nacimiento": "2022-07-27",
-  "domicilio": "www123",
-  "pass": "1234",
-  "passC": "123",
-  "id": 61
- },
- {
-  "usuario": "Nacho",
-  "email": "nacho@ffff",
-  "nacimiento": "2022-07-06",
-  "domicilio": "Evergreen",
-  "pass": "8888",
-  "passC": "888",
-  "id": 5,
+  "usuario": "lean",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-10",
+  "domicilio": "aaaa",
+  "pass": "$2a$10$hRuXHHktGJQC3IVU2rYpVetHEC6aazYsTvKUMWOKEu3QwjZBbCmsu",
+  "passC": "1234",
+  "id": 15,
+  "image": "1659980946110-CharlesBabbage.jpg",
   "group": "admin"
  },
  {
-  "usuario": "eeee",
-  "email": "eee@sss",
-  "nacimiento": "2022-06-29",
+  "usuario": "Cristian",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-10",
   "domicilio": "",
-  "pass": "",
+  "pass": "$2a$10$bvrHMqglDAIYYrm7pfdKue/FIy5maKzp576YabXReVOTKiz8J2aMC",
+  "passC": "1234",
+  "group": "usuario",
+  "id": 3,
+  "image": "1659983832383-Alan_Turing.jpg"
+ },
+ {
+  "usuario": "Nacho",
+  "email": "Lscquizzato@gmail.com",
+  "nacimiento": "2022-08-17",
+  "domicilio": "",
+  "pass": "$2a$10$G.ZK7SqE8iktZc6fXWKEw.ZiFERzp6n8REgXi3kI3keHH25KvYTEC",
   "passC": "",
-  "id": 6
+  "id": 4,
+  "image": "1659983956612-Alan_Turing.jpg",
+  "group": "admin"
  },
  {
-  "usuario": "aaa@hhh",
-  "email": "aaa@hhh",
-  "nacimiento": "2022-06-29",
-  "domicilio": "aaa",
-  "pass": "aaaa",
-  "passC": "aa",
-  "id": 7
- },
- {
-  "usuario": "lll@hhh.com",
-  "email": "lll@hhh",
-  "nacimiento": "2022-07-15",
-  "domicilio": "aaaa",
-  "pass": "aaaa",
-  "passC": "aaa",
-  "id": 8
- },
- {
-  "usuario": "prueba imagen",
-  "email": "sss@hhh",
-  "nacimiento": "2022-07-08",
-  "domicilio": "aaaaa123",
-  "pass": "222",
-  "passC": "222",
-  "id": 9,
-  "image": "CharlesBabbage.jpg"
- },
- {
-  "usuario": "aaa imagen",
-  "email": "aaa@hhh",
-  "nacimiento": "2022-07-20",
-  "domicilio": "aaaa",
-  "pass": "111",
-  "passC": "111",
-  "id": 10,
-  "image": "IMG_20190622_162736234 (2).jpg"
- },
- {
-  "usuario": "lea",
-  "email": "aaa@hhh",
-  "nacimiento": "2022-06-28",
-  "domicilio": "Evergreen",
-  "pass": "123",
-  "passC": "123",
-  "id": 11,
-  "image": "1658944483690-IMG_20190622_162736234 (2).jpg"
- },
- {
-  "usuario": "Sergio",
-  "email": "aaa@hhh",
-  "nacimiento": "2022-07-01",
-  "domicilio": "Evergreen",
-  "pass": "123",
-  "passC": "123",
-  "id": 12,
-  "image": "1658963202268-Ada_Lovelace_Chalon.jpg"
- },
- {
-  "usuario": "Prueba User",
+  "usuario": "alber",
   "email": "as555@sssss.com",
-  "nacimiento": "2022-08-02",
+  "nacimiento": "2022-08-03",
   "domicilio": "",
-  "pass": "1234",
-  "passC": "1234",
-  "id": 13,
-  "image": "1659573783286-Alan_Turing.jpg"
- },
- {
-  "usuario": "ssseee",
-  "email": "as555@sssss.com",
-  "nacimiento": "2022-08-23",
-  "domicilio": "",
-  "pass": "1234",
-  "passC": "1234",
-  "group": "admin",
-  "id": 14,
-  "image": "1659619929344-CharlesBabbage.jpg"
+  "pass": "$2a$10$wtRGmfEAIs.z9L906qjQMelbQtklUbrUPx2jfttODBBSgMqG/upfe",
+  "passC": "",
+  "group": "usuario",
+  "id": 5,
+  "image": "1659984258945-Alan_Turing.jpg"
  }
 ]

@@ -8,7 +8,7 @@ const catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controlador = {
     index: function (req, res){
        
-        res.render("./partials/seleccionados",{"catalogo" : catalogo});
+        res.render("./partials/seleccionados",{"catalogo" : catalogo,"usuarioActual":req.session.usuarioLogueado});
        
     },
 

@@ -5,7 +5,7 @@ const usersFilePath = path.join(__dirname, '../data/usuariosDataBase.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const {validationResult} = require ("express-validator");
 const session = require('express-session');
-
+const bcrypt = require("bcryptjs");
 
 
 
@@ -26,7 +26,9 @@ const controller = {
 		if (errors.isEmpty()){
 		const nuevoUsuario = req.body;
 		nuevoUsuario.id=usuarios.length + 1;
-			if (req.file) {
+		nuevoUsuario.pass=bcrypt.hashSync( nuevoUsuario.pass,10);
+		nuevoUsuario.passC="";
+		if (req.file) {
 				nuevoUsuario.image = req.file.filename;
 		
 				} else {
@@ -60,7 +62,8 @@ const controller = {
 			}
 		}
 		fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '));
-		res.redirect('/users/list',{usuarioActual:req.session.usuarioLogueado})
+		console.log("Usuario Borrado");
+		res.redirect("/");
 		
 	},
 
@@ -101,7 +104,7 @@ const controller = {
 			for(let i =0; i < usuarios.length; i++) {
 				if (usuarios[i].usuario==req.body.usuario) {
 					
-						if (usuarios[i].pass==req.body.pass){
+						if (bcrypt.compareSync(req.body.pass,usuarios[i].pass)){
 							usuarioALoguearse = usuarios[i];
 							
 							flag=1;
