@@ -11,7 +11,22 @@
 
   <div class="login_Register">
     <div class="Login">
+      <br />
+      <% if (typeof errors != "undefined" ) {%>
+        <p style="color:red" > ERROR </p>
+        <ul>
+          <% for (let i =0; i < errors.length; i++) {%>
+            <li>
+              <%= errors[i].msg %>
 
+            </li>
+
+            <%}%>
+            <br />
+        </ul>
+
+
+        <%}%>
       <form action="/users" method="POST" enctype="multipart/form-data">
         <p class="login_Register_text">CREÁ TU CUENTA Y COMPRÁ DESDE DONDE ESTÉS</p>
 
@@ -49,9 +64,25 @@
 
         <p>
           <label for="avatar-img"></label>
-          <input type="file" name="avatar-img" id="avatar-img" placeholder="Subir imagen ">
+          <input type="file" name="avatar-img" id="avatar-img"  placeholder="Subir imagen ">
         </p>
 
+        <% if (locals.usuarioActual) {%>
+          <% if (locals.usuarioActual.group=="admin") { %>
+              
+            <div class="col-12 col-md-6">
+              <label for="group" class="form-label">Categoría:</label>
+              <select name="group" id="group" class="form-input">
+                <option value="usuario">Usuario</option>
+                <option value="admin">admin</option>
+                <option value="supervisor">Supervisor</option>
+                <option value="guest">invitado</option>
+              </select>
+            </div>
+          
+      
+      <%}%>
+  <%}%>
         
         <p class="button_registro">
           <button type="submit" class="button_registro_"> Enviar </button>

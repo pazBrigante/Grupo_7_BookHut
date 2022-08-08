@@ -30,7 +30,7 @@ const controlador = {
     
             
             };
-        res.render("./partials/nuevoslanzamientos",{"resultadola" : resultadola, "ordenla" :ordenla});
+        res.render("./partials/nuevoslanzamientos",{"resultadola" : resultadola, "ordenla" :ordenla,"usuarioActual":req.session.usuarioLogueado});
     },
     masVendidos: (req,res)=> {
         
@@ -50,10 +50,13 @@ const controlador = {
             
             };
 
-        res.render("./partials/masvendidos",{"resultadomv" : resultadomv, "ordenmv" :ordenmv});
+        res.render("./partials/masvendidos",{"resultadomv" : resultadomv, "ordenmv" :ordenmv,"usuarioActual":req.session.usuarioLogueado});
     },
     seleccionados: (req,res)=> {
+        if (!req.session.usuarioLogueado){
+            req.session.usuarioLogueado={usuario:"guest"};
 
+        }
 
         let resultadose =[];
         let ordense=[];
@@ -70,7 +73,7 @@ const controlador = {
     
             
             };
-        res.render("./partials/seleccionados",{"resultadose" : resultadose, "ordense" :ordense});
+        res.render("./partials/seleccionados",{"resultadose" : resultadose, "ordense" :ordense,"usuarioActual":req.session.usuarioLogueado});
     },
 
     

@@ -1,4 +1,6 @@
 
+<!-- Bootstrap Grid Stylesheet -->
+<link rel="stylesheet" href="/css/bootstrap-grid.min.css">
 
 
 
@@ -11,7 +13,7 @@
     </ul>
     <ul class="right-header-navbar">
         <li class="user"> <a href="#"> <i class="fa-solid fa-user"></i> </a> </li>
-        
+        <li class="link"> <a href="/users/login"> Usuario Actual :  <% if (usuarioActual) { %> <%= usuarioActual.usuario %><% } %> / </a> </li>
         
         <li class="link"> <a href="/users/login"> Iniciar Sesión </a></li>
         <li class="link"> <a href="/users/register"> / Crear Cuenta </a></li>
@@ -37,13 +39,22 @@
         <li class="link"> <a href="/lanzamientos"> Nuevos Lanzamientos </a></li>
         <li class="link"> <a href="/seleccionados"> Seleccionados para vos </a></li>
         <li class="link"> <a href="/masVendidos"> Mas vendidos </a></li>
+        
+        <% if (locals.usuarioActual) {%>
+            <% if (locals.usuarioActual.group=="admin") { %>
+                 
+            
+        <ul>
+              
+                
         <li class="link"> <a href="/users/list"> (-Lista de Usuarios-) </a></li>
         <li class="link"> <a href="/products/list"> (-Lista de Productos-) </a></li>
         <li class="link"> <a href="/products/create"> (-Crear Productos-) </a></li>
     
     
     </ul>
-
+        <%}%>
+    <%}%>
     <ul class="right-navbar">
         <li> <a href="#"> AR$ </a> </li>
         <li> <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a> </li>

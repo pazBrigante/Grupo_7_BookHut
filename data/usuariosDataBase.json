@@ -31,7 +31,7 @@
   "email": "cris@hhh",
   "nacimiento": "2022-07-27",
   "domicilio": "www123",
-  "pass": "123",
+  "pass": "1234",
   "passC": "123",
   "id": 61
  },
@@ -40,9 +40,10 @@
   "email": "nacho@ffff",
   "nacimiento": "2022-07-06",
   "domicilio": "Evergreen",
-  "pass": "888",
+  "pass": "8888",
   "passC": "888",
-  "id": 5
+  "id": 5,
+  "group": "admin"
  },
  {
   "usuario": "eeee",
@@ -54,20 +55,20 @@
   "id": 6
  },
  {
-  "usuario": "aaa",
+  "usuario": "aaa@hhh",
   "email": "aaa@hhh",
   "nacimiento": "2022-06-29",
   "domicilio": "aaa",
-  "pass": "aa",
+  "pass": "aaaa",
   "passC": "aa",
   "id": 7
  },
  {
-  "usuario": "sss",
+  "usuario": "lll@hhh.com",
   "email": "lll@hhh",
   "nacimiento": "2022-07-15",
-  "domicilio": "aaa",
-  "pass": "aaa",
+  "domicilio": "aaaa",
+  "pass": "aaaa",
   "passC": "aaa",
   "id": 8
  },
@@ -110,5 +111,26 @@
   "passC": "123",
   "id": 12,
   "image": "1658963202268-Ada_Lovelace_Chalon.jpg"
+ },
+ {
+  "usuario": "Prueba User",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-02",
+  "domicilio": "",
+  "pass": "1234",
+  "passC": "1234",
+  "id": 13,
+  "image": "1659573783286-Alan_Turing.jpg"
+ },
+ {
+  "usuario": "ssseee",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-23",
+  "domicilio": "",
+  "pass": "1234",
+  "passC": "1234",
+  "group": "admin",
+  "id": 14,
+  "image": "1659619929344-CharlesBabbage.jpg"
  }
 ]

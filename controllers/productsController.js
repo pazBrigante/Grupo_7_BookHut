@@ -19,7 +19,7 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 		
-	res.render('../views/productos/product-create-form');
+	res.render('../views/productos/product-create-form',{"usuarioActual":req.session.usuarioLogueado});
 	
 	},
 	
@@ -37,28 +37,33 @@ const controller = {
 		let id_a_editar = req.params.id;
 		let productEdit = catalogo.find(item => item.id == id_a_editar);
 		console.log({productEdit});
-		res.render("./productos/product-edit-form.ejs",{productEdit});
+		res.render("./productos/product-edit-form.ejs",{productEdit,"usuarioActual":req.session.usuarioLogueado});
 	},
 
 	
 	// Update - Method to update
 	update: (req, res) => {
-		let id_a_editar = req.params.id;
-		let productEdit=req.body;
-		let product = catalogo.find(item => item.id == id_a_editar);
-		console.log({productEdit});
-		if (req.file) {
-			product.img = req.file.filename;
+		let id_a_editaru = req.params.id;
+		let productEditu=req.body;
+		let productu = catalogo.find(item => item.id == id_a_editaru);
+		console.log(req.file);
+		if (req.file!=null) {
+			productu.img = req.file.filename; 
 
-		} 
+		} else {
+			productu.img = productEditu.img; 
+
+		}
 
 		
-		product.nombre = productEdit.nombre;
-		product.autor = productEdit.autor;
-		product.precio = productEdit.precio;
-	
-		product.categoria = productEdit.categoria;
-		product.id = productEdit.id;
+		productu.nombre = productEditu.nombre;
+		productu.autor = productEditu.autor;
+		productu.precio = productEditu.precio;
+		productu.descuento = productEditu.descuento;
+		productu.descripcion = productEditu.descripcion;
+		productu.categoria = productEditu.categoria;
+		productu.id = productEditu.id;
+		console.log({productu});
 		fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
 
 
@@ -76,16 +81,16 @@ const controller = {
 			}
 		}
 		fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
-		res.redirect('/products/list')
+		res.redirect('/products/list',{"usuarioActual":req.session.usuarioLogueado})
 		
 	},
 
 	detalle: (req,res)=> {
-        res.render("./productos/productDetail",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
+        res.render("./productos/productDetail",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
     },
 
     carrito: (req,res)=> {
-        res.render("./productos/productCart",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id});
+        res.render("./productos/productCart",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
     },
 
     search: (req,res)=> {
@@ -105,7 +110,7 @@ const controller = {
         }
 	}
     
-        res.render("./productos/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id});
+        res.render("./productos/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
     
     },
 
@@ -123,7 +128,7 @@ const controller = {
         
 	}
     
-        res.render("./productos/listaProducts",{"resultado" : resultado});
+        res.render("./productos/listaProducts",{"resultado" : resultado,"usuarioActual":req.session.usuarioLogueado});
     
     },
 };

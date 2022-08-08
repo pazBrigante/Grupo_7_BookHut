@@ -1,6 +1,7 @@
  //************ Require's ************
  const express = require('express');
  const router = express.Router();
+ const {check} = require ("express-validator");
  const multer= require('multer');
     var storage=multer.diskStorage( {
 
@@ -25,7 +26,14 @@ const usersController = require('../controllers/usersController');
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/register', usersController.register);
-router.post('/', upload.single("avatar-img"),usersController.create);  
+router.post('/', upload.single("avatar-img"),[
+    check("usuario").isLength({min:4}).withMessage("Usuario Mínimo 4 Caracteres"),
+    check("pass").isLength({min:4}).withMessage("Password Mínimo 4 Caracteres"),
+    check("passC").isLength({min:4}).withMessage("Password Mínimo 4 Caracteres"),
+    check("email").isEmail().withMessage("Debe ser Email"),
+    check("nacimiento").isDate().withMessage("Debe ser Fecha"),
+    
+]  ,usersController.create);  
 
 
 /*** GET ONE PRODUCT ***/ 
@@ -43,5 +51,13 @@ router.get('/list',usersController.list);
 router.delete('/eliminar/:id', usersController.destroy); 
 router.get('/detalle/:id',usersController.detalle);
 router.get("/login",usersController.login);
+router.post("/login",[
+    check("usuario").isLength({min:4}).withMessage("Usuario Mínimo 4 Caracteres"),
+    check("pass").isLength({min:4}).withMessage("Password Mínimo 4 Caracteres")
+],
+    
+    usersController.processLogin);
+    router.get("/register",usersController.register
+    );
 
  module.exports = router;

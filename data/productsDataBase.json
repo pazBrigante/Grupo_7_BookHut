@@ -32,26 +32,6 @@
   "id": 11
  },
  {
-  "nombre": "prueba",
-  "precio": "1234",
-  "descuento": "10",
-  "autor": "Juan",
-  "img": "/images/id2.jpg",
-  "categoria": "lanzamientos",
-  "descripcion": "fret",
-  "id": 12
- },
- {
-  "nombre": "Libro DH",
-  "precio": "1.23",
-  "descuento": "1",
-  "autor": "Alberto Alberto",
-  "img": "/images/id3.jpg",
-  "categoria": "seleccionados",
-  "descripcion": "",
-  "id": 17
- },
- {
   "nombre": "DH Book",
   "precio": "22",
   "descuento": "12",
@@ -90,25 +70,5 @@
   "categoria": "seleccionados",
   "descripcion": "ksnsdascja",
   "img": "/images/1658944544551-id7.jpg"
- },
- {
-  "nombre": "Sarasa",
-  "precio": "12",
-  "descuento": "10",
-  "autor": "Jose Sarasa",
-  "id": "Jose ",
-  "categoria": "seleccionados",
-  "descripcion": "librazo lllllllllllllls\r\n\r\nçss",
-  "img": "/images/1658945010806-id8.jpg"
- },
- {
-  "nombre": "libro DH1",
-  "precio": "1.23",
-  "descuento": "10",
-  "autor": "Alberto Alberto",
-  "id": "333as",
-  "categoria": "lanzamientos",
-  "descripcion": "Libro buenisimo",
-  "img": "/images/1658963108637-id3.jpg"
  }
 ]
