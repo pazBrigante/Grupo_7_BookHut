@@ -53,5 +53,81 @@
   "group": "usuario",
   "id": 5,
   "image": "1659984258945-Alan_Turing.jpg"
+ },
+ {
+  "usuario": "ssseee",
+  "email": "eee@sss.com",
+  "nacimiento": "2022-08-09",
+  "domicilio": "",
+  "pass": "$2a$10$QUyccvPneyT8NKpyFYQ3uujbNLcTU5E0MJoZWmoX6dK7s//SIxL1O",
+  "passC": "",
+  "group": "usuario",
+  "id": 6,
+  "image": "1659994917290-Ada_Lovelace_Chalon.jpg"
+ },
+ {
+  "usuario": "pirulo",
+  "email": "eee@sss.com",
+  "nacimiento": "2022-08-10",
+  "domicilio": "Evergreen 1234",
+  "pass": "$2a$10$WqCkhrrd/fsSMdpHf2x7rubw00YjdrhXP46mD3l6qTkEdZj6McJNe",
+  "passC": "",
+  "group": "usuario",
+  "id": 7,
+  "image": "1659995381074-CharlesBabbage.jpg"
+ },
+ {
+  "usuario": "piru",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-13",
+  "domicilio": "",
+  "pass": "$2a$10$CZiBhi4sHnVA.PlTf9o7UuIeJfQZhRt9YKQtziih3Z85wGzDuxJ/W",
+  "passC": "",
+  "group": "usuario",
+  "id": 8,
+  "image": "1659995603210-Alan_Turing.jpg"
+ },
+ {
+  "usuario": "Cristian2",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-24",
+  "domicilio": "",
+  "pass": "$2a$10$vDatYkgK./RshExCghL8leTryyluCabYfcXc5o3PB7LZ.CUu0kVYO",
+  "passC": "",
+  "group": "usuario",
+  "id": 9,
+  "image": "1659997681850-Ada_Lovelace_Chalon.jpg"
+ },
+ {
+  "usuario": "sss2222",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-11",
+  "domicilio": "",
+  "pass": "$2a$10$3weWKXfYCchwx3qrBBJDSODQqJORAklSJRLUh42SyC2z/8oQ1ITL2",
+  "passC": "",
+  "id": 10,
+  "image": "1659998505874-Alan_Turing.jpg"
+ },
+ {
+  "usuario": "JOse",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-17",
+  "domicilio": "",
+  "pass": "$2a$10$hsnM2K9BuGz5jLKlIrYpi.IbnCdT4yskxSQ0lryb04ZIvgWllAq9m",
+  "passC": "",
+  "group": "usuario",
+  "id": 11,
+  "image": "1660002789608-id3.jpg"
+ },
+ {
+  "usuario": "JOse",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-17",
+  "domicilio": "",
+  "pass": "$2a$10$ZUgIxCM4Mkaggu8ewU5NfO9JUojNurfmAxG3K6jsjQ6O/7MkEANaq",
+  "passC": "",
+  "group": "usuario",
+  "id": 12,
+  "image": "1660002815602-id3.jpg"
  }
 ]

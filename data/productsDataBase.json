@@ -8,12 +8,14 @@
   "id": "1"
  },
  {
-  "nombre": "Juvenil",
+  "nombre": "Juvenil123456",
   "autor": "Elisa Perez",
-  "precio": "U$S 11",
-  "img": "/images/id9.jpg",
+  "precio": "U$S 116",
   "categoria": "masVendidos",
-  "id": "9"
+  "id": "9",
+  "descuento": "",
+  "descripcion": "",
+  "img": "/images/1660004029149-id8.jpg"
  },
  {
   "nombre": "JUn regalo Para el alma",
