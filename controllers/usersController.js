@@ -39,12 +39,12 @@ const controller = {
 			usuarios.push(nuevoUsuario);
 			fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '));
 			res.render("../views/usuarios/register"
-				,{usuarioActual:req.session.usuarioLogueado})
+				,{"usuarioActual":req.session.usuarioLogueado})
 		} else {
 			
 			console.log("Datos Inválidos");
 				res.render("../views/usuarios/register"
-				,{errors:errors.errors,usuarioActual:req.session.usuarioLogueado})
+				,{errors:errors.errors,"usuarioActual":req.session.usuarioLogueado})
 	
 			}
 	},
@@ -93,7 +93,7 @@ const controller = {
 		//	console.log(req.session.usuarioLogueado);
         //}
 		
-		res.render("./usuarios/login",{usuarioActual:req.session.usuarioLogueado});
+		res.render("./usuarios/login",{"usuarioActual":req.session.usuarioLogueado});
 	},
 	processLogin: (req,res)=> {
 		let flag=0;
@@ -117,20 +117,20 @@ const controller = {
 			}
 			if (flag == 0) {
 				console.log("Usuario No Existe");
-				return res.render("./usuarios/login",{errors:[{msg:"Usuario No Existe"}],usuarioActual:req.session.usuarioLogueado})
+				return res.render("./usuarios/login",{errors:[{msg:"Usuario No Existe"}],"usuarioActual":req.session.usuarioLogueado})
 				
 				} else {
 					
 			req.session.usuarioLogueado= usuarioALoguearse;
 			console.log("USuario OK");
-			return res.render("./usuarios/login",{usuarioActual:req.session.usuarioLogueado})
+			res.redirect("/")
 				}
 
 		} else {
 			
 			console.log("Datos Inválidos");
 				return res.render("./usuarios/login"
-				,{errors:errors.errors,usuarioActual:req.session.usuarioLogueado})
+				,{errors:errors.errors,"usuarioActual":req.session.usuarioLogueado})
 
 			
 		}

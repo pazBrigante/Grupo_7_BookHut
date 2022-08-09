@@ -19,7 +19,7 @@
 		</header>
 	
 
-			<form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data>
+			<form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
 						<label for="nombre" class="form-label">Nombre del producto:</label>
@@ -64,7 +64,7 @@
 
 					<div>
 						<label for="product-img"></label>
-						<input type="file" name="product-img" id="product-img" value="<%= productEdit.img%>">
+						<input type="file" name="product-img" id="product-img"  >
 						
 					</div>
 					<br />

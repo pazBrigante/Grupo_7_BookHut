@@ -7,12 +7,20 @@ const catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controlador = {
     index: function (req, res){
+        if (!req.session.usuarioLogueado){
+            req.session.usuarioLogueado={usuario:"guest"};
+
+        }
        
         res.render("./partials/seleccionados",{"catalogo" : catalogo,"usuarioActual":req.session.usuarioLogueado});
        
     },
 
     lanzamientos: (req,res)=> {
+        if (!req.session.usuarioLogueado){
+            req.session.usuarioLogueado={usuario:"guest"};
+
+        }
 
         
         let resultadola =[];
@@ -33,6 +41,11 @@ const controlador = {
         res.render("./partials/nuevoslanzamientos",{"resultadola" : resultadola, "ordenla" :ordenla,"usuarioActual":req.session.usuarioLogueado});
     },
     masVendidos: (req,res)=> {
+
+        if (!req.session.usuarioLogueado){
+            req.session.usuarioLogueado={usuario:"guest"};
+
+        }
         
         let resultadomv =[];
         let ordenmv=[];

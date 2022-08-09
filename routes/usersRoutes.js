@@ -21,10 +21,10 @@
 
 const usersController = require('../controllers/usersController');
 
-/*** GET ALL PRODUCTS ***/ 
+/*** GET ALL USER ***/ 
 //router.get('/', productsController.index); 
 
-/*** CREATE ONE PRODUCT ***/ 
+/*** CREATE ONE USER ***/ 
 router.get('/register', usersController.register);
 router.post('/', upload.single("avatar-img"),[
     check("usuario").isLength({min:4}).withMessage("Usuario Mínimo 4 Caracteres"),
@@ -41,16 +41,7 @@ router.post('/', upload.single("avatar-img"),[
 ]  ,usersController.create);  
 
 
-/*** GET ONE PRODUCT ***/ 
-// router.???('/:id/', productsController.detail); 
 
-/*** EDIT ONE PRODUCT ***/ 
-// router.???('/:id/???', productsController.edit); 
-// router.???('/:id', productsController.update); 
-
-
-/*** DELETE ONE PRODUCT***/ 
-//router.get('/eliminar/:id', productsController.destroy); 
 
 router.get('/list',usersController.list);
 router.delete('/eliminar/:id', usersController.destroy); 

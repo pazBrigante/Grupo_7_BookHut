@@ -46,12 +46,12 @@ const controller = {
 		let id_a_editaru = req.params.id;
 		let productEditu=req.body;
 		let productu = catalogo.find(item => item.id == id_a_editaru);
-		console.log(req.file);
-		if (req.file!=null) {
-			productu.img = req.file.filename; 
+		
+		if (req.file) {
+			productu.img = "/images/" + req.file.filename; 
 
 		} else {
-			productu.img = productEditu.img; 
+			productu.img = productu.img; 
 
 		}
 
