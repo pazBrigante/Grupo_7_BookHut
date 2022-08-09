@@ -1,7 +1,6 @@
 # Grupo_7_BookHut
-Nuestro sitio se enfocara en la venta online de libros en español al por menor en Argentina. Tambien se ofrecera un servicio por suscripción tipo club de lectura por el cual se enviara a los suscriptores en forma mensual un paquete que incluye la seleccion de 2 libros recomendados de acuerdo a los intereses de cada grupo de suscriptores, incluyendo un regalo sorpresa enfocado en mejorar la experiencia de lectura del cliente.
-Programa de fidelizacion. El sitio incluira un programa de beneficios y recompensas para clientes que adquieran pruductos o esten suscriptos al club de lectura mediante la acumulacion de puntos, para ser canjeados por libros, descuentos, o premios.
-Reseñas. El sitio tambien incluira la posibilidad de incluir reseñas por parte de los clientes que hayan adquirido un producto o esten suscriptos al club de lectura.
+Nuestro sitio se enfocara en la venta online de libros en español al por menor en Argentina.
+
 
 ----------------------------------------------------------------------------------------------------------------------------------
 

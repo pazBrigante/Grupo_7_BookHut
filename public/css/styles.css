@@ -13,14 +13,12 @@ main {
 
 .link:hover {
     cursor: pointer;
-  }
-
-  
+}
 
 .search-button form {
     display: none;
     padding-top: 10px;
-  }
+}
 
 body {
     font-family: 'Roboto', sans-serif;
