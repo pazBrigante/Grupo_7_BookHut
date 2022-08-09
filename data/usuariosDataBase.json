@@ -53,5 +53,16 @@
   "group": "usuario",
   "id": 5,
   "image": "1659984258945-Alan_Turing.jpg"
+ },
+ {
+  "usuario": "sergio",
+  "email": "sergiolaulhe@hotmail.com",
+  "nacimiento": "2022-09-02",
+  "domicilio": "liber",
+  "pass": "$2a$10$/0gcggYGBZtnuhKtorDTV.hx6QdYLt1I4XBpI4nnxxjmrnWRjqETi",
+  "passC": "",
+  "group": "usuario",
+  "id": 6,
+  "image": "1660001439072-img-cafetera-moulinex.jpg"
  }
 ]
