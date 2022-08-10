@@ -15,8 +15,7 @@ let userFromCookie
 let usuarioInCookie=req.cookies.usuario;
 
 for(let i =0; i < usuarios.length; i++) {
-    console.log(usuarios[i].usuario );
-    console.log(usuarioInCookie );
+    
     if (usuarios[i].usuario==usuarioInCookie) {
                 userFromCookie = usuarios[i];
                 
