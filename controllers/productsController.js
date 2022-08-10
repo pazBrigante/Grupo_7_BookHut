@@ -36,7 +36,7 @@ const controller = {
 	edit: (req, res) => {
 		let id_a_editar = req.params.id;
 		let productEdit = catalogo.find(item => item.id == id_a_editar);
-		console.log({productEdit});
+		
 		res.render("./productos/product-edit-form.ejs",{productEdit,"usuarioActual":req.session.usuarioLogueado});
 	},
 
