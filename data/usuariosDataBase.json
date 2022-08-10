@@ -18,7 +18,7 @@
   "pass": "$2a$10$hRuXHHktGJQC3IVU2rYpVetHEC6aazYsTvKUMWOKEu3QwjZBbCmsu",
   "passC": "1234",
   "id": 15,
-  "image": "1659980946110-CharlesBabbage.jpg",
+  "image": "1660069617508-CharlesBabbage.jpg",
   "group": "admin"
  },
  {
@@ -97,37 +97,5 @@
   "group": "usuario",
   "id": 9,
   "image": "1659997681850-Ada_Lovelace_Chalon.jpg"
- },
- {
-  "usuario": "sss2222",
-  "email": "as555@sssss.com",
-  "nacimiento": "2022-08-11",
-  "domicilio": "",
-  "pass": "$2a$10$3weWKXfYCchwx3qrBBJDSODQqJORAklSJRLUh42SyC2z/8oQ1ITL2",
-  "passC": "",
-  "id": 10,
-  "image": "1659998505874-Alan_Turing.jpg"
- },
- {
-  "usuario": "JOse",
-  "email": "as555@sssss.com",
-  "nacimiento": "2022-08-17",
-  "domicilio": "",
-  "pass": "$2a$10$hsnM2K9BuGz5jLKlIrYpi.IbnCdT4yskxSQ0lryb04ZIvgWllAq9m",
-  "passC": "",
-  "group": "usuario",
-  "id": 11,
-  "image": "1660002789608-id3.jpg"
- },
- {
-  "usuario": "JOse",
-  "email": "as555@sssss.com",
-  "nacimiento": "2022-08-17",
-  "domicilio": "",
-  "pass": "$2a$10$ZUgIxCM4Mkaggu8ewU5NfO9JUojNurfmAxG3K6jsjQ6O/7MkEANaq",
-  "passC": "",
-  "group": "usuario",
-  "id": 12,
-  "image": "1660002815602-id3.jpg"
  }
 ]

@@ -7,20 +7,14 @@ const catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controlador = {
     index: function (req, res){
-        if (!req.session.usuarioLogueado){
-            req.session.usuarioLogueado={usuario:"guest"};
-
-        }
+        
        
         res.render("./partials/seleccionados",{"catalogo" : catalogo,"usuarioActual":req.session.usuarioLogueado});
        
     },
 
     lanzamientos: (req,res)=> {
-        if (!req.session.usuarioLogueado){
-            req.session.usuarioLogueado={usuario:"guest"};
-
-        }
+       
 
         
         let resultadola =[];
@@ -42,10 +36,7 @@ const controlador = {
     },
     masVendidos: (req,res)=> {
 
-        if (!req.session.usuarioLogueado){
-            req.session.usuarioLogueado={usuario:"guest"};
-
-        }
+        
         
         let resultadomv =[];
         let ordenmv=[];
@@ -66,10 +57,7 @@ const controlador = {
         res.render("./partials/masvendidos",{"resultadomv" : resultadomv, "ordenmv" :ordenmv,"usuarioActual":req.session.usuarioLogueado});
     },
     seleccionados: (req,res)=> {
-        if (!req.session.usuarioLogueado){
-            req.session.usuarioLogueado={usuario:"guest"};
-
-        }
+       
 
         let resultadose =[];
         let ordense=[];

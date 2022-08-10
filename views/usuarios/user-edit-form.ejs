@@ -1,0 +1,92 @@
+  
+  <head>
+    <%- include("../partials/head") %> 
+    <%- include("../partials/head_reg") %> 
+  </head>
+  <header>
+    
+    <%- include("../partials/header") %> 
+  </header>
+
+
+  <div class="login_Register">
+    <div class="Login">
+      <br />
+      <% if (typeof errors != "undefined" ) {%>
+        <p style="color:red" > ERROR </p>
+        <ul>
+          <% for (let i =0; i < errors.length; i++) {%>
+            <li>
+              <%= errors[i].msg %>
+
+            </li>
+
+            <%}%>
+            <br />
+        </ul>
+
+        
+        <%}%>
+        <br />
+        <a href="/users/logout/">    Cerrar Sesión</i></a>
+        <br />
+        <br />
+      <form action="/users/edit/<%= userEdit.id %>?_method=PUT"" method="POST" enctype="multipart/form-data">
+        <p class="login_Register_text">EDITA TU CUENTA</p>
+
+        
+        <p>
+          <label for="usuario"></label>
+          <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" value="<%= locals.usuarioLogueado.usuario %>">
+          
+        </p>
+        <p>
+          <label for="nombre"></label>
+          <input type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.usuarioLogueado.email %>">
+        </p>
+
+        <p>
+          <label for="nacimiento">
+            <p>Fecha de nacimiento:</p>
+          </label>
+          <input type="date" name="nacimiento" id="date" value="<%= locals.usuarioLogueado.nacimiento %>">
+        </p>
+        <p>
+          <label for="domicilio"></label>
+          <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" value="<%= locals.usuarioLogueado.domicilio %>">
+        </p>
+        id: <%= locals.usuarioLogueado.id %>
+        <br />
+        
+
+        <p>
+          <label for="avatar-img"></label>
+          <input type="file" name="avatar-img" id="avatar-img"  placeholder="Subir imagen ">
+        </p>
+
+      </p>
+      Categoría: <%= locals.usuarioLogueado.group%>
+      <br />
+      
+
+      <p>
+    Imagen Actual : <%= locals.usuarioLogueado.image %>
+    <br />
+  <img class="imagen" src="/images/users/<%= locals.usuarioLogueado.image %>" alt="Product Image" style="width:20%">
+  </div>
+        <p class="button_registro">
+          <button type="submit" class="button_registro_"> Enviar </button>
+          <button type="reset" class="button_registro_"> Cancelar </button>
+        </p>
+
+      </form>
+    </div>
+  </div>
+      <footer class="main-footer">
+
+        <%- include("../partials/footer") %> 
+      </footer>
+    
+ 
+
+    

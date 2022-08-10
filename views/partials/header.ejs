@@ -13,10 +13,13 @@
     </ul>
     <ul class="right-header-navbar">
         <li class="user"> <a href="#"> <i class="fa-solid fa-user"></i> </a> </li>
-        <li class="link"> <a href="/users/login"> Usuario Actual :  <% if (usuarioActual) { %> <%= usuarioActual.usuario %><% } %> / </a> </li>
+        <li class="link"> <a href="/users/login">  <% if (locals.usuarioLogueado) { %> <%= locals.usuarioLogueado.usuario %><% } %>  </a> </li>
         
-        <li class="link"> <a href="/users/login"> Iniciar Sesión </a></li>
-        <li class="link"> <a href="/users/register"> / Crear Cuenta </a></li>
+        <% if (!locals.usuarioLogueado) { %>
+             <li class="link"> <a href="/users/login"> Iniciar Sesión </a></li>
+             <li class="link"> <a href="/users/register"> / Crear Cuenta </a></li>
+        <% } %>
+        
     </ul>
 </nav>
 
@@ -40,8 +43,8 @@
         <li class="link"> <a href="/seleccionados"> Seleccionados para vos </a></li>
         <li class="link"> <a href="/masVendidos"> Mas vendidos </a></li>
         
-        <% if (locals.usuarioActual) {%>
-            <% if (locals.usuarioActual.group=="admin") { %>
+        <% if (locals.usuarioLogueado) {%>
+            <% if (locals.usuarioLogueado.group=="admin") { %>
                  
             
         <ul>

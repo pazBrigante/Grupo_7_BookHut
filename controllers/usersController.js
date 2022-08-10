@@ -20,14 +20,14 @@ const controller = {
 	
 	// Create -  Method to store
 	create: (req, res) => {
-		console.log(req.body);
+		
 		let errors = validationResult(req);
 		console.log(errors);
 		if (errors.isEmpty()){
 		const nuevoUsuario = req.body;
 		nuevoUsuario.id=usuarios.length + 1;
 		nuevoUsuario.pass=bcrypt.hashSync( nuevoUsuario.pass,10);
-		nuevoUsuario.passC="";
+		delete nuevoUsuario.passC;
 		if (req.file) {
 				nuevoUsuario.image = req.file.filename;
 		
@@ -49,8 +49,13 @@ const controller = {
 			}
 	},
 	detalle: (req,res)=> {
-        res.render("./usuarios/userDetail",{"usuariodetalle" : usuarios[req.params.id],"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
-    },
+        for(let i=0; i< usuarios.length; i++) { 
+			let id=req.params.id;
+			if (usuarios[i].id==id)
+			res.render("./usuarios/userDetail",{"usuariodetalle" : usuarios[i],"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
+    }
+
+},
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 		// Do the magic
@@ -99,7 +104,7 @@ const controller = {
 		let flag=0;
 		let usuarioALoguearse={};
 		let errors = validationResult(req);
-		console.log(errors);
+		
 		if (errors.isEmpty()){
 			for(let i =0; i < usuarios.length; i++) {
 				if (usuarios[i].usuario==req.body.usuario) {
@@ -122,6 +127,11 @@ const controller = {
 				} else {
 					
 			req.session.usuarioLogueado= usuarioALoguearse;
+			if (req.body.recordame) {
+				res.cookie("usuario",req.session.usuarioLogueado.usuario,{maxAge:60*1000*10});
+
+			}
+			
 			console.log("USuario OK");
 			res.redirect("/")
 				}
@@ -136,7 +146,59 @@ const controller = {
 		}
 	},
 
+	logout: (req,res) => {
+		res.clearCookie("usuario")
+		req.session.destroy();
+		return res.redirect("/");
 
+
+	},
+
+	edit: (req, res) => {
+		let id_a_editar = req.params.id;
+		let userEdit = usuarios.find(usuar => usuar.id == id_a_editar);
+		console.log({userEdit});
+		res.render("./usuarios/user-edit-form.ejs",{userEdit,"usuarioActual":req.session.usuarioLogueado});
+	},
+	update: (req, res) => {
+		let id_a_editaru = req.params.id;
+		let userEditu=req.body;
+		let errors = validationResult(req);
+		console.log(errors);
+		
+			let usertu = usuarios.find(usuar => usuar.id == id_a_editaru);
+			if (errors.isEmpty()){
+			if (req.file) {
+				usertu.image =  req.file.filename; 
+
+			} else {
+				usertu.image = usertu.image; 
+
+			}
+		
+		
+			usertu.usuario = userEditu.usuario;
+			usertu.email = userEditu.email;
+			usertu.nacimiento = userEditu.nacimiento;
+			usertu.domicilio = userEditu.domicilio;
+			usertu.pass = usertu.pass;
+			usertu.id = usertu.id ;
+		
+			usertu.group = usertu.group;
+			console.log({usertu});
+			fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '));
+		
+
+			res.redirect("/");
+	} else {
+			
+		console.log("Datos Inválidos");
+			return res.render("./usuarios/user-edit-form.ejs"
+			,{userEdit:usertu,errors:errors.errors})
+
+		
+	}
+},
 
 };
 

@@ -81,7 +81,7 @@ const controller = {
 			}
 		}
 		fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
-		res.redirect('/products/list',{"usuarioActual":req.session.usuarioLogueado})
+		res.redirect('/products/list')
 		
 	},
 

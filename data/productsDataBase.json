@@ -8,14 +8,14 @@
   "id": "1"
  },
  {
-  "nombre": "Juvenil123456",
+  "nombre": "Juvenil123457",
   "autor": "Elisa Perez",
   "precio": "U$S 116",
-  "categoria": "masVendidos",
+  "categoria": "lanzamientos",
   "id": "9",
   "descuento": "",
   "descripcion": "",
-  "img": "/images/1660004029149-id8.jpg"
+  "img": "/images/1660048204695-id9.jpg"
  },
  {
   "nombre": "JUn regalo Para el alma",
@@ -44,16 +44,6 @@
   "descripcion": ""
  },
  {
-  "nombre": "prueba imagen",
-  "precio": "1234",
-  "descuento": "10",
-  "autor": "Juan",
-  "img": "/images/id5.jpg",
-  "id": "123",
-  "categoria": "seleccionados",
-  "descripcion": ""
- },
- {
   "nombre": "prueba img2",
   "precio": "1234",
   "descuento": "10",
@@ -64,13 +54,13 @@
   "img": "/images/1658929610664-id6.jpg"
  },
  {
-  "nombre": "prueba img3",
-  "precio": "1.23",
-  "descuento": "23",
-  "autor": "Juan Alberto",
-  "id": "3331",
-  "categoria": "seleccionados",
-  "descripcion": "ksnsdascja",
-  "img": "/images/1658944544551-id7.jpg"
+  "nombre": "prueba123",
+  "precio": "1234",
+  "descuento": "10",
+  "autor": "Jose pedro",
+  "id": "23a",
+  "categoria": "lanzamientos",
+  "descripcion": "",
+  "img": "/images/1660052827672-id2.jpg"
  }
 ]
