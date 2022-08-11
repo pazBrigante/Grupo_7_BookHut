@@ -13,7 +13,7 @@
     
     
     <div class="Register">
-      <br />
+      
       <% if (typeof errors != "undefined" ) {%>
         <p style="color:red" > ERROR </p>
         <ul>
@@ -24,7 +24,7 @@
             </li>
 
             <%}%>
-            <br />
+            
         </ul>
 
 
@@ -32,9 +32,9 @@
         
             <form action="/users/login" method="POST">
               <p class="login_Register_text">¿TENÉS UNA CUENTA?</p>
-              <br />
+              
               <p>Usuario Actual :  <% if (usuarioActual) { %> <%= usuarioActual.usuario %><% } %> </p>
-              <br />
+              
 
               <p>
                 <label for="usuario"></label>
@@ -44,15 +44,15 @@
                 <label for="pass"></label>
                 <input type="password" name="pass" id="pass" placeholder="Contraseña">
               </p>
-              <br />
+              
               <label for="pass">Recordame </label>
               <input type="checkbox" name="recordame" id="recordame" placeholder="recordame" checked="checked">
-              <br />
+              
 
             <p>
               <button type="submit" class="button_ingresar"> Ingresar </button>
             </p>
-            <br />
+            
           </form>
              
     </div>

@@ -17,7 +17,12 @@
 			<%- include("../partials/header") %> 
 		   
 		</header>
-	
+		<div class="container products-wrapper">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="products-title">Formulario de creación de productos</h2> <br>
+				</div>
+			</div>
 
 			<form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
@@ -43,7 +48,7 @@
 					</div>
 
 					<div class="col-12 col-md-6">
-						<label for="id" class="form-label">Id:</label>
+						<label for="id" class="form-label">Id:</label> <br>
 						<input type="text" id="id" name="id" placeholder="Ej: 15" value="<%= productEdit.id %>" class="form-input">
 					</div>
 
@@ -58,19 +63,24 @@
 						</select>
 					</div>
 					<div class="col-12">
-						<label for="descripcion" class="form-label">Descipción:</label>
+						<label for="descripcion" class="form-label">Descipción:</label> <br>
 						<textarea name="descripcion" id="descripcion" class="form-input"><%= productEdit.descripcion %></textarea>
 					</div>
 
-					<div>
+					<div class="col-12">
 						<label for="product-img"></label>
 						<input type="file" name="product-img" id="product-img"  >
 						
 					</div>
 					<br />
 					<div>
+						<div class="col-12">
+							<label for="descripcion" class="form-label">Imagen Actual : <%= productEdit.img%>:
+							</label> <br>
+							
+						</div>
+					
 						
-					Imagen Actual : <%= productEdit.img%>
 					<br />
 					<img class="imagen" src="<%= productEdit.img %>" alt="Product Image" style="width:20%">
 					</div>

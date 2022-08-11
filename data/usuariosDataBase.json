@@ -97,5 +97,34 @@
   "group": "usuario",
   "id": 9,
   "image": "1659997681850-Ada_Lovelace_Chalon.jpg"
+ },
+ {
+  "usuario": "Juan Pedre",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-09-08",
+  "domicilio": "Evergreen 123",
+  "pass": "$2a$10$YX8cxbLLm.22a5R0xQNEG.asO.LDPJtdh4zfv7GSRYbuEvEdif4wG",
+  "id": 10,
+  "image": "1660170329619-Ada_Lovelace_Chalon.jpg"
+ },
+ {
+  "usuario": "lean2",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-18",
+  "domicilio": "Evergreen 444",
+  "pass": "$2a$10$heyJ/YF0jirkwITqkVeS/.Sj7I0CNX3vqjDcr2uyoNp.iZiivb8me",
+  "group": "usuario",
+  "id": 11,
+  "image": "1660171544643-Alan_Turing.jpg"
+ },
+ {
+  "usuario": "Nacho444",
+  "email": "as555@sssss.com",
+  "nacimiento": "2022-08-17",
+  "domicilio": "Evergreen4444",
+  "pass": "$2a$10$kMFs6OHVkeFqiTWlv7TzIuvDBlWr6jbkWfpWodJOZXbPULNp/jYm6",
+  "group": "usuario",
+  "id": 12,
+  "image": "1660177038769-Ada_Lovelace_Chalon.jpg"
  }
 ]

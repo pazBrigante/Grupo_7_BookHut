@@ -64,5 +64,25 @@
   "categoria": "seleccionados",
   "descripcion": "Librazo!",
   "img": "/images/1660157770123-id2.jpg"
+ },
+ {
+  "nombre": "Juvenil2e",
+  "precio": "2",
+  "descuento": "2",
+  "autor": "Juan",
+  "id": "123aa",
+  "categoria": "lanzamientos",
+  "descripcion": "",
+  "img": "/images/1660170412332-id1.jpg"
+ },
+ {
+  "nombre": "Juvenil3",
+  "precio": "1234",
+  "descuento": "10",
+  "autor": "Juan",
+  "id": "123xx",
+  "categoria": "seleccionados",
+  "descripcion": "Libro Loco",
+  "img": "/images/1660177720552-id1.jpg"
  }
 ]

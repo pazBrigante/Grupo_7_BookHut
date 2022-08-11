@@ -66,9 +66,9 @@
           <label for="avatar-img"></label>
           <input type="file" name="avatar-img" id="avatar-img"  placeholder="Subir imagen ">
         </p>
-
-        <% if (locals.usuarioActual) {%>
-          <% if (locals.usuarioActual.group=="admin") { %>
+        
+        <% if (locals.usuarioLogueado) {%>
+          <% if (locals.usuarioLogueado.group=="admin") { %>
               
             <div class="col-12 col-md-6">
               <label for="group" class="form-label">Categoría:</label>
@@ -90,12 +90,24 @@
           </select>
         </div>
         <%}%>
-  <%}%>
+        <%} else {%>
+          <div class="col-12 col-md-6">
+            <label for="group" class="form-label">Categoría:</label>
+            <select name="group" id="group" class="form-input">
+              <option value="usuario">Usuario</option>
+              
+            </select>
+          </div>
         
-        <p class="button_registro">
+  <%}%>
+  <br />
+  <br />
+  <br />
+
+        <div class="button_registro">
           <button type="submit" class="button_registro_"> Enviar </button>
           <button type="reset" class="button_registro_"> Cancelar </button>
-        </p>
+        </div>
 
       </form>
     </div>

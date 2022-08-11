@@ -13,8 +13,8 @@ const controller = {
 	
 	
 	register: (req, res) => {
-		console.log("Por GET");
-	res.render('../views/usuarios/register',{"usuarioActual":req.session.usuarioLogueado});
+		console.log(res.locals.usuarioLogueado);
+	res.render('../views/usuarios/register',{"usuarioActual":res.locals.usuarioLogueado });
 	
 	},
 	
