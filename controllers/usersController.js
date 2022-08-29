@@ -1,8 +1,13 @@
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
+
+
 const fs = require('fs');
 const path = require('path');
 
 const usersFilePath = path.join(__dirname, '../data/usuariosDataBase.json');
-const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const {validationResult} = require ("express-validator");
 const session = require('express-session');
 const bcrypt = require("bcryptjs");
@@ -11,21 +16,21 @@ const bcrypt = require("bcryptjs");
 
 const controller = {
 	
-	
+	// Registro -  Method to mostrar registro SQL
 	register: (req, res) => {
 		console.log(res.locals.usuarioLogueado);
 	res.render('../views/usuarios/register',{"usuarioActual":res.locals.usuarioLogueado });
 	
 	},
 	
-	// Create -  Method to store
+	// Create -  Method to Create SQL
 	create: (req, res) => {
 		
 		let errors = validationResult(req);
 		console.log(errors);
 		if (errors.isEmpty()){
 		const nuevoUsuario = req.body;
-		nuevoUsuario.id=usuarios.length + 1;
+		
 		nuevoUsuario.pass=bcrypt.hashSync( nuevoUsuario.pass,10);
 		delete nuevoUsuario.passC;
 		if (req.file) {
@@ -36,10 +41,25 @@ const controller = {
 				nuevoUsuario.image="";
 			}
 			console.log(nuevoUsuario)
-			usuarios.push(nuevoUsuario);
-			fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '));
-			res.render("../views/usuarios/register"
-				,{"usuarioActual":req.session.usuarioLogueado})
+			
+			db.Usuario.create({
+				usuario: nuevoUsuario.usuario,
+				email:nuevoUsuario.email ,
+				nacimiento:nuevoUsuario.nacimiento ,
+				domicilio:nuevoUsuario.domicilio ,
+				pass:nuevoUsuario.pass ,
+				grupo :nuevoUsuario.group,
+				image:nuevoUsuario.image,
+			})
+			.then(resultado => {
+				res.redirect("/");
+				
+			})
+			
+			
+			
+			
+			
 		} else {
 			
 			console.log("Datos Inválidos");
@@ -48,78 +68,77 @@ const controller = {
 	
 			}
 	},
+	// Detalle - SQL
 	detalle: (req,res)=> {
-        for(let i=0; i< usuarios.length; i++) { 
-			let id=req.params.id;
-			if (usuarios[i].id==id)
-			res.render("./usuarios/userDetail",{"usuariodetalle" : usuarios[i],"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
-    }
+        
+		db.Usuario.findByPk(req.params.id)
+           .then(resultado => {
+			res.render("./usuarios/userDetail",{"usuariodetalle" : resultado,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
+            });
+    
 
 },
-	// Delete - Delete one product from DB
+	// Delete - Delete one user from DB - SQL
 	destroy : (req, res) => {
 		// Do the magic
 		let id_a_borrar = req.params.id;
-		for(let i=0; i< usuarios.length; i++) {
-			if (usuarios[i].id==id_a_borrar ) {
-			usuarios.splice(i,1);
+		db.Usuario.destroy({
+			where: {id:id_a_borrar}})
 			
-			}
-		}
-		fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '));
-		console.log("Usuario Borrado");
+		.then(resultado => {
 		res.redirect("/");
-		
+		});
 	},
 
-	
+	// LIST- SQL
 
 	list: (req,res)=> {
         
-        let resultado =[];
-        
-		
-        for(let i=0; i< usuarios.length; i++) {
-
+                  
+		db.Usuario.findAll()
+		.then(resultado => {
 			
-                resultado.push(usuarios[i])
-               
-            
+			res.render("./usuarios/listaUsers",{"resultado" : resultado,"usuarioActual":req.session.usuarioLogueado}); 
         
-	}
-    
-        res.render("./usuarios/listaUsers",{"resultado" : resultado,"usuarioActual":req.session.usuarioLogueado});
-    
-    },
-
+		})
+	},
+	// - Login  SQL
 	login: (req,res)=> {
-		//if (!req.session.usuarioLogueado.usuario){
-       //     req.session.usuarioLogueado.usuario="guest";
-		//	console.log(req.session.usuarioLogueado);
-        //}
+		
 		
 		res.render("./usuarios/login",{"usuarioActual":req.session.usuarioLogueado});
 	},
+
+		// Process Login - SQL
 	processLogin: (req,res)=> {
 		let flag=0;
 		let usuarioALoguearse={};
 		let errors = validationResult(req);
-		
-		if (errors.isEmpty()){
-			for(let i =0; i < usuarios.length; i++) {
-				if (usuarios[i].usuario==req.body.usuario) {
+		db.Usuario.findAll({
+            where: {
+				
+                usuario: req.body.usuario
 					
-						if (bcrypt.compareSync(req.body.pass,usuarios[i].pass)){
-							usuarioALoguearse = usuarios[i];
-							
+            }}
+		)
+		.then(resultado => {
+			
+			
+			let usuario_encontrado=resultado;
+			
+			let pass_ok=bcrypt.compareSync("1234",usuario_encontrado[0].pass);	
+			console.log("passok",pass_ok);
+						if (pass_ok){
+							usuarioALoguearse = usuario_encontrado[0];
+							console.log("Usuario a  loguearse  ",usuarioALoguearse);
 							flag=1;
 							
 
 						}
 
-				}
+				
 
-			}
+			
 			if (flag == 0) {
 				console.log("Usuario No Existe");
 				return res.render("./usuarios/login",{errors:[{msg:"Usuario No Existe"}],"usuarioActual":req.session.usuarioLogueado})
@@ -127,6 +146,7 @@ const controller = {
 				} else {
 					
 			req.session.usuarioLogueado= usuarioALoguearse;
+			
 			if (req.body.recordame) {
 				res.cookie("usuario",req.session.usuarioLogueado.usuario,{maxAge:60*1000*10});
 
@@ -136,14 +156,15 @@ const controller = {
 			res.redirect("/")
 				}
 
-		} else {
+		} )
+		//else {
 			
-			console.log("Datos Inválidos");
-				return res.render("./usuarios/login"
-				,{errors:errors.errors,"usuarioActual":req.session.usuarioLogueado})
+		//	console.log("Datos Inválidos");
+		//		return res.render("./usuarios/login"
+		//		,{errors:errors.errors,"usuarioActual":req.session.usuarioLogueado})
 
-			
-		}
+		
+		//}})
 	},
 
 	logout: (req,res) => {
@@ -155,41 +176,50 @@ const controller = {
 	},
 
 	edit: (req, res) => {
-		let id_a_editar = req.params.id;
-		let userEdit = usuarios.find(usuar => usuar.id == id_a_editar);
-		console.log({userEdit});
-		res.render("./usuarios/user-edit-form.ejs",{userEdit,"usuarioActual":req.session.usuarioLogueado});
+		let id_a_editar = req.session.usuarioLogueado.id;
+		
+		console.log("editando usuarios editando usuarioseditando usuarioseditando usuarioseditando usuarios");
+		//res.render("./usuarios/user-edit-form.ejs",{userEdit,"usuarioActual":req.session.usuarioLogueado});
+		console.log("id_a_editar 33",id_a_editar);
+		db.Usuario.findByPk(id_a_editar)
+           .then(resultado=> {
+			console.log(resultado.id);
+			res.render("./usuarios/user-edit-form.ejs",{"userEdit":resultado,"usuarioActual":req.session.usuarioLogueado});
+            });
 	},
 	update: (req, res) => {
-		let id_a_editaru = req.params.id;
-		let userEditu=req.body;
+		console.log("User Update User Update User Update User Update User Update ");
 		let errors = validationResult(req);
 		console.log(errors);
+		let campo_img;
 		
-			let usertu = usuarios.find(usuar => usuar.id == id_a_editaru);
+			//let usertu = usuarios.find(usuar => usuar.id == id_a_editaru);
 			if (errors.isEmpty()){
-			if (req.file) {
-				usertu.image =  req.file.filename; 
+				if (req.file) {
+					campo_img =  req.file.filename; 
+			
+					} else {
+						campo_img = req.body.img; 
+			
+					};
+		
+			db.Usuario.update({
+				usuario: req.body.usuario,
+				email:req.body.email ,
+				nacimiento:req.body.nacimiento ,
+				domicilio:req.body.domicilio ,
+				pass:req.body.pass ,
+				grupo :req.body.grupo ,
+				image :campo_img
+				},
+			{where:{
+				id: req.params.id
+			}});
+			res.redirect("/") ;
 
-			} else {
-				usertu.image = usertu.image; 
 
-			}
 		
-		
-			usertu.usuario = userEditu.usuario;
-			usertu.email = userEditu.email;
-			usertu.nacimiento = userEditu.nacimiento;
-			usertu.domicilio = userEditu.domicilio;
-			usertu.pass = usertu.pass;
-			usertu.id = usertu.id ;
-		
-			usertu.group = usertu.group;
-			console.log({usertu});
-			fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '));
-		
-
-			res.redirect("/");
+			
 	} else {
 			
 		console.log("Datos Inválidos");

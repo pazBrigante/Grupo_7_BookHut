@@ -1,136 +1,159 @@
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
+//Otra forma de llamar a los modelos
+
+
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+///const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+//const catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const controller = {
-	 //Root - Show all products
-	//index: (req, res) => {
-	//res.render('products', {products});
-	//},
-
-	// Detail - Detail from one product
-	//detail: (req, res) => {
-		// Do the magic
-	//},
-
-	// Create - Form to create
+	 
+	// Create - Form to create SQL
 	create: (req, res) => {
-		
 	res.render('../views/productos/product-create-form',{"usuarioActual":req.session.usuarioLogueado});
 	
 	},
 	
-	// Create -  Method to store
+	// Create -  Method to store SQL
 	store: (req, res) => {
-	const nuevoProducto = req.body;
-	nuevoProducto.img = "/images/" + req.file.filename;
-	catalogo.push(nuevoProducto);
-	fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
-	res.redirect('/')
+	console.log(req.body);
+	db.Catalogo.create({
+		nombre: req.body.nombre,
+		precio:req.body.precio ,
+		descuento:req.body.descuento ,
+		autor:req.body.autor ,
+		codigo:req.body.codigo ,
+		categoria :req.body.categoria ,
+		descripcion :req.body.descripcion ,
+		img :"/images/" + req.file.filename,
+	})
+	.then(resultado => {
+		res.redirect('/')
+	})
+	
 	},
 
-	// Update - Form to edit
+	// Update - Form to edit SQL
 	edit: (req, res) => {
-		let id_a_editar = req.params.id;
-		let productEdit = catalogo.find(item => item.id == id_a_editar);
 		
-		res.render("./productos/product-edit-form.ejs",{productEdit,"usuarioActual":req.session.usuarioLogueado});
+		db.Catalogo.findByPk(req.params.id)
+            .then(resultado => {
+                res.render("./productos/product-edit-form.ejs",{"productEdit":resultado,"usuarioActual":req.session.usuarioLogueado});;
+            });
+
+
 	},
 
 	
-	// Update - Method to update
-	update: (req, res) => {
-		let id_a_editaru = req.params.id;
-		let productEditu=req.body;
-		let productu = catalogo.find(item => item.id == id_a_editaru);
-		
-		if (req.file) {
-			productu.img = "/images/" + req.file.filename; 
-
-		} else {
-			productu.img = productu.img; 
-
-		}
-
-		
-		productu.nombre = productEditu.nombre;
-		productu.autor = productEditu.autor;
-		productu.precio = productEditu.precio;
-		productu.descuento = productEditu.descuento;
-		productu.descripcion = productEditu.descripcion;
-		productu.categoria = productEditu.categoria;
-		productu.id = productEditu.id;
-		console.log({productu});
-		fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
-
-
-		res.redirect("/");
-	},
-
-	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-		// Do the magic
-		let id_a_borrar = req.params.id;
-		for(let i=0; i< catalogo.length; i++) {
-			if (catalogo[i].id==id_a_borrar ) {
-			catalogo.splice(i,1);
+	// Update - Method to update SQL
+	
+	update: function (req,res) {
+			let campo_img;
 			
-			}
-		}
-		fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ' '));
-		res.redirect('/products/list')
+			if (req.file) {
+				campo_img = "/images/" + req.file.filename; 
+		
+				} else {
+					campo_img = req.body.img; 
+		
+				};
+			
+			db.Catalogo.update({
+				nombre: req.body.nombre,
+				precio:req.body.precio ,
+				descuento:req.body.descuento ,
+				autor:req.body.autor ,
+				codigo:req.body.codigo ,
+				categoria :req.body.categoria ,
+				descripcion :req.body.descripcion ,
+				img :campo_img
+				},
+			{where:{
+				id: req.params.id
+			}});
+			res.redirect("/") ;
+
+
+	},
+
+	// Delete - Delete one product from DB SQL
+	destroy : (req, res) => {
+		
+		db.Catalogo.destroy(
+			{where:{
+				id: req.params.id
+			}});
+			res.redirect('/products/list')
 		
 	},
 
+	// DETALLE - Method to detalle SQL
 	detalle: (req,res)=> {
-        res.render("./productos/productDetail",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
+        
+		db.Catalogo.findByPk(req.params.id)
+           .then(resultado => {
+			res.render("./productos/productDetail",{"catalogodetalle" : resultado,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
+            });
     },
 
+	// CARRITO - Method to carrito SQL
     carrito: (req,res)=> {
-        res.render("./productos/productCart",{"catalogodetalle" : catalogo[req.params.id],"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
+        db.Catalogo.findByPk(req.params.id)
+           .then(resultado => {
+			res.render("./productos/productCart",{"catalogodetalle" : resultado,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
+            });
+		
     },
 
+	// SEARCH - Method to search SQL
     search: (req,res)=> {
         
         let textoBusqueda = req.query.busqueda;
         let resultado =[];
         let orden=[];
 		
-        for(let i=0; i< catalogo.length; i++) {
+		db.Catalogo.findAll({
+            where: {
+				[db.Sequelize.Op.or] : [
+                {nombre: {[db.Sequelize.Op.like] : ("%"+textoBusqueda+"%")}},
+				{descripcion: {[db.Sequelize.Op.like] : ("%"+textoBusqueda+"%")}},
+				{codigo: {[db.Sequelize.Op.like] : ("%"+textoBusqueda+"%")}},
+				{autor: {[db.Sequelize.Op.like] : ("%"+textoBusqueda+"%")}}
+				]			
+            },
+			
 
-		
-			if (typeof catalogo[i].nombre !="undefined") {
-            if (catalogo[i].nombre.toUpperCase().includes(textoBusqueda.toUpperCase())) {
-                resultado.push(catalogo[i].nombre)
-                orden.push(i);
-            }
+            order: [
+				 ['nombre', 'DESC']
+            ]
         }
-	}
-    
-        res.render("./productos/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
-    
-    },
 
+
+		)
+		.then(resultado => {
+			console.log("resultado");
+			console.log(resultado);
+			res.render("./productos/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
+		}) 
+                  
+    },
+	// LIST - Method to list SQL
 	list: (req,res)=> {
         
-        let resultado =[];
-        
-		
-        for(let i=0; i< catalogo.length; i++) {
-
+		db.Catalogo.findAll()
+		.then(resultado => {
 			
-                resultado.push(catalogo[i])
-               
-            
+			res.render("./productos/listaProducts",{"resultado" : resultado,"usuarioActual":req.session.usuarioLogueado});
+		})    
         
 	}
     
-        res.render("./productos/listaProducts",{"resultado" : resultado,"usuarioActual":req.session.usuarioLogueado});
-    
-    },
+     
 };
 
 module.exports = controller;

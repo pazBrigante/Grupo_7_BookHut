@@ -39,12 +39,16 @@
                  
                     Id : <%= catalogodetalle.id%>
                     <br />
+                    
+                 
+                    Código : <%= catalogodetalle.codigo%>
+                    <br />
                     <a href="/products/carrito/<%=id%>">  <%= catalogodetalle.nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
                   
                     <br />
                     <br />
                     <% if (locals.usuarioActual) {%>
-                        <% if (locals.usuarioActual.group=="admin") { %>
+                        <% if (locals.usuarioActual.grupo=="admin") { %>
                             
                           
                             <form action="/products/eliminar/<%= catalogodetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex">
