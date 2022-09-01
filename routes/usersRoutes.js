@@ -45,7 +45,7 @@ router.post('/', upload.single("avatar-img"),[
     
 ]  ,usersController.create);  
 
-router.get("/edit/", usersController.edit); 
+router.get("/edit/:id", usersController.edit); 
 router.put("/edit/:id", upload.single("avatar-img"),
 [
     check("usuario").isLength({min:4}).withMessage("Usuario Mínimo 4 Caracteres"),

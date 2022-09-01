@@ -38,7 +38,7 @@
                     <br />
                     id: <%= usuariodetalle.id %>
                     <br />
-                    grupo: : <%= usuariodetalle.group %>
+                    grupo: : <%= usuariodetalle.grupo %>
                     <br />
 
                     <img class="imagen" src="/images/users/<%= usuariodetalle.image %>" alt="user Avatar" >
@@ -55,7 +55,13 @@
                     <form action="/users/eliminar/<%= usuariodetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                         <button type="submit" class="action-button delete">ELIMINAR</button>
                     </form>
+
+                  <form action="/users/edit/<%= usuariodetalle.id %>" method=GET style="display: inline-flex">
+                       <button type="submit" class="action-button delete">EDITAR</button>
+                    </form>
                     
+                    
+
                     <%}%>
                 <%}%>
                 <br />

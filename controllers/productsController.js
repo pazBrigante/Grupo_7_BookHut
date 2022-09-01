@@ -34,7 +34,14 @@ const controller = {
 	})
 	.then(resultado => {
 		res.redirect('/')
+
 	})
+	.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			})
 	
 	},
 
@@ -44,7 +51,13 @@ const controller = {
 		db.Catalogo.findByPk(req.params.id)
             .then(resultado => {
                 res.render("./productos/product-edit-form.ejs",{"productEdit":resultado,"usuarioActual":req.session.usuarioLogueado});;
-            });
+            })
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			});
 
 
 	},
@@ -75,7 +88,13 @@ const controller = {
 				},
 			{where:{
 				id: req.params.id
-			}});
+			}})
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			});
 			res.redirect("/") ;
 
 
@@ -87,7 +106,13 @@ const controller = {
 		db.Catalogo.destroy(
 			{where:{
 				id: req.params.id
-			}});
+			}})
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			});
 			res.redirect('/products/list')
 		
 	},
@@ -97,8 +122,18 @@ const controller = {
         
 		db.Catalogo.findByPk(req.params.id)
            .then(resultado => {
-			res.render("./productos/productDetail",{"catalogodetalle" : resultado,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
-            });
+			if (resultado){
+				res.render("./productos/productDetail",{"catalogodetalle" : resultado,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
+		} else {
+			res.redirect("views/partials/not-found.ejs")
+
+		}}) 
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			})
     },
 
 	// CARRITO - Method to carrito SQL
@@ -106,7 +141,13 @@ const controller = {
         db.Catalogo.findByPk(req.params.id)
            .then(resultado => {
 			res.render("./productos/productCart",{"catalogodetalle" : resultado,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
-            });
+            })
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			});
 		
     },
 
@@ -138,8 +179,14 @@ const controller = {
 		.then(resultado => {
 			console.log("resultado");
 			console.log(resultado);
-			res.render("./productos/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : catalogo,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
+			res.render("./productos/resultadoBusqueda",{"orden" : orden ,"textoBusqueda" : textoBusqueda ,"resultado" : resultado,"catalogo" : resultado,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
 		}) 
+		.catch(error=> {
+			res.redirect("views/partials/not-found.ejs")
+
+			
+			
+		})
                   
     },
 	// LIST - Method to list SQL
@@ -149,7 +196,13 @@ const controller = {
 		.then(resultado => {
 			
 			res.render("./productos/listaProducts",{"resultado" : resultado,"usuarioActual":req.session.usuarioLogueado});
-		})    
+		})
+		 .catch(error=> {
+			res.redirect("views/partials/not-found.ejs")
+
+			
+			
+		})   
         
 	}
     

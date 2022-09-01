@@ -55,6 +55,12 @@ const controller = {
 				res.redirect("/");
 				
 			})
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			})
 			
 			
 			
@@ -74,7 +80,13 @@ const controller = {
 		db.Usuario.findByPk(req.params.id)
            .then(resultado => {
 			res.render("./usuarios/userDetail",{"usuariodetalle" : resultado,"id": req.params.id,"usuarioActual":req.session.usuarioLogueado});
-            });
+            })
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			});
     
 
 },
@@ -87,6 +99,12 @@ const controller = {
 			
 		.then(resultado => {
 		res.redirect("/");
+		})
+		.catch(error=> {
+			res.redirect("views/partials/not-found.ejs")
+
+			
+			
 		});
 	},
 
@@ -100,6 +118,12 @@ const controller = {
 			
 			res.render("./usuarios/listaUsers",{"resultado" : resultado,"usuarioActual":req.session.usuarioLogueado}); 
         
+		})
+		.catch(error=> {
+			res.redirect("views/partials/not-found.ejs")
+
+			
+			
 		})
 	},
 	// - Login  SQL
@@ -148,7 +172,7 @@ const controller = {
 			req.session.usuarioLogueado= usuarioALoguearse;
 			
 			if (req.body.recordame) {
-				res.cookie("usuario",req.session.usuarioLogueado.usuario,{maxAge:60*1000*10});
+				res.cookie("usuario",req.session.usuarioLogueado.usuario,{maxAge:60*1000*20});
 
 			}
 			
@@ -157,6 +181,12 @@ const controller = {
 				}
 
 		} )
+		.catch(error=> {
+			res.redirect("views/partials/not-found.ejs")
+
+			
+			
+		})
 		//else {
 			
 		//	console.log("Datos Inválidos");
@@ -176,7 +206,7 @@ const controller = {
 	},
 
 	edit: (req, res) => {
-		let id_a_editar = req.session.usuarioLogueado.id;
+		let id_a_editar = req.params.id;
 		
 		console.log("editando usuarios editando usuarioseditando usuarioseditando usuarioseditando usuarios");
 		//res.render("./usuarios/user-edit-form.ejs",{userEdit,"usuarioActual":req.session.usuarioLogueado});
@@ -185,7 +215,13 @@ const controller = {
            .then(resultado=> {
 			console.log(resultado.id);
 			res.render("./usuarios/user-edit-form.ejs",{"userEdit":resultado,"usuarioActual":req.session.usuarioLogueado});
-            });
+            })
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			});
 	},
 	update: (req, res) => {
 		console.log("User Update User Update User Update User Update User Update ");
@@ -214,7 +250,13 @@ const controller = {
 				},
 			{where:{
 				id: req.params.id
-			}});
+			}})
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+				
+				
+			});
 			res.redirect("/") ;
 
 
