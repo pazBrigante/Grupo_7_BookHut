@@ -31,14 +31,14 @@
                 <div class="secctionGeneral_div_bloque">
                 <img class="imagen" src= <%= resultadose[i].img %> alt="Imagén de Producto" ><br />
               
-                <a href="products/detalle/<%=ordense[i]%>">  <%= resultadose[i].nombre %></a>
+                <a href="products/detalle/<%=resultadose[i].id%>">  <%= resultadose[i].nombre %></a>
                 <p class="ps-text-grey">
                 <%= resultadose[i].autor %> 
                 <%= resultadose[i].precio %>
                 
 
                 <br />
-                <a href="products/carrito/<%=ordense[i]%>">  <%= resultadose[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
+                <a href="products/carrito/<%=resultadose[i].id%>">  <%= resultadose[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
             </div>
            
 

@@ -38,31 +38,31 @@
         <p>
           <p>Nombre:</p>
           <label for="usuario"></label>
-          <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" value="<%= locals.usuarioLogueado.usuario %>">
+          <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" value="<%= userEdit.usuario %>">
           
         </p>
         <p>
           <p>email:</p>
           <label for="nombre"></label>
-          <input type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.usuarioLogueado.email %>">
+          <input type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= userEdit.email %>">
         </p>
 
         
           <label for="nacimiento">
             <p>Fecha de nacimiento:</p>
           </label>
-          <input type="date" name="nacimiento" id="date" value="<%= locals.usuarioLogueado.nacimiento %>">
+          <input type="date" name="nacimiento" id="date" value="<%= userEdit.nacimiento %>">
         
         <p>
           <p>Domicilio:</p>
           <label for="domicilio"></label>
-          <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" value="<%= locals.usuarioLogueado.domicilio %>">
+          <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" value="<%= userEdit.domicilio %>">
         </p>
 
         <p>
           <p>Id:</p>
           <label for="id"></label>
-          <input type="text" name="id" id="id" placeholder="id" value="<%= locals.usuarioLogueado.id %>">
+          <input type="text" name="id" id="id" placeholder="id" value="<%= userEdit.id %>">
         </p>
       
         <br />
@@ -74,16 +74,47 @@
         </p>
 
         <p>
-    
-      <p>Categoría:</p>
-      <label for="categoria"></label>
-      <input type="text" name="categoria" id="categoria" placeholder="categoria" value="<%= locals.usuarioLogueado.grupo%>">
-    </p>
-      <br />
+          
+         
+
+          <% if (locals.usuarioLogueado) {%>
+            <% if (locals.usuarioLogueado.grupo=="admin") { %>
+                
+              <div class="col-12 col-md-6">
+                <label for="grupo" class="form-label">Categoría:</label>
+                <select name="grupo" id="grupo" class="form-input">
+                  <option value=<%= userEdit.grupo %>><%= userEdit.grupo %></option>
+                  <option value="usuario">Usuario</option>
+                  <option value="admin">admin</option>
+                  <option value="supervisor">Supervisor</option>
+                  <option value="guest">invitado</option>
+                </select>
+              </div>
+            
+              
+        <%} else {%>
+          <div class="col-12 col-md-6">
+            <label for="grupo" class="form-label">Categoría:</label>
+            <select name="grupo" id="grupo" class="form-input">
+              <option value="usuario">Usuario</option>
+              
+            </select>
+          </div>
+          <%}%>
+          <%} else {%>
+            <div class="col-12 col-md-6">
+              <label for="grupo" class="form-label">Categoría:</label>
+              <select name="grupo" id="grupo" class="form-input">
+                <option value="usuario">Usuario</option>
+                
+              </select>
+            </div>
+          
+    <%}%>
       
 
       
-    Imagen Actual : <%= locals.usuarioLogueado.image %>
+    Imagen Actual : <%= userEdit.image %>
   
     <br />
   <img class="imagen" src="/images/users/<%= locals.usuarioLogueado.image %>" alt="Product Image" style="width:20%">

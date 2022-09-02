@@ -31,12 +31,12 @@
             <div class="secctionGeneral_div_bloque">
                 <article>
                 <img class="imagen" src=<%= resultadola[i].img %> ><br />
-                <a href="products/detalle/<%=ordenla[i]%>">  <%= resultadola[i].nombre %></a>
+                <a href="products/detalle/<%=resultadola[i].id%>">  <%= resultadola[i].nombre %></a>
                 <p class="ps-text-grey">
                 <%= resultadola[i].autor %> 
                 <%= resultadola[i].precio %>
                 <br />
-                <a href="products/carrito/<%=ordenla[i]%>">  <%= resultadola[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
+                <a href="products/carrito/<%=resultadola[i].id%>">  <%= resultadola[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
                 </article>
             </div>
                 

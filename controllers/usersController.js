@@ -208,12 +208,12 @@ const controller = {
 	edit: (req, res) => {
 		let id_a_editar = req.params.id;
 		
-		console.log("editando usuarios editando usuarioseditando usuarioseditando usuarioseditando usuarios");
+		
 		//res.render("./usuarios/user-edit-form.ejs",{userEdit,"usuarioActual":req.session.usuarioLogueado});
-		console.log("id_a_editar 33",id_a_editar);
+		
 		db.Usuario.findByPk(id_a_editar)
            .then(resultado=> {
-			console.log(resultado.id);
+		
 			res.render("./usuarios/user-edit-form.ejs",{"userEdit":resultado,"usuarioActual":req.session.usuarioLogueado});
             })
 			.catch(error=> {
