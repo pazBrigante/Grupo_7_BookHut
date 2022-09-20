@@ -24,6 +24,21 @@
 				</div>
 			</div>
 
+
+			<br />
+      
+			<% if (typeof errors != "undefined" ) {%>
+        <p style="color:red" > ERROR </p>
+        <ul>
+          <% for (let i =0; i < errors.length; i++) {%>
+            <li>
+              <%= errors[i].msg %>
+
+            </li>
+
+            <%}%>
+            <br />
+			<%}%>
 			<form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">

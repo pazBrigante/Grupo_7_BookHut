@@ -37,5 +37,16 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Catalogo = sequelize.define(alias, cols, config)
 
+    Catalogo.associate = function(models) {
+        Catalogo.hasMany(models.Carrito,{
+            as:"carritos",
+            foreignKey:"catalogo_id",
+            
+    })}
+    
+
+    
+
+
     return Catalogo
 }

@@ -18,7 +18,7 @@ const controller = {
 	
 	// Registro -  Method to mostrar registro SQL
 	register: (req, res) => {
-		console.log(res.locals.usuarioLogueado);
+		console.log("USuario Loguado",res.locals.usuarioLogueado);
 	res.render('../views/usuarios/register',{"usuarioActual":res.locals.usuarioLogueado });
 	
 	},
@@ -27,13 +27,31 @@ const controller = {
 	create: (req, res) => {
 		
 		let errors = validationResult(req);
-		console.log(errors);
+		let authorizedMimeTypes=['image/jpg','image/jpeg','image/png','image/gif'];
+		if (req.file){
+		if((req.file.mimetype== 'image/jpeg' ||
+		req.file.mimetype== 'image/jpg'||
+		req.file.mimetype== 'image/gif'||
+		req.file.mimetype== 'image/png' )){
+			console.log("tipo grafico ok ", req.file.mimetype);
+			}else{
+				
+				errors.errors.push({msg:"Solo archivos jpg jpeg png o gif"});
+				//console.log("tipo grafico mal", req.file.mimetype);
+				//console.log("errors", errors);
+			}};
+	
 		if (errors.isEmpty()){
 		const nuevoUsuario = req.body;
 		
 		nuevoUsuario.pass=bcrypt.hashSync( nuevoUsuario.pass,10);
 		delete nuevoUsuario.passC;
+		
+		
+
+
 		if (req.file) {
+			
 				nuevoUsuario.image = req.file.filename;
 		
 				} else {
@@ -56,7 +74,8 @@ const controller = {
 				
 			})
 			.catch(error=> {
-				res.redirect("views/partials/not-found.ejs")
+				
+				res.redirect("views/partials/not-found.ejs",{"error":error})
 
 				
 				
@@ -69,6 +88,7 @@ const controller = {
 		} else {
 			
 			console.log("Datos Inválidos");
+			
 				res.render("../views/usuarios/register"
 				,{errors:errors.errors,"usuarioActual":req.session.usuarioLogueado})
 	
@@ -228,7 +248,20 @@ const controller = {
 		let errors = validationResult(req);
 		console.log(errors);
 		let campo_img;
-		
+		let authorizedMimeTypes=['image/jpg','image/jpeg','image/png','image/gif'];
+		if (req.file){
+		if((req.file.mimetype== 'image/jpeg' ||
+		req.file.mimetype== 'image/jpg'||
+		req.file.mimetype== 'image/gif'||
+		req.file.mimetype== 'image/png' )){
+			console.log("tipo grafico ok ", req.file.mimetype);
+			}else{
+				
+				errors.errors.push({msg:"Solo archivos jpg jpeg png o gif"});
+				//console.log("tipo grafico mal", req.file.mimetype);
+				//console.log("errors", errors);
+			}};
+	
 			//let usertu = usuarios.find(usuar => usuar.id == id_a_editaru);
 			if (errors.isEmpty()){
 				if (req.file) {
@@ -263,10 +296,16 @@ const controller = {
 		
 			
 	} else {
-			
+		let id_a_editar = req.params.id;
 		console.log("Datos Inválidos");
-			return res.render("./usuarios/user-edit-form.ejs"
-			,{userEdit:usertu,errors:errors.errors})
+		db.Usuario.findByPk(id_a_editar)
+           .then(resultado=> {
+		
+			res.render("./usuarios/user-edit-form.ejs",{errors:errors.errors,"userEdit":resultado,"usuarioActual":req.session.usuarioLogueado});
+            })
+			
+
+			
 
 		
 	}

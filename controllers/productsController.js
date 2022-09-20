@@ -1,6 +1,6 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
-
+const {validationResult} = require ("express-validator");
 //Otra forma de llamar a los modelos
 
 
@@ -21,35 +21,63 @@ const controller = {
 	
 	// Create -  Method to store SQL
 	store: (req, res) => {
-	console.log(req.body);
-	db.Catalogo.create({
-		nombre: req.body.nombre,
-		precio:req.body.precio ,
-		descuento:req.body.descuento ,
-		autor:req.body.autor ,
-		codigo:req.body.codigo ,
-		categoria :req.body.categoria ,
-		descripcion :req.body.descripcion ,
-		img :"/images/" + req.file.filename,
-	})
-	.then(resultado => {
-		res.redirect('/')
+	
+	
+		let errors = validationResult(req);
 
-	})
-	.catch(error=> {
-				res.redirect("views/partials/not-found.ejs")
+		let authorizedMimeTypes=['image/jpg','image/jpeg','image/png','image/gif'];
+		if (req.file){
+		if((req.file.mimetype== 'image/jpeg' ||
+		req.file.mimetype== 'image/jpg'||
+		req.file.mimetype== 'image/gif'||
+		req.file.mimetype== 'image/png' )){
+			console.log("tipo grafico ok ", req.file.mimetype);
+			}else{
+				
+				errors.errors.push({msg:"Solo archivos jpg jpeg png o gif"});
+				//console.log("tipo grafico mal", req.file.mimetype);
+				//console.log("errors", errors);
+			}};
+	
+		console.log(errors);
+			if (errors.isEmpty()){
+
+				db.Catalogo.create({
+				nombre: req.body.nombre,
+				precio:req.body.precio ,
+				descuento:req.body.descuento ,
+				autor:req.body.autor ,
+				codigo:req.body.codigo ,
+				categoria :req.body.categoria ,
+				descripcion :req.body.descripcion ,
+				img :"/images/" + req.file.filename,
+			})
+			.then(resultado => {
+			res.redirect('/')
+
+		})
+		.catch(error=> {
+					res.redirect("views/partials/not-found.ejs")
 
 				
 				
 			})
+		} else {
+			
+			console.log("Datos Inválidos");
+			console.log("+++++++++++++++++++++++++++++++++++++++")
+				console.log(errors.errors);
+				res.render("../views/productos/product-create-form"
+				,{errors:errors.errors,"usuarioActual":req.session.usuarioLogueado})
 	
+			}
 	},
 
 	// Update - Form to edit SQL
 	edit: (req, res) => {
-		
-		db.Catalogo.findByPk(req.params.id)
-            .then(resultado => {
+				
+			db.Catalogo.findByPk(req.params.id)
+           	 .then(resultado => {
                 res.render("./productos/product-edit-form.ejs",{"productEdit":resultado,"usuarioActual":req.session.usuarioLogueado});;
             })
 			.catch(error=> {
@@ -58,44 +86,72 @@ const controller = {
 				
 				
 			});
-
+		
 
 	},
 
 	
 	// Update - Method to update SQL
 	
-	update: function (req,res) {
+	update: function ( req , res ) {
 			let campo_img;
-			
-			if (req.file) {
-				campo_img = "/images/" + req.file.filename; 
-		
-				} else {
+			let authorizedMimeTypes=['image/jpg','image/jpeg','image/png','image/gif'];
+		if (req.file){
+		if((req.file.mimetype== 'image/jpeg' ||
+		req.file.mimetype== 'image/jpg'||
+		req.file.mimetype== 'image/gif'||
+		req.file.mimetype== 'image/png' )){
+			console.log("tipo grafico ok ", req.file.mimetype);
+			}else{
+				
+				errors.errors.push({msg:"Solo archivos jpg jpeg png o gif"});
+				//console.log("tipo grafico mal", req.file.mimetype);
+				//console.log("errors", errors);
+			}};
+	
+			let errors = validationResult(req);
+				console.log(errors);
+			if (errors.isEmpty()){
+				if (req.file) {
+					campo_img = "/images/" + req.file.filename; 
+					
+					} else {
 					campo_img = req.body.img; 
 		
-				};
+					};
 			
-			db.Catalogo.update({
-				nombre: req.body.nombre,
-				precio:req.body.precio ,
-				descuento:req.body.descuento ,
-				autor:req.body.autor ,
-				codigo:req.body.codigo ,
-				categoria :req.body.categoria ,
-				descripcion :req.body.descripcion ,
-				img :campo_img
-				},
-			{where:{
-				id: req.params.id
-			}})
-			.catch(error=> {
-				res.redirect("views/partials/not-found.ejs")
+				db.Catalogo.update({
+					nombre: req.body.nombre,
+					precio:req.body.precio ,
+					descuento:req.body.descuento ,
+					autor:req.body.autor ,
+					codigo:req.body.codigo ,
+					categoria :req.body.categoria ,
+					descripcion :req.body.descripcion ,
+					img :campo_img
+					},
+				{where:{
+					id: req.params.id
+				}})
+				.catch(error=> {
+					res.redirect("views/partials/not-found.ejs")
 
 				
 				
 			});
-			res.redirect("/") ;
+		} else {
+			db.Catalogo.findByPk(req.params.id)
+           	 .then(resultado => {
+                res.render("./productos/product-edit-form.ejs",{"productEdit":resultado,"usuarioActual":req.session.usuarioLogueado
+				,errors:errors.errors});;
+            })
+			.catch(error=> {
+				res.redirect("views/partials/not-found.ejs")
+
+			})
+				
+		}
+			
 
 
 	},

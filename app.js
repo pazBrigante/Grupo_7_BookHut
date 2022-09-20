@@ -20,7 +20,7 @@ app.set("view engine","ejs");
 const rutasMain = require("./routes/mainRoutes");
 const productsRouter = require('./routes/productsRoutes'); // Rutas /products
 const usersRouter = require('./routes/usersRoutes'); // Rutas /users
-
+const carritoRouter = require('./routes/carritoRoutes'); // Rutas /carrito
 //Aquí pueden colocar las rutas de las APIs
 const apiRouter = require('./routes/api/apiRouter');
 
@@ -47,7 +47,7 @@ app.use('/',rutasMain );
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
-
+app.use('/carrito', carritoRouter);
 
 app.use((req,res,next) => {
     res.status(404).render("../views/partials/not-found.ejs")

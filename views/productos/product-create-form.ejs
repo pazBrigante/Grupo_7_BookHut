@@ -25,6 +25,20 @@
 				<h2 class="products-title">Formulario de creación de productos</h2> <br>
 			</div>
 		</div>
+
+		<br />
+		<% if (typeof errors != "undefined" ) {%>
+		  <p style="color:red" > ERROR </p>
+		  <ul>
+			<% for (let i =0; i < errors.length; i++) {%>
+			  <li>
+				<%= errors[i].msg %>
+  
+			  </li>
+  
+			  <%}%>
+			  <br />
+			  <%}%>
 		<div class="col-12">
 			<form action="/products" method="post" enctype="multipart/form-data">
 				<div class="row product-detail">
