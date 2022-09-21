@@ -50,18 +50,23 @@ router.post('/', upload.single("avatar_img"), [
             throw new Error('Las Contraseñas deben ser iguales')
         }
     }),
-    check("email").custom(async (email1, { req }) => {
+    //check("email").custom(async (email1, { req }) => {
+        
+     //   console.log("verificar email1",email1);
+    ////    db.Usuario.findAll(
+           // { where: { "email": email1 } }
+     //   )
+     //   .then(resultado => {
+           
+     //   if (resultado != "") {
+          //  new Error('El email ya esta registrado')
 
-        resultado = db.Usuario.findAll(
-            { where: { "email": email1 } }
-        )
-
-        if (resultado != "") {
-            throw new Error('El email ya esta registrado')
-
-        }
-
-    }),
+    //    }
+    
+   // });
+//}
+//)
+//,
     check("email").isEmail().withMessage("Debe ser Email"),
     check("nacimiento").isDate().withMessage("Debe ser Fecha"),
     

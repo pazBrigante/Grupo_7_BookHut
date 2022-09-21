@@ -53,7 +53,7 @@ router.post('/', upload.single("product-img"),
     check("precio").isNumeric({ min: 2 }).withMessage("Precio Inválido"),
     check("categoria").custom(async (categoria, { req }) => {
         console.log("categoria",categoria);
-        if ((categoria != "lanzamientos") && (categoria != "seleccionados") && (categoria != "MasVendidos") ) {
+        if ((categoria != "lanzamientos") && (categoria != "seleccionados") && (categoria != "masVendidos") ) {
             throw new Error('Categoría incorrecta')
         }
     }),
@@ -80,7 +80,7 @@ check("precio").isNumeric({ min: 2 }).withMessage("Precio Inválido"),
 check("categoria").custom(async (categoria, { req }) => {
     console.log("categoria",categoria);
     console.log("categoria","seleccionados");
-    if ((categoria != "lanzamientos" )&& (categoria != "seleccionados") && (categoria != "MasVendidos") ) {
+    if ((categoria != "lanzamientos" )&& (categoria != "seleccionados") && (categoria != "masVendidos") ) {
         throw new Error('Categoría incorrecta')
     }
 })

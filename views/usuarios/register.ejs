@@ -1,10 +1,11 @@
   
   <head>
+  
     <%- include("../partials/head") %> 
     <%- include("../partials/head_reg") %> 
   </head>
   <header>
-    
+    <script src="/js/userValidation.js" ></script>
     <%- include("../partials/header") %> 
   </header>
 
@@ -25,9 +26,10 @@
             <br />
         </ul>
 
-
+      
         <%}%>
-      <form action="/users" method="POST" enctype="multipart/form-data">
+        <ul id="ul2"></ul>
+      <form id="form" action="/users" method="POST" enctype="multipart/form-data">
         <p class="login_Register_text">CREÁ TU CUENTA Y COMPRÁ DESDE DONDE ESTÉS 1</p>
 
         

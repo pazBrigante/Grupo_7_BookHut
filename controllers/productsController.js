@@ -41,7 +41,13 @@ const controller = {
 	
 		console.log(errors);
 			if (errors.isEmpty()){
-
+				if (req.file) {
+					campo_img =  "/images/" +req.file.filename; 
+			
+					} else {
+						campo_img = "/images/" +req.body.img; 
+			
+					};
 				db.Catalogo.create({
 				nombre: req.body.nombre,
 				precio:req.body.precio ,
@@ -50,7 +56,7 @@ const controller = {
 				codigo:req.body.codigo ,
 				categoria :req.body.categoria ,
 				descripcion :req.body.descripcion ,
-				img :"/images/" + req.file.filename,
+				img :campo_img,
 			})
 			.then(resultado => {
 			res.redirect('/')
