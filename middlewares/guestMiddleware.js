@@ -1,9 +1,7 @@
-function guestMiddleware (req,res,next) {
-
-if (req.session && req.session.usuarioLogueado){
-    return res.redirect("edit/"+req.session.usuarioLogueado.id)
-
+function guestMiddleware(req, res, next) {
+    if (req.session && req.session.usuarioLogueado) {
+        return res.redirect("edit/" + req.session.usuarioLogueado.id)
+    }
+    next();
 }
-next();
-}
-module.exports=guestMiddleware;
+module.exports = guestMiddleware;

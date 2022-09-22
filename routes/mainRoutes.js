@@ -9,9 +9,7 @@ const productsController = require('../controllers/productsController.js');
 const userLoguedMiddleware=require("../middlewares/userLoguedMiddleware.js");
 router.use(express.static(publicFolderPath)); 
 
-
 router.get('/',mainController.seleccionados );
-
 
 router.get("/lanzamientos",mainController.lanzamientos);
 router.get("/masVendidos",mainController.masVendidos);

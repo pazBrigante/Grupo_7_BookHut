@@ -9,7 +9,4 @@ router.get('/users/:id', apiController.detailUsers);
 //router.post('/api/movies/add', moviesController.store);
 //router.delete('/api/movies/delete/:id', moviesController.delete);
 
-
-
-
 module.exports = router;
