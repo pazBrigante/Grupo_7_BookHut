@@ -30,10 +30,11 @@ var upload = multer({
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const notUniqueEmailMiddleware = require('../middlewares/notUniqueEmailMiddleware');
 
 /*** CREATE ONE USER ***/
 router.get('/register', usersController.register);
-router.post('/', upload.single("avatar_img"), [
+router.post('/',upload.single("avatar_img"), [
     check("usuario").isLength({ min: 4 }).withMessage("Usuario Mínimo 4 Caracteres"),
     check("pass").isLength({ min: 4 }).withMessage("Password Mínimo 4 Caracteres"),
     check("passC").custom(async (passC, { req }) => {
@@ -42,24 +43,9 @@ router.post('/', upload.single("avatar_img"), [
             throw new Error('Las Contraseñas deben ser iguales')
         }
     }),
-    //check("email").custom(async (email1, { req }) => {
-
-    //   console.log("verificar email1",email1);
-    ////    db.Usuario.findAll(
-    // { where: { "email": email1 } }
-    //   )
-    //   .then(resultado => {
-
-    //   if (resultado != "") {
-    //  new Error('El email ya esta registrado')
-    //    }
-    // });
-    //}
-    //)
-    //,
-    check("email").isEmail().withMessage("Debe ser Email"),
-    check("nacimiento").isDate().withMessage("Debe ser Fecha"),
-], usersController.create);
+        check("email").isEmail().withMessage("Debe ser Email"),
+    check("nacimiento").isDate().withMessage("Debe ser Fecha")
+],  notUniqueEmailMiddleware,usersController.create);
 
 router.get("/edit/:id", usersController.edit);
 router.put("/edit/:id", upload.single("avatar_img"),
@@ -69,7 +55,7 @@ router.put("/edit/:id", upload.single("avatar_img"),
         check("nacimiento").isDate().withMessage("Debe ser Fecha"),
 
     ],
-    usersController.update);
+    notUniqueEmailMiddleware,usersController.update);
 router.get('/list', usersController.list);
 router.delete('/eliminar/:id', usersController.destroy);
 router.get('/detalle/:id', usersController.detalle);

@@ -19,9 +19,14 @@ const controller = {
 
 	// Create -  Method to Create SQL
 	create: (req, res) => {
-
+		console.log("email Duplicado ",req.body.emailDuplicado)
 		let errors = validationResult(req);
 		let authorizedMimeTypes = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];
+		if (req.body.emailDuplicado==true){
+			req.body.emailDuplicado=false
+			errors.errors.push({ msg: "Email ya existe" });
+		}
+		
 		if (req.file) {
 			if ((req.file.mimetype == 'image/jpeg' ||
 				req.file.mimetype == 'image/jpg' ||
@@ -169,6 +174,7 @@ const controller = {
 	},
 
 	edit: (req, res) => {
+		
 		let id_a_editar = req.params.id;
 		//res.render("./usuarios/user-edit-form.ejs",{userEdit,"usuarioActual":req.session.usuarioLogueado});
 		db.Usuario.findByPk(id_a_editar)
@@ -182,6 +188,10 @@ const controller = {
 	},
 	update: (req, res) => {
 		let errors = validationResult(req);
+		if (req.body.emailDuplicado==true){
+			req.body.emailDuplicado=false
+			errors.errors.push({ msg: "Email ya existe" });
+		}
 		let campo_img;
 		let authorizedMimeTypes = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];
 		if (req.file) {
