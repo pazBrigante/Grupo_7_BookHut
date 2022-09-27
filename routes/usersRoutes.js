@@ -63,7 +63,7 @@ router.get('/detalle/:id', usersController.detalle);
 router.get("/login", usersController.login);
 router.get("/logout", usersController.logout);
 router.post("/login", [
-    check("usuario").isLength({ min: 4 }).withMessage("Usuario Mínimo 4 Caracteres"),
+    check("usuario").isLength({ min: 2 }).withMessage("Usuario Mínimo 2 Caracteres"),
     check("pass").isLength({ min: 4 }).withMessage("Password Mínimo 4 Caracteres")
 ],
     usersController.processLogin);

@@ -24,7 +24,7 @@ window.onload = function () {
 
     nombre.focus();
 
-    nombre.addEventListener('blur', () => {
+    nombre.addEventListener('input', () => {
         
         if (nombre.value.trim() == '') {
             errores.push('El nombre esta vacio');
@@ -39,7 +39,7 @@ window.onload = function () {
         };
     });
 
-   precio.addEventListener('blur', () => {
+   precio.addEventListener('input', () => {
       
         if (precio.value.trim() == '') {
             errores.push('El precio esta vacio');
@@ -57,7 +57,7 @@ window.onload = function () {
         };
     });
     
-    descripcion.addEventListener('blur', () => {
+    descripcion.addEventListener('input', () => {
       
         if (descripcion.value.trim() == '') {
             errores.push('La decripcion esta vacio');
@@ -72,7 +72,7 @@ window.onload = function () {
         };
     });
 
-    autor.addEventListener('blur', () => {
+    autor.addEventListener('input', () => {
         console.log("dejé el autor");
         if (autor.value == '') {
             errores.push('El autor esta vacio');
@@ -87,7 +87,7 @@ window.onload = function () {
         };
     });
 
-   codigo.addEventListener('blur', () => {
+   codigo.addEventListener('input', () => {
         
         if (codigo.value.trim() == '') {
             errores.push('El código esta vacio');

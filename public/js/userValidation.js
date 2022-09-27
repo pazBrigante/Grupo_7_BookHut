@@ -9,7 +9,24 @@ window.onload = function () {
 
     //------DESDE AQUÍ CONTINÚE CON LAS VALIDACIONES DEL FORMULARIO //
     //-------------------DE REGISTRO DE PELÍCULAS------------------//    
-    
+    let emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+    function isEmailValid(email) {
+        if (!email)
+            return false;
+        if(email.length>254)
+            return false;
+        var valid = emailRegex.test(email);
+        if(!valid)
+            return false;
+        // Further checking of some things regex can't handle
+        var parts = email.split("@");
+        if(parts[0].length>64)
+            return false;
+        var domainParts = parts[1].split(".");
+        if(domainParts.some(function(part) { return part.length>63; }))
+            return false;
+        return true;
+    }
     const form = document.querySelector('#form');
     const usuario = document.querySelector('#usuario');
     const email = document.querySelector('#email');
@@ -20,13 +37,14 @@ window.onload = function () {
     //const categoria = document.querySelector('#categoria');
     //const  product_img = document.querySelector('#product-img');
     const ulErrores = document.querySelector('#ul2');
+    const ulErroresBack = document.querySelector('#ul1');
     const errores = [];
 
     usuario.focus();
-
-    usuario.addEventListener('blur', () => {
+    
+    usuario.addEventListener('input', () => {
         
-        if (usuario.value.trim() == '') {
+        if (usuario.value.trim() == '' ) {
             errores.push('El usuario esta vacio');
             usuario.classList.add('is-invalid');
             usuario.placeholder = 'El usuario esta vacio';
@@ -39,12 +57,12 @@ window.onload = function () {
         };
     });
 
-   email.addEventListener('blur', () => {
+   email.addEventListener('input', () => {
       
-        if (email.value.trim() == '') {
-            errores.push('El email esta vacio');
+        if ((email.value.trim() == '') || (!isEmailValid(email.value))) {
+            errores.push('El email es inválido');
             email.classList.add('is-invalid');
-            email.placeholder = 'El email esta vacio';
+            email.placeholder = 'inválido';
         } else if (email.value.length < 2) {
             errores.push('El email debe tener al menos dos caracteres');
             email.classList.add('is-invalid');
@@ -55,7 +73,7 @@ window.onload = function () {
         };
     });
     
-    nacimiento.addEventListener('blur', () => {
+    nacimiento.addEventListener('input', () => {
       
         if (nacimiento.value.trim() == '') {
             errores.push('La nacimiento esta vacio');
@@ -70,7 +88,7 @@ window.onload = function () {
         };
     });
 if (password) {
-    password.addEventListener('blur', () => {
+    password.addEventListener('input', () => {
         console.log("dejé el password");
         if (password.value == '') {
             errores.push('El password esta vacio');
@@ -90,7 +108,7 @@ if (password) {
     //Verificación envio de form
     form.addEventListener('submit', (e) => {
         let error = []
-    
+        
         
         
             if (usuario.value.trim() == '') {
@@ -107,11 +125,11 @@ if (password) {
         
     
        
-          
-            if (email.value.trim() == '') {
-                error.push('El email esta vacio');
+            if ((email.value.trim() == '') || (!isEmailValid(email.value))) {
+                error.push('El email es inválido');
                 email.classList.add('is-invalid');
-                email.placeholder = 'El email esta vacio';
+              
+            
             } else if (email.value.length < 2) {
                 error.push('El email debe tener al menos dos caracteres');
                 email.classList.add('is-invalid');
@@ -160,7 +178,9 @@ if (password) {
             for (let i = 0; i < error.length; i++) {
                 ulErrores.classList.add('alert-warning');
                 ulErrores.innerHTML += '<li>' + error[i] + '</li>';
+                
             };
+            
         };
 
         if (error.length == 0) {

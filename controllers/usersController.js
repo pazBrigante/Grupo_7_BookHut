@@ -22,8 +22,8 @@ const controller = {
 		console.log("email Duplicado ",req.body.emailDuplicado)
 		let errors = validationResult(req);
 		let authorizedMimeTypes = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];
-		if (req.body.emailDuplicado==true){
-			req.body.emailDuplicado=false
+		if (req.body.emailDuplicado!=0){
+			//req.body.emailDuplicado=false
 			errors.errors.push({ msg: "Email ya existe" });
 		}
 		
@@ -188,9 +188,10 @@ const controller = {
 	},
 	update: (req, res) => {
 		let errors = validationResult(req);
-		if (req.body.emailDuplicado==true){
-			req.body.emailDuplicado=false
-			errors.errors.push({ msg: "Email ya existe" });
+		console.log("edit user:",req.body.emailDuplicado,req.body.emailDuplicadoId,req.params.id)
+		if (req.body.emailDuplicado>0 ){
+			if ((req.body.emailDuplicado==1 && req.body.emailDuplicadoId!=req.params.id)||req.body.emailDuplicado>1 )
+				errors.errors.push({ msg: "Email ya existe" });
 		}
 		let campo_img;
 		let authorizedMimeTypes = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];

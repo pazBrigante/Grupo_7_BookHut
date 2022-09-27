@@ -13,11 +13,16 @@ function notUniqueEmailMiddleware(req, res, next) {
        )
        .then(resultado => {
         console.log("Resultado",resultado);
-       if (resultado != "") {
-        //throw new Error('El email ya esta registrado')
-        console.log("El email ya esta registrado ");
-        req.body.emailDuplicado=true;
-        }
+       //if (resultado != "") {
+        
+       
+        req.body.emailDuplicado=resultado.length;
+        if(req.body.emailDuplicado==1){
+            req.body.emailDuplicadoId=resultado[0].id;
+       }
+
+        //console.log("El email ya esta registrado ", req.body.emailDuplicado,req.body.emailDuplicadoId);
+        
        
         next();
      })};
