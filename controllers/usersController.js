@@ -19,14 +19,14 @@ const controller = {
 
 	// Create -  Method to Create SQL
 	create: (req, res) => {
-		console.log("email Duplicado ",req.body.emailDuplicado)
+		console.log("email Duplicado ", req.body.emailDuplicado)
 		let errors = validationResult(req);
 		let authorizedMimeTypes = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];
-		if (req.body.emailDuplicado!=0){
+		if (req.body.emailDuplicado != 0) {
 			//req.body.emailDuplicado=false
 			errors.errors.push({ msg: "Email ya existe" });
 		}
-		
+
 		if (req.file) {
 			if ((req.file.mimetype == 'image/jpeg' ||
 				req.file.mimetype == 'image/jpg' ||
@@ -69,7 +69,7 @@ const controller = {
 				.catch(error => {
 
 					res.redirect("views/partials/not-found.ejs", { "error": error })
-					})
+				})
 		} else {
 			console.log("Datos Inválidos");
 			console.log("errors.errors");
@@ -174,13 +174,15 @@ const controller = {
 	},
 
 	edit: (req, res) => {
-		
+
 		let id_a_editar = req.params.id;
 		//res.render("./usuarios/user-edit-form.ejs",{userEdit,"usuarioActual":req.session.usuarioLogueado});
 		db.Usuario.findByPk(id_a_editar)
 			.then(resultado => {
-				res.render("./usuarios/user-edit-form.ejs", { "userEdit": resultado, 
-				"usuarioActual": req.session.usuarioLogueado });
+				res.render("./usuarios/user-edit-form.ejs", {
+					"userEdit": resultado,
+					"usuarioActual": req.session.usuarioLogueado
+				});
 			})
 			.catch(error => {
 				res.redirect("views/partials/not-found.ejs")
@@ -188,9 +190,9 @@ const controller = {
 	},
 	update: (req, res) => {
 		let errors = validationResult(req);
-		console.log("edit user:",req.body.emailDuplicado,req.body.emailDuplicadoId,req.params.id)
-		if (req.body.emailDuplicado>0 ){
-			if ((req.body.emailDuplicado==1 && req.body.emailDuplicadoId!=req.params.id)||req.body.emailDuplicado>1 )
+		console.log("edit user:", req.body.emailDuplicado, req.body.emailDuplicadoId, req.params.id)
+		if (req.body.emailDuplicado > 0) {
+			if ((req.body.emailDuplicado == 1 && req.body.emailDuplicadoId != req.params.id) || req.body.emailDuplicado > 1)
 				errors.errors.push({ msg: "Email ya existe" });
 		}
 		let campo_img;
@@ -238,9 +240,11 @@ const controller = {
 			console.log("Datos Inválidos");
 			db.Usuario.findByPk(id_a_editar)
 				.then(resultado => {
-					res.render("./usuarios/user-edit-form.ejs", 
-					{ errors: errors.errors, "userEdit": resultado, 
-					"usuarioActual": req.session.usuarioLogueado });
+					res.render("./usuarios/user-edit-form.ejs",
+						{
+							errors: errors.errors, "userEdit": resultado,
+							"usuarioActual": req.session.usuarioLogueado
+						});
 				})
 		}
 	},

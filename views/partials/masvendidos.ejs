@@ -2,52 +2,56 @@
 <html>
 
 <head>
-    
-    <%- include("./head") %> 
+
+    <%- include("./head") %>
 </head>
 
- 
+
 <body>
 
 
     <header class="main-header">
 
-        <%- include("./header") %> 
-       
+        <%- include("./header") %>
+
     </header>
 
-    
-      <br />
-<h3>Mas Vendidos</h3>
 
-<div class="secctionGeneral_bloque">
+    <br />
+    <h3>Mas Vendidos</h3>
 
-    <% for(let i=0; i< resultadomv.length; i++) { %> 
-        
-        <br />
-      
-            
+    <div class="secctionGeneral_bloque">
+
+        <% for(let i=0; i< resultadomv.length; i++) { %>
+
+            <br />
+
+
             <div class="secctionGeneral_div_bloque">
                 <article>
-                <img class="imagen" src=<%= resultadomv[i].img %> ><br />
-                <a href="products/detalle/<%=resultadomv[i].id%>">  <%= resultadomv[i].nombre %></a>
-                <p class="ps-text-grey">
-                <%= resultadomv[i].autor %> 
-                <%= resultadomv[i].precio %>
-                <br />
-                <a href="carrito/<%=resultadomv[i].id%>">  <%= resultadomv[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
+                    <img class="imagen" src=<%=resultadomv[i].img %> ><br />
+                    <a href="products/detalle/<%=resultadomv[i].id%>">
+                        <%= resultadomv[i].nombre %>
+                    </a>
+                    <p class="ps-text-grey">
+                        <%= resultadomv[i].autor %>
+                            <%= resultadomv[i].precio %>
+                                <br />
+                                <a href="carrito/<%=resultadomv[i].id%>">
+                                    <%= resultadomv[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
                 </article>
             </div>
-                
+
             <% } %>
 
-        
-       
-    
- 
-</div>
 
-<footer class="main-footer">
 
-    <%- include("./footer") %> 
-</footer>
+
+
+    </div>
+
+    <footer class="main-footer">
+
+        <%- include("./footer") %>
+    </footer>

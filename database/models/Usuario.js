@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Usuario';
 
-   
+
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
         grupo: {
             type: dataTypes.STRING
         },
-        
+
         image: {
             type: dataTypes.STRING
         }

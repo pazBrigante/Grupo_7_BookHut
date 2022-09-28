@@ -1,88 +1,88 @@
 [
- {
-  "nombre": "JUn regalo Para el alma",
-  "autor": "Cecilia Ahern",
-  "precio": "U$S 31",
-  "img": "/images/id7.jpg",
-  "categoria": "masVendidos",
-  "id": "10"
- },
- {
-  "nombre": "Nuevo libro",
-  "autor": "nuevo autor",
-  "precio": "U$S 31",
-  "img": "/images/id10.jpg",
-  "categoria": "masVendidos",
-  "id": 11
- },
- {
-  "nombre": "DH Book 21",
-  "precio": "22",
-  "descuento": "12",
-  "autor": "Juan Juan",
-  "img": "/images/id4.jpg",
-  "id": "12345",
-  "categoria": "lanzamientos",
-  "descripcion": ""
- },
- {
-  "nombre": "prueba123",
-  "precio": "1234",
-  "descuento": "10",
-  "autor": "Jose pedro",
-  "id": "23a",
-  "categoria": "lanzamientos",
-  "descripcion": "",
-  "img": "/images/1660052827672-id2.jpg"
- },
- {
-  "nombre": "Sarasa2",
-  "precio": "1.12",
-  "descuento": "1",
-  "autor": "Maguila",
-  "id": "2212as",
-  "categoria": "lanzamientos",
-  "descripcion": "Un libro groso",
-  "img": "/images/1660156293243-id5.jpg"
- },
- {
-  "nombre": "Sarasa1",
-  "precio": "1234",
-  "descuento": "123",
-  "autor": "Tito Lopez",
-  "id": "1231asd",
-  "categoria": "lanzamientos",
-  "descripcion": "",
-  "img": "/images/1660156428052-id1.jpg"
- },
- {
-  "nombre": "Sarasa 3",
-  "precio": "6661",
-  "descuento": "6",
-  "autor": "Juan Bauti",
-  "id": "123bauti1",
-  "categoria": "seleccionados",
-  "descripcion": "Librazo!",
-  "img": "/images/1660157770123-id2.jpg"
- },
- {
-  "nombre": "Juvenil2e",
-  "precio": "2",
-  "descuento": "2",
-  "autor": "Juan",
-  "id": "123aa",
-  "categoria": "lanzamientos",
-  "descripcion": "",
-  "img": "/images/1660170412332-id1.jpg"
- },
- {
-  "nombre": "Juvenil3",
-  "precio": "1234",
-  "descuento": "10",
-  "autor": "Juan",
-  "id": "123xx",
-  "categoria": "seleccionados",
-  "descripcion": "Libro Loco",
-  "img": "/images/1660177720552-id1.jpg"
- }
+    {
+        "nombre": "JUn regalo Para el alma",
+        "autor": "Cecilia Ahern",
+        "precio": "U$S 31",
+        "img": "/images/id7.jpg",
+        "categoria": "masVendidos",
+        "id": "10"
+    },
+    {
+        "nombre": "Nuevo libro",
+        "autor": "nuevo autor",
+        "precio": "U$S 31",
+        "img": "/images/id10.jpg",
+        "categoria": "masVendidos",
+        "id": 11
+    },
+    {
+        "nombre": "DH Book 21",
+        "precio": "22",
+        "descuento": "12",
+        "autor": "Juan Juan",
+        "img": "/images/id4.jpg",
+        "id": "12345",
+        "categoria": "lanzamientos",
+        "descripcion": ""
+    },
+    {
+        "nombre": "prueba123",
+        "precio": "1234",
+        "descuento": "10",
+        "autor": "Jose pedro",
+        "id": "23a",
+        "categoria": "lanzamientos",
+        "descripcion": "",
+        "img": "/images/1660052827672-id2.jpg"
+    },
+    {
+        "nombre": "Sarasa2",
+        "precio": "1.12",
+        "descuento": "1",
+        "autor": "Maguila",
+        "id": "2212as",
+        "categoria": "lanzamientos",
+        "descripcion": "Un libro groso",
+        "img": "/images/1660156293243-id5.jpg"
+    },
+    {
+        "nombre": "Sarasa1",
+        "precio": "1234",
+        "descuento": "123",
+        "autor": "Tito Lopez",
+        "id": "1231asd",
+        "categoria": "lanzamientos",
+        "descripcion": "",
+        "img": "/images/1660156428052-id1.jpg"
+    },
+    {
+        "nombre": "Sarasa 3",
+        "precio": "6661",
+        "descuento": "6",
+        "autor": "Juan Bauti",
+        "id": "123bauti1",
+        "categoria": "seleccionados",
+        "descripcion": "Librazo!",
+        "img": "/images/1660157770123-id2.jpg"
+    },
+    {
+        "nombre": "Juvenil2e",
+        "precio": "2",
+        "descuento": "2",
+        "autor": "Juan",
+        "id": "123aa",
+        "categoria": "lanzamientos",
+        "descripcion": "",
+        "img": "/images/1660170412332-id1.jpg"
+    },
+    {
+        "nombre": "Juvenil3",
+        "precio": "1234",
+        "descuento": "10",
+        "autor": "Juan",
+        "id": "123xx",
+        "categoria": "seleccionados",
+        "descripcion": "Libro Loco",
+        "img": "/images/1660177720552-id1.jpg"
+    }
 ]
