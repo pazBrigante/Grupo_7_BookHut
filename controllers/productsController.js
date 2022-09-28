@@ -30,7 +30,7 @@ const controller = {
 				//console.log("errors", errors);
 			}
 		};
-
+		let  campo_img="";
 
 		if (errors.isEmpty()) {
 			if (req.file) {

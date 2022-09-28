@@ -15,11 +15,11 @@ window.onload = function () {
             return false;
         if(email.length>254)
             return false;
-        var valid = emailRegex.test(email);
+        let valid = emailRegex.test(email);
         if(!valid)
             return false;
         // Further checking of some things regex can't handle
-        var parts = email.split("@");
+        let parts = email.split("@");
         if(parts[0].length>64)
             return false;
         var domainParts = parts[1].split(".");
