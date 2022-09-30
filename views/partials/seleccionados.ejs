@@ -2,55 +2,59 @@
 <html>
 
 <head>
-    
-    <%- include("./head") %> 
+
+    <%- include("./head") %>
 </head>
 
- 
+
 <body>
 
 
     <header class="main-header">
 
-        <%- include("./header") %> 
-       
+        <%- include("./header") %>
+
     </header>
 
-    
 
-      <br />
-<h3>Seleccionados para vos</h3>
 
-<div class="secctionGeneral_bloque">
+    <br />
+    <h3>Seleccionados para vos</h3>
 
-    <% for(let i=0; i< resultadose.length; i++) { %> 
-        
-        <br />
-        
-            
-                <div class="secctionGeneral_div_bloque">
-                <img class="imagen" src= <%= resultadose[i].img %> alt="Imagén de Producto" ><br />
-              
-                <a href="products/detalle/<%=resultadose[i].id%>">  <%= resultadose[i].nombre %></a>
+    <div class="secctionGeneral_bloque">
+
+        <% for(let i=0; i< resultadose.length; i++) { %>
+
+            <br />
+
+
+            <div class="secctionGeneral_div_bloque">
+                <img class="imagen" src=<%=resultadose[i].img %> alt="Imagén de Producto" ><br />
+
+                <a href="products/detalle/<%=resultadose[i].id%>">
+                    <%= resultadose[i].nombre %>
+                </a>
                 <p class="ps-text-grey">
-                <%= resultadose[i].autor %> 
-                <%= resultadose[i].precio %>
-                
+                    <%= resultadose[i].autor %>
+                        <%= resultadose[i].precio %>
 
-                <br />
-                <a href="carrito/<%=resultadose[i].id%>">  <%= resultadose[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
+
+                            <br />
+                            <a href="carrito/<%=resultadose[i].id%>">
+                                <%= resultadose[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
             </div>
-           
 
-        
-        <% } %> 
-    
- 
-</div>
+
+
+            <% } %>
+
+
+    </div>
 
 </body>
 
 <footer class="main-footer">
 
-    <%- include("./footer") %> 
+    <%- include("./footer") %>
 </footer>

@@ -1,80 +1,82 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    
-    <%- include("../partials/head") %> 
+
+    <%- include("../partials/head") %>
 </head>
 
- 
 
 
 
-    <header class="main-header">
 
-        <%- include("../partials/header") %> 
-       
-    </header>
-    <body>
+<header class="main-header">
+
+    <%- include("../partials/header") %>
+
+</header>
+
+<body>
     <br />
     <h3>Detalle del Producto</h3>
     <div class="secctionGeneral_bloque">
-    <br />
-    
-    <div class="secctionGeneral_div_bloque">
-                    <img class="imagen" src="<%= catalogodetalle.img %>" alt="Product Image" >
-                    
-                    <br />
-                    <br />
-                
-                Título : <%= catalogodetalle.nombre %> 
-                        <br />
-                    Autor: <%= catalogodetalle.autor %> 
+        <br />
+
+        <div class="secctionGeneral_div_bloque">
+            <img class="imagen" src="<%= catalogodetalle.img %>" alt="Product Image">
+
+            <br />
+            <br />
+
+            Título : <%= catalogodetalle.nombre %>
+                <br />
+                Autor: <%= catalogodetalle.autor %>
                     <br />
                     Precio: <%= catalogodetalle.precio %>
-                    <br />
-                    Descripción : <%= catalogodetalle.descripcion%>
-                    <br />
-                 
-                    Id : <%= catalogodetalle.id%>
-                    <br />
-                    
-                 
-                    Código : <%= catalogodetalle.codigo%>
-                    <br />
-                    <a href="/carrito/<%=id%>">  <%= catalogodetalle.nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i> </a>
-                  
-                    <br />
-                    <br />
-                    <% if (locals.usuarioActual) {%>
-                        <% if (locals.usuarioActual.grupo=="admin") { %>
-                            
-                          
-                            <form action="/products/eliminar/<%= catalogodetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                                <button type="submit" class="action-button delete">ELIMINAR</button>
-                            </form> 
-                          
-                            <form action="/products/edit/<%= catalogodetalle.id %>" method="GET" style="display: inline-flex">
-                                <button type="submit" class="action-button delete">EDITAR</button>
-                            </form> 
-                    
-                    
-                    <%}%>
-                <%}%>
-                    
-                    
-          
-                </div>    
-     
-    
-</div>
+                        <br />
+                        Descripción : <%= catalogodetalle.descripcion%>
+                            <br />
+
+                            Id : <%= catalogodetalle.id%>
+                                <br />
+
+
+                                Código : <%= catalogodetalle.codigo%>
+                                    <br />
+                                    <a href="/carrito/<%=id%>">
+                                        <%= catalogodetalle.nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+
+                                    <br />
+                                    <br />
+                                    <% if (locals.usuarioActual) {%>
+                                        <% if (locals.usuarioActual.grupo=="admin" ) { %>
+
+
+                                            <form action="/products/eliminar/<%= catalogodetalle.id %>?_method=DELETE"
+                                                method="POST" style="display: inline-flex">
+                                                <button type="submit" class="action-button delete">ELIMINAR</button>
+                                            </form>
+
+                                            <form action="/products/edit/<%= catalogodetalle.id %>" method="GET"
+                                                style="display: inline-flex">
+                                                <button type="submit" class="action-button delete">EDITAR</button>
+                                            </form>
+
+
+                                            <%}%>
+                                                <%}%>
+
+
+
+        </div>
+
+
+    </div>
 
 </body>
 
-    <footer class="main-footer">
+<footer class="main-footer">
 
-        <%- include("../partials/footer") %> 
-    </footer>
-
-   
+    <%- include("../partials/footer") %>
+</footer>

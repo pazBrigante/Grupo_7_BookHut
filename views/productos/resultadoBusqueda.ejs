@@ -2,51 +2,53 @@
 <html>
 
 <head>
-    
-    <%- include("../partials/head") %> 
+
+    <%- include("../partials/head") %>
 </head>
 
- 
 
 
 
-    <header class="main-header">
 
-        <%- include("../partials/header") %> 
-       
-    </header>
+<header class="main-header">
+
+    <%- include("../partials/header") %>
+
+</header>
 
 
-    <br />
-    <h3>Resultados</h3>
-    <br />
-    Texto buscado: <%= textoBusqueda  %>
-    
-    <div >
+<br />
+<h3>Resultados</h3>
+<br />
+Texto buscado: <%= textoBusqueda %>
 
-        <% for(let i=0; i< resultado.length; i++) { %> 
-            
+    <div>
+
+        <% for(let i=0; i< resultado.length; i++) { %>
+
             <br />
-          
-                
-                    
-                    <a href="detalle/<%=resultado[i].id %>">  <%= resultado[i].nombre %></a>
-                    <br />
-                    
-                    
-                <% } %>
-    
-            
-          
-        
-     
+
+
+
+            <a href="detalle/<%=resultado[i].id %>">
+                <%= resultado[i].nombre %>
+            </a>
+            <br />
+
+
+            <% } %>
+
+
+
+
+
     </div>
 
     <br /><br />
 
     <footer class="main-footer">
 
-        <%- include("../partials/footer") %> 
+        <%- include("../partials/footer") %>
     </footer>
 
     </body>

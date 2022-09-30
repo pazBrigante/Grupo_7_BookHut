@@ -9,7 +9,7 @@ window.onload = function () {
 
     //------DESDE AQUÍ CONTINÚE CON LAS VALIDACIONES DEL FORMULARIO //
     //-------------------DE REGISTRO DE PELÍCULAS------------------//    
-    
+
     const form = document.querySelector('#form');
     const nombre = document.querySelector('#nombre');
     const precio = document.querySelector('#precio');
@@ -18,14 +18,14 @@ window.onload = function () {
     const descripcion = document.querySelector('#descripcion');
     const codigo = document.querySelector('#codigo');
     const categoria = document.querySelector('#categoria');
-    const  product_img = document.querySelector('#product-img');
+    const product_img = document.querySelector('#product-img');
     const ulErrores = document.querySelector('#ul2');
     const errores = [];
 
     nombre.focus();
 
     nombre.addEventListener('input', () => {
-        
+
         if (nombre.value.trim() == '') {
             errores.push('El nombre esta vacio');
             nombre.classList.add('is-invalid');
@@ -39,8 +39,8 @@ window.onload = function () {
         };
     });
 
-   precio.addEventListener('input', () => {
-      
+    precio.addEventListener('input', () => {
+
         if (precio.value.trim() == '') {
             errores.push('El precio esta vacio');
             precio.classList.add('is-invalid');
@@ -56,9 +56,9 @@ window.onload = function () {
             precio.classList.add('is-valid');
         };
     });
-    
+
     descripcion.addEventListener('input', () => {
-      
+
         if (descripcion.value.trim() == '') {
             errores.push('La decripcion esta vacio');
             descripcion.classList.add('is-invalid');
@@ -87,8 +87,8 @@ window.onload = function () {
         };
     });
 
-   codigo.addEventListener('input', () => {
-        
+    codigo.addEventListener('input', () => {
+
         if (codigo.value.trim() == '') {
             errores.push('El código esta vacio');
             codigo.classList.add('is-invalid');
@@ -105,7 +105,7 @@ window.onload = function () {
     //Verificación envio de form
     form.addEventListener('submit', (e) => {
         let error = []
-    
+
         if (nombre.value.trim() == '') {
             error.push('El nombre esta vacio');
             nombre.classList.add('is-invalid');
@@ -117,10 +117,10 @@ window.onload = function () {
             nombre.classList.remove('is-invalid');
             nombre.classList.add('is-valid');
         };
-   
 
- 
-      
+
+
+
         if (precio.value.trim() == '') {
             error.push('El precio esta vacio');
             precio.classList.add('is-invalid');
@@ -135,10 +135,10 @@ window.onload = function () {
             precio.classList.remove('is-invalid');
             precio.classList.add('is-valid');
         };
-    
-    
-   
-      
+
+
+
+
         if (descripcion.value.trim() == '') {
             error.push('La decripcion esta vacio');
             descripcion.classList.add('is-invalid');
@@ -150,9 +150,9 @@ window.onload = function () {
             descripcion.classList.remove('is-invalid');
             descripcion.classList.add('is-valid');
         };
-    
 
-        
+
+
 
         if (autor.value == '') {
             error.push('El autor esta vacio');
@@ -188,7 +188,7 @@ window.onload = function () {
 
         if (error.length == 0) {
             form.submit()
-            
+
         };
     });
 }

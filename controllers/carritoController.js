@@ -14,7 +14,7 @@ const controller = {
 
 	// Create -  Method to store SQL - UPDATE CARRITO
 	store: (req, res) => {
-		
+
 		if (req.session.usuarioLogueado) {
 			db.Carrito.create({
 				usuario_id: req.session.usuarioLogueado.id,

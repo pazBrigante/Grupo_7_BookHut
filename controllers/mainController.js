@@ -6,9 +6,11 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controlador = {
     index: function (req, res) {
-        res.render("./partials/seleccionados", { "catalogo": catalogo, 
-        "usuarioActual": req.session.usuarioLogueado });
-   },
+        res.render("./partials/seleccionados", {
+            "catalogo": catalogo,
+            "usuarioActual": req.session.usuarioLogueado
+        });
+    },
 
     lanzamientos: (req, res) => {
         let resultadola = [];
