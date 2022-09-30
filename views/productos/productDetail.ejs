@@ -13,7 +13,7 @@
 <header class="main-header">
 
     <%- include("../partials/header") %>
-
+    <script src="/js/addItemCarrito.js" ></script>
 </header>
 
 <body>
@@ -43,9 +43,9 @@
 
                                 Código : <%= catalogodetalle.codigo%>
                                     <br />
-                                    <a href="/carrito/<%=id%>">
-                                        <%= catalogodetalle.nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
+                                    <% if (locals.usuarioLogueado) { %>
+                                        <%= catalogodetalle.nombre %> Comprar  <i id="<%= locals.usuarioLogueado.id%>,<%=catalogodetalle.id %>,<%=catalogodetalle.nombre%>,<%=catalogodetalle.autor%>,<%=catalogodetalle.precio%>" class="fa-solid fa-cart-shopping"></i>
+                                        <% } %>
 
                                     <br />
                                     <br />

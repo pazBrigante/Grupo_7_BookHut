@@ -15,11 +15,11 @@
         <%- include("./header") %>
 
     </header>
-
-
+    
+    <script src="/js/addItemCarrito.js" ></script>
 
     <br />
-    <h3>Nuevos Lanzamientos</h3>
+    <h3>  Nuevos Lanzamientos</h3>
 
     <div class="secctionGeneral_bloque">
 
@@ -38,9 +38,9 @@
                         <%= resultadola[i].autor %>
                             <%= resultadola[i].precio %>
                                 <br />
-                                <a href="carrito/<%=resultadola[i].id%>">
-                                    <%= resultadola[i].nombre %> Comprar <i class="fa-solid fa-cart-shopping"></i>
-                                </a>
+                                <% if (locals.usuarioLogueado) { %>
+                                    <%= resultadola[i].nombre %> Comprar  <i id="<%= locals.usuarioLogueado.id%>,<%=resultadola[i].id %>,<%=resultadola[i].nombre%>,<%=resultadola[i].autor%>,<%=resultadola[i].precio%>" class="fa-solid fa-cart-shopping"></i>
+                                    <% } %>
                 </article>
             </div>
 

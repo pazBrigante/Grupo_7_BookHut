@@ -33,6 +33,7 @@ function userLoguedMiddleware(req, res, next) {
 
         } else {
             res.locals.isLogued = false
+            
         }
     }
     next();

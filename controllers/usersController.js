@@ -50,7 +50,7 @@ const controller = {
 
 			} else {
 
-				nuevoUsuario.image = "";
+				nuevoUsuario.image = "Alan_Turing.jpg";
 			}
 			console.log(nuevoUsuario)
 
@@ -168,6 +168,7 @@ const controller = {
 	logout: (req, res) => {
 		res.clearCookie("usuario")
 		req.session.destroy();
+		
 		return res.redirect("/");
 
 

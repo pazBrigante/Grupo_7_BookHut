@@ -41,29 +41,12 @@ const controller = {
 
 	// LIST - Method to list SQL
 	list: (req, res) => {
-
-		db.Carrito.findAll({
-
-
-			include: [
-				{ association: "libros" }],
-			where: { usuario_id: 10 }
-		}
-
-		)
-			.then(resultado => {
-				console.log("RESULTADO**********************", resultado)
-				res.redirect('/')
-			})
-			.catch(error => {
-				console.log(error);
-				res.redirect("views/partials/not-found.ejs")
-
-
-
-			})
-
-	}
+		res.render('../views/carrito/listacarrito',
+		{ "usuarioActual": req.session.usuarioLogueado });
+},
+	
+	
+	
 
 
 };

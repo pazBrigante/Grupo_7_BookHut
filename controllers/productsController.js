@@ -36,7 +36,7 @@ const controller = {
 			if (req.file) {
 				campo_img = "/images/" + req.file.filename;
 			} else {
-				campo_img = "/images/" + req.body.img;
+				campo_img = "/images/id1.jpg"
 			};
 			db.Catalogo.create({
 				nombre: req.body.nombre,

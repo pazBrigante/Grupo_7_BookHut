@@ -6,6 +6,8 @@
   </head>
   <header>
     <script src="/js/userValidation.js" ></script>
+    <script src="/js/clearCarrito.js" ></script>
+    
     <%- include("../partials/header") %> 
   </header>
 
@@ -25,12 +27,12 @@
             <%}%>
             <br />
         </ul>
-
+        
         
         <%}%>
         <ul id="ul2"></ul>
         <br />
-        <a href="/users/logout/">    Cerrar Sesión</i></a>
+        <a id="logout" href="/users/logout/">    Cerrar Sesión</i></a>
         <br />
         <br />
       <form id="form" action="/users/edit/<%= userEdit.id %>?_method=PUT"" method="POST" enctype="multipart/form-data">
