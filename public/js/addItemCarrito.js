@@ -60,15 +60,7 @@ window.onload =function() {
                 actualCart.push(myObj);
                 json = JSON.stringify(actualCart, null, 2);
                 sessionStorage.setItem("cart", json);
-            //sessionStorage.setItem("usuarioId"+contItems,datos[0]);
-            //sessionStorage.setItem("libroId"+contItems,datos[1]);
-            //sessionStorage.setItem("libro"+contItems,datos[2]);
-            //sessionStorage.setItem("autor"+contItems,datos[3]);
-            //sessionStorage.setItem("precio"+contItems,datos[4]);
-            //contItems=contItems+1;
-            //sessionStorage.setItem("contItems",contItems);
-            //console.log("contItems storage",contItems);
-    
+           
         });
     }    
 };

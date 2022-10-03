@@ -2,7 +2,7 @@ const methodOverride = require('method-override');
 
 const db = require('../../database/models');
 const opp = db.Sequelize.Op;
-
+const sequelize = db.sequelize;
 module.exports = {
 
     list: (req, res) => {
@@ -92,8 +92,43 @@ module.exports = {
                     }
                 })
             })
-    }
+    },
+    comprar: (req, res) => {
+        console.log("api_comprar",req.body);
+        let compras=req.body;
+        let comprasBulk=[]
+        
+        compras.forEach((element,indice) => {
+        
+            if (element.libroId && element.usuarioId ) {
+                comprasBulk.push({usuario_id:element.usuarioId,catalogo_id:element.libroId })
+                         
 
+
+            };
+        });
+        console.log("comprasBulk");
+        console.log(comprasBulk);
+        
+        
+        
+            
+             
+			db.Carrito.bulkCreate(
+				comprasBulk
+			)
+				.then(resultado => {
+					res.redirect('/')
+				})
+				.catch(error => {
+					console.log(error);
+					res.redirect("views/partials/not-found.ejs")
+                });
+			
+		        
+    
+    }
 }
+
 
 

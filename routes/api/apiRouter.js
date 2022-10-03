@@ -6,6 +6,8 @@ router.get('/products', apiController.list);
 router.get('/products/:id', apiController.detail);
 router.get('/users', apiController.listUsers);
 router.get('/users/:id', apiController.detailUsers);
+router.post('/comprar', apiController.comprar);
+
 //router.post('/api/movies/add', moviesController.store);
 //router.delete('/api/movies/delete/:id', moviesController.delete);
 
