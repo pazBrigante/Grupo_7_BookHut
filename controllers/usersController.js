@@ -158,17 +158,12 @@ const controller = {
 				res.redirect("views/partials/not-found.ejs")
 
 			})
-		//else {
 
-		//	console.log("Datos Inválidos");
-		//		return res.render("./usuarios/login"
-		//		,{errors:errors.errors,"usuarioActual":req.session.usuarioLogueado})
-		//}})
 	},
 	logout: (req, res) => {
 		res.clearCookie("usuario")
 		req.session.destroy();
-		
+
 		return res.redirect("/");
 
 
@@ -177,7 +172,7 @@ const controller = {
 	edit: (req, res) => {
 
 		let id_a_editar = req.params.id;
-		//res.render("./usuarios/user-edit-form.ejs",{userEdit,"usuarioActual":req.session.usuarioLogueado});
+
 		db.Usuario.findByPk(id_a_editar)
 			.then(resultado => {
 				res.render("./usuarios/user-edit-form.ejs", {

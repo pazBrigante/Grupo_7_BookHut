@@ -11,7 +11,9 @@ window.onload =function() {
     listado.innerHTML = '';
     
     let itemsLimpio=[];
-    items.forEach((element) => {
+    if(items) {
+    
+        items.forEach((element) => {
         
         if (element.libroId && element.usuarioId ) {
             itemsLimpio.push(element);
@@ -52,7 +54,9 @@ window.onload =function() {
        
         sessionStorage.clear();
         location.reload();
-    });
+            
+    })
+};
 
     borrar.addEventListener('click', (req,res) => {
         sessionStorage.clear();
