@@ -11,17 +11,17 @@ window.onload =function() {
     listado.innerHTML = '';
     
     let itemsLimpio=[];
-    items.forEach((element,indice) => {
+    items.forEach((element) => {
         
         if (element.libroId && element.usuarioId ) {
             itemsLimpio.push(element);
         } else {
-            console.log("borre " + indice )
+            console.log("borre " )
             
         };
     });
     
-    itemsLimpio.forEach((element,indice) => {
+    itemsLimpio.forEach((element) => {
         
         if (element.libroId && element.usuarioId ) {
        
@@ -49,9 +49,18 @@ window.onload =function() {
           },
         body:JSON.stringify(itemsLimpio),
                });
-        
+       
         sessionStorage.clear();
+        location.reload();
     });
+
+    borrar.addEventListener('click', (req,res) => {
+        sessionStorage.clear();
+        location.reload();
+        
+    });
+
+
 }
         
 

@@ -102,23 +102,18 @@ module.exports = {
         
             if (element.libroId && element.usuarioId ) {
                 comprasBulk.push({usuario_id:element.usuarioId,catalogo_id:element.libroId })
-                         
-
-
+              
             };
         });
         console.log("comprasBulk");
         console.log(comprasBulk);
         
-        
-        
-            
-             
 			db.Carrito.bulkCreate(
 				comprasBulk
 			)
 				.then(resultado => {
-					res.redirect('/')
+                    console.log("compraok");
+					res.redirect("/")
 				})
 				.catch(error => {
 					console.log(error);
